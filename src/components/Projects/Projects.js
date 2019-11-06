@@ -5,7 +5,6 @@ import ProjectLink from '../ProjectLink/ProjectLink';
 import batterydesignThumbnail from './../../img/project/batterydesign-thumbnail.png'
 import bmstestingboardThumbnail from './../../img/project/cellboardtester-thumbnail.png'
 import wireharnessThumbnail from './../../img/WiringHarness/original.png';
-import assemblyThumbnail from './../../img/project/accumulator-thumbnail.png';
 
 import temp from './../../img/project/aerodynamic-thumbnail.png';
 
@@ -16,9 +15,9 @@ export class Projects extends Component {
             projects:[
                 {
                     id: 0,
-                    name:"Battery Design",
+                    name:"Accumulator Design 2018",
                     type:"modelling",
-                    link:"/accumulator-assembly",
+                    link:"/battery-design",
                     thumbnail:batterydesignThumbnail},
                 {
                     id: 1,
