@@ -16,6 +16,9 @@ export class ProfileBox extends Component {
                     <a className="linkedin-link-container" href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">
                         <i class="fa fa-linkedin" style={{fontSize:"45px",color:"rgb(37, 124, 195)"}}></i>
                     </a>
+                    <a className="github-link-container" href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-github" style={{fontSize:"45px",color:"rgb(49, 51, 53)"}}></i>
+                    </a>
                     <div className="resume-button-wrapper">
                         <a className="resume-button" target="_blank" rel="noopener noreferrer" href={resume}>Resume</a>
                     </div>

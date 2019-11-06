@@ -19,14 +19,14 @@ export class ProjectView extends Component {
                         <span className="subtitle-name">Tile View</span> */}
                     </h1>
                 </div>
-                {/* Control buttons */}
+                {/* Control buttons
                 <div id="myBtnContainer">
                     <button className="btn active" onclick="filterSelection('all')"> Show All</button>
                     <button className="btn" onclick="filterSelection('model')">Modelling</button>
                     <button className="btn" onclick="filterSelection('outreach')">Outreach</button>
                     <button className="btn" onclick="filterSelection('programming')">Programming</button>
                     <button className="btn" onclick="filterSelection('sim')">Simulation</button>
-                </div>
+                </div> */}
                 <Projects />
                 
             </div>
