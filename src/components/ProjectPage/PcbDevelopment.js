@@ -9,7 +9,7 @@ import frontwingiso from './../../img/placeholder.png';
 
 
 
-export class FrontWing extends Component {
+export class pcbDev extends Component {
     componentDidMount() {
         window.scrollTo(0, 0)
     }
@@ -17,7 +17,7 @@ export class FrontWing extends Component {
     render() {
         return (
             <ProjectPage
-            title="Front Wing Development and Analysis"
+            title="PCB Development"
             images={[
                 {image:frontwingimg,
                 description:"Front wing render"},
@@ -36,4 +36,4 @@ export class FrontWing extends Component {
     }
 }
 
-export default FrontWing
+export default pcbDev

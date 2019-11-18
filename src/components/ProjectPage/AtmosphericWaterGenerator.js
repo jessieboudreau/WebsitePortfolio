@@ -9,7 +9,7 @@ import thermalModel from './../../img/battery-design/thermal-model.png';
 
 import ProjectPage from './ProjectPage';
 
-export class BatteryMK1 extends Component {
+export class AWG extends Component {
     componentDidMount() {
         window.scrollTo(0, 0)
     }
@@ -18,7 +18,7 @@ export class BatteryMK1 extends Component {
         return (
             
             <ProjectPage
-            title="Battery Design"
+            title="Atmospheric Water Generator"
             images={[
                 {image: original,
                 description:"Model of the 2018 vehicle battery, also referred to as the 'Accumulator'"},
@@ -36,4 +36,4 @@ export class BatteryMK1 extends Component {
     }
 }
 
-export default BatteryMK1
+export default AWG

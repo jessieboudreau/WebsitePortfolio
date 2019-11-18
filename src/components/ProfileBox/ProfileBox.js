@@ -24,7 +24,26 @@ export class ProfileBox extends Component {
                     </div>
                 </div>
                 <div className="profile-box-school-container">
-                    <h1 className="profile-box-school">McMaster University | Power & Energy Engineering 2020</h1>
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr className="profile-box-school-wrapper">
+                                    <td className="profile-box-school-left">Conestoga College</td>
+                                    <td className="profile-box-school"></td>
+                                    <td className="profile-box-school">Energy Systems Engineering Technology</td>
+                                    <td className="profile-box-school"></td>
+                                    <td className="profile-box-school">2017</td>
+                                </tr>
+                                <tr className="profile-box-school-wrapper">
+                                    <td className="profile-box-school-left">McMaster University</td>
+                                    <td className="profile-box-school"></td>
+                                    <td className="profile-box-school">Power & Energy Engineering</td>
+                                    <td className="profile-box-school"></td>
+                                    <td className="profile-box-school">2020</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className="home-link-container">
                 <Link to="/">

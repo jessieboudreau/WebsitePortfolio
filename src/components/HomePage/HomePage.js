@@ -10,8 +10,10 @@ export class HomePage extends Component {
     render() {
         return (
             <div>
-                <ProfileBox home="is-home"/>
-                <ProjectView />
+                <div>
+                    <ProfileBox home="is-home"/>
+                    <ProjectView />
+                </div>
             </div>
         )
     }

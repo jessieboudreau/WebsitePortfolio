@@ -4,6 +4,7 @@ import ProfileBox from '../ProfileBox/ProfileBox';
 
 
 import './ProjectPage.css';
+import Projects from './../../components/Projects/Projects.js'
 
 export class ProjectPage extends Component {
     constructor(props){
@@ -44,6 +45,7 @@ export class ProjectPage extends Component {
                     ))}
                 </div>
                 <div className="project-description-container">
+                    <h1 className="project-header">Overview</h1>
                     <p className="project-description">
                         {this.props.description}
                     </p>
