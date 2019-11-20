@@ -70,7 +70,8 @@ export class Projects extends Component {
     }
 
     filterData(group) {
-        if (group == 'Conestoga College') {
+        // Filter for 'Conestoga College' projects
+        if (group === 'Conestoga College') {
             let temp = [];
             for (let p of projects) {
               if (p.group === 'Conestoga College') {
@@ -81,7 +82,8 @@ export class Projects extends Component {
               filteredProjects: temp
             });
         }
-        else if (group == 'MAC Formula Electric') {
+        // Filter for 'MAC Formula Electric' projects
+        else if (group === 'MAC Formula Electric') {
             let temp = [];
             for (let p of projects) {
               if (p.group === 'MAC Formula Electric') {
@@ -92,7 +94,8 @@ export class Projects extends Component {
               filteredProjects: temp
             });
         }
-        else if (group == 'McMaster University') {
+        // Filter for 'McMaster University' projects
+        else if (group === 'McMaster University') {
             let temp = [];
             for (let p of projects) {
               if (p.group === 'McMaster University') {
@@ -104,7 +107,7 @@ export class Projects extends Component {
             });
         }
     }
-    
+
     render() {
 
         return (
