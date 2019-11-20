@@ -14,14 +14,18 @@ export class ProjectLink extends Component {
             <a href={this.props.project.link} className="project-link-link" target="_blank" rel="noopener noreferrer" >
                 <div className="project-link-container">
                     <img className="project-thumbnail" src={this.props.project.thumbnail}/>
-                    <h1 className="project-name">{this.props.project.name}</h1>              
+                    <h1 className="project-name">{this.props.project.name}</h1>
+                    <h1 className="project-group">{this.props.project.group}</h1>              
                 </div>
             </a>
         :
             <Link className="project-link-link" to={this.props.project.link}>
             <div className="project-link-container">
                 <img className="project-thumbnail" src={this.props.project.thumbnail}/>
-                <h1 className="project-name">{this.props.project.name}</h1>              
+                <div>
+                    <h1 className="project-name">{this.props.project.name}</h1>
+                    <h1 className="project-group">{this.props.project.group}</h1> 
+                </div>              
             </div>
             </Link>
             

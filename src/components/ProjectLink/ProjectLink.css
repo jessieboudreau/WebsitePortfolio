@@ -44,7 +44,24 @@
         transition: .3s ease all;
         text-decoration: none;
     }
+    .project-group{
+        position: relative;
+        width:100%;
+        height:100%;
+        padding-top: 10px;
+        color:rgb(204, 199, 199);
+        bottom:300px;
+        font-size:17px;
+        text-align: center;
+        transition: .3s ease all;
+        text-decoration: none;
+    }
     .project-link-container:hover .project-name{
+        opacity: 0;
+        transition: .6s ease all;
+    }
+
+    .project-link-container:hover .project-group{
         opacity: 0;
         transition: .6s ease all;
     }

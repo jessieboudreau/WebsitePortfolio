@@ -9,24 +9,14 @@ export class ProjectView extends Component {
         return (
             <div className="project-container">
                 <div className="intro-paragraph-container">
+                    <h1 className="title-name">About Me</h1>
                     <p className="intro-paragraph">
-                        Welcome to my portfolio.  Outlined below are some of the projects I have worked on while on MAC Formula Electric - A fully student run team working to design and manufacture a fully electric, formula style racecar.
+                    Experienced Engineering Team Leader with a demonstrated history of working in the automotive industry. 
+                    Skilled in Electrical Engineering, Leadership, Test Automation and Manufacturing Design. Fluent in English 
+                    with professional working proficiency in French. Strong engineering professional working towards a Bachelor 
+                    Technology – B.Tech focused in Power & Energy Engineering from McMaster University. 
                     </p>
                 </div>
-                <div className="project-name-container">
-                    <h1 className="title-name">Projects
-                        {/* <span className="subtitle-name">></span>
-                        <span className="subtitle-name">Tile View</span> */}
-                    </h1>
-                </div>
-                {/* Control buttons
-                <div id="myBtnContainer">
-                    <button className="btn active" onclick="filterSelection('all')"> Show All</button>
-                    <button className="btn" onclick="filterSelection('model')">Modelling</button>
-                    <button className="btn" onclick="filterSelection('outreach')">Outreach</button>
-                    <button className="btn" onclick="filterSelection('programming')">Programming</button>
-                    <button className="btn" onclick="filterSelection('sim')">Simulation</button>
-                </div> */}
                 <Projects />
                 
             </div>

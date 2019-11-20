@@ -24,7 +24,12 @@ export class AccumulatorAssembly extends Component {
             {image:screenshot,
             description:"Screenshot of assembly animation"}
         ]}
-            description="Our Accumulator consists of 138 indiviual lithium-ion pouch cells, with a total voltage of 600V.  Given the risk associated with handling this package, we required proper documentation for the assembly procedure.  I created this procedure using SolidWorks Composer, creating snapshots and a full animation for our plan for assembly.  Once this was completed and a select few members received high-voltage certifications, we were able to source the proper resources and supervision for the assembly of our battery, a major milestone in the completion of our vehicle."
+            description="Our Accumulator consists of 138 indiviual lithium-ion pouch cells, with a total voltage of 600V.  
+                        Given the risk associated with handling this package, we required proper documentation for the assembly 
+                        rocedure.  I created this procedure using SolidWorks Composer, creating snapshots and a full animation 
+                        for our plan for assembly.  Once this was completed and a select few members received high-voltage 
+                        certifications, we were able to source the proper resources and supervision for the assembly of our 
+                        battery, a major milestone in the completion of our vehicle."
             />
         )
     }
