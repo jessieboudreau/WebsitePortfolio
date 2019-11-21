@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89f22aa0.chunk.css",
+    "main.js": "/static/js/main.5c3d98f8.chunk.js",
+    "main.js.map": "/static/js/main.5c3d98f8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e89362ac.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e89362ac.js.map",
+    "static/css/2.a641e29a.chunk.css": "/static/css/2.a641e29a.chunk.css",
+    "static/js/2.54f2dade.chunk.js": "/static/js/2.54f2dade.chunk.js",
+    "static/js/2.54f2dade.chunk.js.map": "/static/js/2.54f2dade.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.09a88306e9588cef28a522f6be437cbf.js": "/precache-manifest.09a88306e9588cef28a522f6be437cbf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.a641e29a.chunk.css.map": "/static/css/2.a641e29a.chunk.css.map",
+    "static/css/main.89f22aa0.chunk.css.map": "/static/css/main.89f22aa0.chunk.css.map",
+    "static/media/batterydesign-thumbnail.png": "/static/media/batterydesign-thumbnail.3e7c6fe7.png",
+    "static/media/cellboardtester-thumbnail.png": "/static/media/cellboardtester-thumbnail.0b24a3a0.png",
+    "static/media/cells.png": "/static/media/cells.9be30911.png",
+    "static/media/exploded-container-view.png": "/static/media/exploded-container-view.0c6e2cda.png",
+    "static/media/jessie-boudreau-resume.pdf": "/static/media/jessie-boudreau-resume.ea452212.pdf",
+    "static/media/original.png": "/static/media/original.ae1f90c1.png",
+    "static/media/packaging.png": "/static/media/packaging.054499d2.png",
+    "static/media/thermal-model.png": "/static/media/thermal-model.78a0dbd0.png",
+    "static/media/watergenerator-thumbnail.jpg": "/static/media/watergenerator-thumbnail.571e1419.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e89362ac.js",
+    "static/css/2.a641e29a.chunk.css",
+    "static/js/2.54f2dade.chunk.js",
+    "static/css/main.89f22aa0.chunk.css",
+    "static/js/main.5c3d98f8.chunk.js"
+  ]
+}
