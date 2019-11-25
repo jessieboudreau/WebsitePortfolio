@@ -69,7 +69,7 @@ export class Projects extends Component {
         }
     }
 
-    filterData(group) {
+    filterProjects(group) {
         // Filter for 'Conestoga College' projects
         if (group === 'Conestoga College') {
             let temp = [];
@@ -134,7 +134,7 @@ export class Projects extends Component {
                             className={item.btnClass}
                             type="button"
                             onClick={() => {
-                            this.filterData(item.label);
+                            this.filterProjects(item.label);
                             }}>
                             {item.label}
                         </button>))}
@@ -147,13 +147,6 @@ export class Projects extends Component {
                             project={project}
                             />
                         </div>))}
-                        {window.innerWidth > 800 ? 
-                        <>
-                        {/* <div className="projects-project-link-container"/>
-                        <div className="projects-project-link-container"></div> */}
-                        </>
-                        :
-                        <div/>}
                 </div>
             </div>
         )

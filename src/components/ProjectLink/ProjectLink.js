@@ -5,12 +5,16 @@ import './ProjectLink.css'
 export class ProjectLink extends Component {
     constructor(props){
         super(props)
+
+        this.state = {
+            likeBtn: ""
+        }
     }
 
 
     render() {
 
-        return (this.props.project.type==="website"?
+        return (this.props.project.type === "website"?
             <a href={this.props.project.link} className="project-link-link" target="_blank" rel="noopener noreferrer" >
                 <div className="project-link-container">
                     <img className="project-thumbnail" src={this.props.project.thumbnail}/>
@@ -25,7 +29,8 @@ export class ProjectLink extends Component {
                 <div>
                     <h1 className="project-name">{this.props.project.name}</h1>
                     <h1 className="project-group">{this.props.project.group}</h1> 
-                </div>              
+                </div>
+                <p className="" id="fa heart-o"></p>              
             </div>
             </Link>
             

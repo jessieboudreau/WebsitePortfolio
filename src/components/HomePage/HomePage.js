@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ProfileBox from './../ProfileBox/ProfileBox';
+
 import ProjectView from './../ProjectView/ProjectView';
 
 export class HomePage extends Component {

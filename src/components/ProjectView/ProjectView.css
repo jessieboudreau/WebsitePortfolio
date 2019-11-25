@@ -13,6 +13,7 @@
     font-size:20px;
     font-weight:200;
     line-height: 1.4;
+    float:center;
 }
 
 .project-name-container{
@@ -27,6 +28,7 @@
     padding-bottom: 5px;
     color:rgb(87, 87, 87);
     font-size:32px;
+    float:center;
     font-family: 'Rajdhani', sans-serif;}
 
 .subtitle-name{
