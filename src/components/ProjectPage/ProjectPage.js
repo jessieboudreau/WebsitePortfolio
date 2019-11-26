@@ -48,7 +48,13 @@ export class ProjectPage extends Component {
                     <h1 className="project-header">Overview</h1>
                     <p className="project-description">
                         {this.props.description}
-                    </p>                    
+                    </p> 
+
+                    {/* Additonal project-specific content */}
+                    {this.props.hasTable ?
+                    this.props.table
+                    : <div></div>
+                }               
                 </div>
             </div>
         )

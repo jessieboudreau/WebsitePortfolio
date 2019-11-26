@@ -1,3 +1,22 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 100px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 .footer-container {
     position:relative;
     bottom:-100px;
@@ -9,65 +28,47 @@
     background-color: #555;
     color:#fff;
     overflow: hidden;
-    overflow: hidden;
 }
 
     .footer{
-        width:100%;
-        max-width:1100px;
-        margin:auto;}
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+    }
 
         .name-container{
-            width:500px;
-            padding-top:20px;
+            /* border:1px solid green; */
+            padding-top: 20px;
+            padding: 10px;
+            float: left;
         }
 
             .footer-name{
-                width:500px;
-                position:relative;
-                float:left;
-                font-size:16px;
+                position: relative;
+                font-size: 16px;
             }
 
-            .follow-list-container{
-                position:relative;
-                float:left;
+            .link-container-wrapper {
+                /* border:1px solid green; */
+                text-align: center;
+                font-size: 40px;
             }
 
-                .follow-list-container ul {
-                    text-decoration: none;
-                    list-style: none;
-                    width: 200px;
+                .link-container {
+                    margin: 10px;
+                    color: rgb(49, 51, 53);
                 }
-
-                    .follow-list-container li{
-                        display: inline;
-                        padding:10px;
-                        font-size:16px;
-                    }
-
-                    .follow-list-container a{
-                        text-decoration: none;
-                        color:rgb(255, 255, 255);
-                    }
-
-                    .follow-list-container a:visited {
-                        color:rgb(255, 255, 255);
-                        text-decoration: underline;
-                        font-size: 17px;
-                    }
-
-                    .follow-list-container a:hover{
-                        padding-bottom: 1px;
-                        color:rgb(255, 75, 75);
+                
+                    .link-container:hover {
+                        color: rgb(179, 179, 179)
                     }
 
         .made-with-container{
-            width:250px;
-            display: inline;
-            position:relative;
-            float:right;
-            padding-bottom: 20px;
+            /* border:1px solid green; */
+            position: relative;
+            float: right;
+            padding: 20px;
+            text-align: right;
         }
 
             .made-with-container h1{
@@ -80,43 +81,54 @@
                 font-weight: normal;}
 
 @media only screen and (max-width: 800px) {
+      /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 125px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+    
     .footer-container {
-        height: 50px;
-        padding-top:5px;}
-
-        .footer{}
+        height: 130px;
+        padding-top:5px;
+    }
         
             .name-container{
-                width:330px;
                 margin: auto;
                 padding-top:14px;}
 
                 .footer-name{
-                    width:170px;
                     font-size:12px;
                 }
 
                     .footer-name-span{
-                        width:170px;
                         font-size:12px;
                     }
 
-                .follow-list-container{
-                    top:-5px;}
-
-                    .follow-list-container ul {
-                        width: 50px;}
-
-                        .follow-list-container li{
-                            padding:0 5px;
-                            font-size:9.5px;}
-    
-                        .follow-list-container a:visited {
-                            font-size: 16px;}
+            .link-container-wrapper {
+                font-size: 23px;
+            }
     
             .made-with-container{
-                display: none;
+                margin: auto;
+                padding-top:14px;
             }
+
+                .made-with-container h1{
+                    font-size: 12px;
+                }
+
+                    .footer-container:hover .made-with-container span{
+                        font-size: 12px;
+                    }
                 
                 /* .made-with-container h1{
                     font-size: 0px;} */

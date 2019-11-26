@@ -140,13 +140,21 @@ export class Projects extends Component {
                         </button>))}
                         
                 </div>
-                <div className="projects-container">
-                    {this.state.filteredProjects.map(project => (
-                        <div className="projects-project-link-container">
-                            <ProjectLink
-                            project={project}
-                            />
-                        </div>))}
+                <div>
+                    {this.state.filteredProjects.length !== 0 ? (
+                        <div className="projects-container">
+                            {this.state.filteredProjects.map(project => (
+                                <div className="projects-project-link-container">
+                                    <ProjectLink
+                                    project={project}
+                                    />
+                                </div>))}
+                        </div>
+                    ) : (
+                        <div className="projects-container">
+                            <p className="intro-paragraph">No projects to display!</p>
+                        </div>  
+                    )}
                 </div>
             </div>
         )
