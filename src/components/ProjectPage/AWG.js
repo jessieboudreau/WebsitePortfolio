@@ -44,8 +44,8 @@ export class AWG extends Component {
             contents={[
                 <div>
                     <div>
-                        <div className="pill"><span className="award" class="fa fa-trophy"></span> Mastercraft Award Winner: Spring 2017</div>
-                        <div className="pill"><span className="award" class="fa fa-star"></span> ESE Program Top Project</div>
+                        <div className="pill"><span class="fa fa-trophy"></span> Mastercraft Award Winner: Spring 2017</div>
+                        <div className="pill"><span class="fa fa-star"></span> ESET Program Top Project</div>
                         {/* <div className="pill"><span className="check" class="fa fa-check"></span> Final Grade</div> */}
                     </div>
                     {/* Additional Links */}

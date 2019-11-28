@@ -104,16 +104,15 @@
 
 .pill {
     background-color: rgb(255,255,255);
-    border:rgb(100, 100, 100);
-    border-width: 1px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 16px;
     color:#666;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 4px 5px;
     cursor: pointer;
-    border-radius: 16px;
     font-weight: normal;
     font-size: 15px;
     font-family: 'Rajdhani', sans-serif;
@@ -123,7 +122,7 @@
     cursor: default;
   }
   
-  .pill:hover .award {
+  .pill:hover span {
     color:rgba(255, 230, 2, 0.75);
   }
 
