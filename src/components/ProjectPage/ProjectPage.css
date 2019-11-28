@@ -24,21 +24,24 @@
 
 .showcase-container{
     /* border: 1px solid red; */
-    width:780px;
+    width:auto;
+    max-width:600px;
     margin:30px auto;
-    height:480px;
+    height:auto;
     overflow: hidden;
     /* margin-bottom:10px; */
     
 }
 
 .showcase-image{
-    object-fit: cover; 
+    object-fit: contain; 
     width:100%;
-    height:450px;
+    height:auto;
+    max-height: 75vh;
     object-position: center;
     /* top:-100px; */
 }
+
 .showcase-description{
     /* border:1px solid blue; */
     height:30px;
@@ -85,6 +88,48 @@
     line-height:1.5;
     font-weight: 200;
 }
+
+.project-links {
+    margin-top:10px;
+    margin-bottom:10px;
+    color: royalblue;
+}
+
+.link {
+    font-size: 15px;
+    line-height:1.5;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.pill {
+    background-color: rgb(255,255,255);
+    border:rgb(100, 100, 100);
+    border-width: 1px;
+    color:#666;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  
+  .pill:hover {
+    cursor: default;
+  }
+  
+  .pill:hover .award {
+    color:rgba(255, 230, 2, 0.75);
+  }
+
+  .pill:hover .check {
+    color:rgba(2, 255, 2, 0.75);
+  }
 
 .tftable {
     font-size:20px;
@@ -142,24 +187,15 @@
         font-weight: normal;
         font-family: 'Rajdhani', sans-serif;
     }
-    
-    .showcase-container{
-        /* border: 1px solid red; */
-        width:78vw;
-        margin:3vw auto;
-        height:48vw;
-        overflow: hidden;
-        /* margin-bottom:10px; */
-        
+
+    .pill {
+        font-size: 2vw;
     }
-    
-    .showcase-image{
-        object-fit: cover; 
-        width:100%;
-        height:45vw;
-        object-position: center;
-        /* top:-100px; */
+
+    .link {
+        font-size: 2.3vw;
     }
+
     .showcase-description{
         /* border:1px solid blue; */
         height:3vw;

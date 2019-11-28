@@ -30,7 +30,7 @@ const projects = [
         name: "FSAE-E Accumulator MK I",
         group: "MAC Formula Electric",
         type: "modelling",
-        link: "/battery-design",
+        link: "/accumulator-MK1",
         title: "Battery Design",
         thumbnail: batterydesignThumbnail},
     {
@@ -46,7 +46,7 @@ const projects = [
         name: "Battery Cell Board Tester",
         group: "MAC Formula Electric",
         type: "modelling",
-        link: "/pcb-development",
+        link: "/cell-board-tester",
         title: "PCB Development",
         thumbnail: bmstestingboardThumbnail},
     {
