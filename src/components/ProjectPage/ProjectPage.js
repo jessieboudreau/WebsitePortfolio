@@ -44,10 +44,10 @@ export class ProjectPage extends Component {
                 <ProfileBox />
 
                 {/* Scroll to top button */}
-                <button title='Back to top' className='scroll' 
+                {/* <button title='Back to top' className='scroll' 
                      onClick={ () => { this.scrollToTop(); }}>
                       <span className='arrow-up fa fa-arrow-up'></span>
-                </button>
+                </button> */}
 
                 <div className="project-header-container">
                     <h1 className="project-header">
