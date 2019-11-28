@@ -4,10 +4,10 @@ import { BrowserRouter as Router,  Route } from 'react-router-dom';
 
 import HomePage from './components/HomePage/HomePage';
 import Footer from './components/footer/Footer';
-import BatteryDesign from './components/ProjectPage/BatteryDesign';
+import BatteryDesign from './components/ProjectPage/AccumulatorMK1';
 import WiringHarness from './components/ProjectPage/WiringHarness';
-import pcbDevelopment from './components/ProjectPage/PcbDevelopment';
-import WaterGenerator from './components/ProjectPage/AtmosphericWaterGenerator';
+import cellBoard from './components/ProjectPage/CellBoardTester';
+import waterGenerator from './components/ProjectPage/AWG';
 
 function App() {
   return (
@@ -17,16 +17,14 @@ function App() {
             <div className="app">
               <Route exact path="/"
                 component={HomePage}/>
-              {/* <Route exact path="/"
-                component={About}/>   */}
-              <Route path="/battery-design" 
+              <Route path="/accumulator-MK1" 
                 component={BatteryDesign} />
               <Route path="/wiring-harness" 
                 component={WiringHarness} />
-              <Route path="/pcb-development" 
-                component={pcbDevelopment} />
+              <Route path="/cell-board-tester" 
+                component={cellBoard} />
               <Route path="/atmospheric-water-generator" 
-                component={WaterGenerator} />
+                component={waterGenerator} />
             </div>
           </Router>
           <Footer></Footer>
