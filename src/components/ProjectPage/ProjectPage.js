@@ -6,13 +6,14 @@ import ProfileBox from '../ProfileBox/ProfileBox';
 import './ProjectPage.css';
 import Projects from './../../components/Projects/Projects.js'
 
+
 export class ProjectPage extends Component {
     constructor(props){
         super(props)
         this.state = {
             showcase:this.props.images[0],
-            images:this.props.images
-
+            images:this.props.images,
+            intervalId: 0
         }}
     
 
@@ -23,11 +24,31 @@ export class ProjectPage extends Component {
     updateShowcase = (newImage) =>{
         this.setState({showcase:newImage})
     }
+        
+        scrollStep() {
+          if (window.pageYOffset === 0) {
+              clearInterval(this.state.intervalId);
+          }
+          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+        }
+        
+        scrollToTop() {
+          let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
+          this.setState({ intervalId: intervalId });
+        }
+
 
     render() {
         return (
             <div>
                 <ProfileBox />
+
+                {/* Scroll to top button */}
+                <button title='Back to top' className='scroll' 
+                     onClick={ () => { this.scrollToTop(); }}>
+                      <span className='arrow-up fa fa-arrow-up'></span>
+                </button>
+
                 <div className="project-header-container">
                     <h1 className="project-header">
                         {this.props.title}

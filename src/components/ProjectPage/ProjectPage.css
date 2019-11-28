@@ -130,6 +130,35 @@
     color:rgba(2, 255, 2, 0.75);
   }
 
+.scroll {
+    opacity: 0.3;
+    background-color: #555;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    bottom: 190px;
+    align-self: flex-end;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    vertical-align: middle;
+}
+    
+    .scroll:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .arrow-up {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -6px;
+    }
+
 .tftable {
     font-size:20px;
     color:#333333;
