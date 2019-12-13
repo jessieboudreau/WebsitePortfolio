@@ -10,7 +10,7 @@ export function footer() {
                     <p className="footer-name">Jessie Boudreau<span>&nbsp;|&nbsp;</span><span> 2019</span><br></br>
                         <span>McMaster University<br></br></span>
                         <span>Bachelor of Technology,<br></br></span>
-                        <span>Power & Energy Enegineering</span>
+                        <span>Power & Energy Engineering</span>
                     </p>
                 </div>
                 <div className="column link-container-wrapper">
