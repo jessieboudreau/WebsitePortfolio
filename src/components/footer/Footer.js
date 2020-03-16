@@ -1,38 +1,89 @@
 import React from 'react';
-import './Footer.css';
-import resume from './../../docs/jessie-boudreau-resume.pdf'
+import Resume from './../../docs/jessie-boudreau-resume.pdf'
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
-export function footer() {
-    return (
-        <div className="footer-container">
-            <div className="row footer">
-                <div className="column name-container">
-                    <p className="footer-name">Jessie Boudreau<span>&nbsp;|&nbsp;</span><span> 2019</span><br></br>
-                        <span>McMaster University<br></br></span>
-                        <span>Bachelor of Technology,<br></br></span>
-                        <span>Power & Energy Engineering</span>
-                    </p>
-                </div>
-                <div className="column link-container-wrapper">
-                        <a className="link-container" href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        <a className="link-container" href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    <a className="link-container" target="_blank" rel="noopener noreferrer" href={resume}>
-                        <i class="fa fa-file-text"></i>
-                    </a>
-                </div>
-                <div className="column made-with-container">
-                    <h1>Made With&nbsp;
-                        <span className="love">
-                            <i class="fa fa-heart"></i>
-                        </span> In Canada</h1>
-                </div> 
-            </div>
-        </div>
-    )
+const FooterPage = () => {
+  return (
+    <MDBFooter color="grey darken-2" className="font-small pt-4 mt-4">
+      <MDBContainer fluid className="text-center text-md-left">
+        <MDBRow>
+          <MDBCol md="3">
+            <h5 className="title">Education</h5>
+            <hr size="6" width="80%" align="left" color="white"></hr>
+            <p>
+              McMaster University<br/>
+              Bachelor of Technology,<br/> 
+              Power & Energy Engineering<br/>
+              Graduation: Spring 2020
+            </p>
+            <p>
+              Conestoga College<br/>
+              Advanced Diploma,<br/> 
+              Energy Systems Engineering<br/>
+              Graduated: Spring 2017
+            </p>
+          </MDBCol>
+          <MDBCol md="3">
+          <h5 className="title">Experience</h5>
+          <hr size="6" width="80%" align="left" color="white"></hr>
+            <p>
+              Undergraduate Research Assisstant<br/>
+              McMaster Automotive Resource Centre<br/> 
+              McMaster University<br/>
+              Since: January, 2020
+            </p>
+            <p>
+              Team Captain<br/>
+              MAC Formula Electric<br/> 
+              McMaster University<br/>
+              Since: May, 2019
+            </p>
+          </MDBCol>
+          <MDBCol md="3">
+            <h5 className="title">Connect</h5>
+            <hr size="6" width="80%" align="left" color="white"></hr>
+            <ul>
+                <li className="btn text-decoration-none">
+                    <a href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank">LinkedIn </a>
+                </li>  
+                <li className="btn">
+                    <a href="https://github.com/jessieboudreau" target="_blank">GitHub</a>
+                </li>
+                <li className="btn">
+                        <a href={Resume} target="_blank">Resume</a>
+                </li>
+                <li className="btn">
+                    <a href="mailto:jessie.boudreau@live.ca" target="_blank">Email</a>
+                </li>
+            </ul>
+          </MDBCol>
+          <MDBCol md="3">
+            <h5 className="title">Projects</h5>
+            <hr size="6" width="80%" align="left" color="white"></hr>
+            <ul>
+                <li className="list-unstyled">
+                <a href="/atmospheric-water-generator">Atmospheric Water Generator</a>
+              </li>  
+              <li className="list-unstyled">
+                <a href="/cell-board-tester">Battery Cell Board Tester</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="/accumulator-MK1">FSAE-E Accumulator MK I</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="/wiring-harness">Wiring Harness</a>
+              </li>
+            </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-3">
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.jessieboudreau.com"> Jessie Boudreau </a>
+        </MDBContainer>
+      </div>
+    </MDBFooter>
+  );
 }
 
-export default footer
+export default FooterPage;

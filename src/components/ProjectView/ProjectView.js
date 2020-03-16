@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './ProjectView.css';
 import Projects from '../Projects/Projects';
+import avatar from './../../img/jessie.jpg'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -10,6 +11,7 @@ export class ProjectView extends Component {
             <div>
                 <div className="intro-paragraph-container">
                         <h1 className="title-name">About Me</h1>
+                        <img src={avatar} alt="A portrait of Jessie Boudreau" class="curve"></img>
                         <p className="intro-paragraph">
                         Experienced Engineering Team Leader with a demonstrated history of working in the automotive industry. 
                         Skilled in Electrical Engineering, Leadership, Test Automation and Manufacturing Design. Fluent in English 
