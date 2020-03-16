@@ -44,16 +44,16 @@ const FooterPage = () => {
             <hr size="6" width="90%" align="left" color="white"></hr>
             <ul>
                 <li className="btn">
-                    <a href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
+                    <a href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn </a>
                 </li>  
                 <li className="btn">
-                    <a href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
                 </li>
                 <li className="btn">
-                        <a href={Resume} target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href={Resume} target="_blank" rel="noopener noreferrer"><i class="far fa-file"></i> Resume</a>
                 </li>
                 <li className="btn">
-                    <a href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer">Email</a>
+                    <a href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i> Email</a>
                 </li>
             </ul>
           </MDBCol>
@@ -66,6 +66,9 @@ const FooterPage = () => {
               </li>  
               <li className="list-unstyled">
                 <a href="/cell-board-tester">Battery Cell Board Tester</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="/capstone-battery">Capstone Battery Design</a>
               </li>
               <li className="list-unstyled">
                 <a href="/accumulator-MK1">FSAE-E Accumulator MK I</a>

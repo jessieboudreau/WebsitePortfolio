@@ -7,6 +7,7 @@ import batterydesignThumbnail from './../../img/project/batterydesign-thumbnail.
 import bmstestingboardThumbnail from './../../img/project/cellboardtester-thumbnail.png';
 import wireharnessThumbnail from './../../img/WiringHarness/original.png';
 import awgprojectThumbnail from './../../img/project/watergenerator-thumbnail.jpg';
+import capstoneThumbnail from './../../img/battery-design-capstone/iso.png';
 
 const buttons = [
     {
@@ -17,10 +18,10 @@ const buttons = [
         id: 1,
         label: 'MAC Formula Electric',
         btnClass: 'btn'},
-    // {
-    //     id: 2,
-    //     label: 'McMaster University',
-    //     btnClass: 'btn'}
+    {
+        id: 2,
+        label: 'McMaster University',
+        btnClass: 'btn'}
 ];
 
 const projects = [
@@ -56,6 +57,14 @@ const projects = [
         link: "/atmospheric-water-generator",
         title: "Atmospheric Water Generator",
         thumbnail: awgprojectThumbnail},
+    {
+        id: 4,
+        name: "Capstone Battery Design",
+        group: "McMaster University",
+        type: "modelling",
+        link: "/capstone-battery",
+        title: "Battery Design",
+        thumbnail: capstoneThumbnail},
 ];
 
 

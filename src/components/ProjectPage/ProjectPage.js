@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProfileBox from '../ProfileBox/ProfileBox';
 import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 import { Link } from 'react-router-dom';
+import LoadingSpinner from './../../components/loadingspinner/LoadingSpinner';
 
 
 
@@ -15,7 +16,9 @@ export class ProjectPage extends Component {
         this.state = {
             showcase:this.props.images[0],
             images:this.props.images,
-            intervalId: 0
+            intervalId: 0,
+            loaded:true,
+            loadingElement:<LoadingSpinner/>
         }}
     
 
@@ -57,12 +60,6 @@ export class ProjectPage extends Component {
                     <MDBBreadcrumbItem active>{this.props.title}</MDBBreadcrumbItem>
                     </MDBBreadcrumb>
                 </MDBContainer>
-
-                {/* Scroll to top button */}
-                {/* <button title='Back to top' className='scroll' 
-                     onClick={ () => { this.scrollToTop(); }}>
-                      <span className='arrow-up fa fa-arrow-up'></span>
-                </button> */}
 
                 <div className="project-header-container">
                     <h1 className="project-header">

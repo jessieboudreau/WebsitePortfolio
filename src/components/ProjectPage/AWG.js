@@ -57,7 +57,7 @@ export class AWG extends Component {
                     </div>
                     <h1 className="project-header">Overview</h1>
                     <p className="project-description">
-                        The technologies the AWG employs may be divided into six categories. The six categories are as follows:
+                        The Atmospheric Water Generator (AWG) extract water from the air by condensing it over some refrigerant cooled coils. The extracted water is first stored in a "gray-water" tank before filtration. Once the gray-water tank has sufficient volume, it is pumped out and filtered through an ultra-violet reaction chamber. Finally, the water is stored in a "fresh-water" tank awaiting consumption. The technologies the AWG employs may be divided into six categories. The six categories are as follows:
                     </p>
                     <h1 className="project-subheader">HVAC</h1>
                     <p className="project-description">
