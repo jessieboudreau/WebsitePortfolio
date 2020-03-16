@@ -9,7 +9,6 @@
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: grey;
   color: #666;
   }
 
