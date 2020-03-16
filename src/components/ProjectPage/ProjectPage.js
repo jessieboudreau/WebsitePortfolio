@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import ProfileBox from '../ProfileBox/ProfileBox';
+import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
+import { Link } from 'react-router-dom';
 
 
 
@@ -42,6 +44,19 @@ export class ProjectPage extends Component {
         return (
             <div>
                 <ProfileBox />
+                <MDBContainer>
+                    <MDBBreadcrumb>
+                        <MDBBreadcrumbItem>
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </MDBBreadcrumbItem>
+                        <MDBBreadcrumbItem active>
+                            Projects
+                        </MDBBreadcrumbItem>
+                    <MDBBreadcrumbItem active>{this.props.title}</MDBBreadcrumbItem>
+                    </MDBBreadcrumb>
+                </MDBContainer>
 
                 {/* Scroll to top button */}
                 {/* <button title='Back to top' className='scroll' 

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@kunukn/react-collapse": "^2.2.8",
     "highlight.js": "^9.16.2",
+    "mdbreact": "^4.25.3",
     "react": "^16.10.2",
     "react-animated-slider": "^1.1.4",
     "react-dom": "^16.10.2",

@@ -111,52 +111,52 @@ export class Projects extends Component {
     render() {
 
         return (
-            <div>
-                <div className="project-name-container">
-                    <h1 className="title-name">Projects</h1>
-                </div>
-                <div className="my-btn-container">
-
-                    {/* Display 'Show All' button */}
-                    <button
-                        className="btn" 
-                        onClick={() => {
-                        this.setState({
-                            filteredProjects: projects
-                        });
-                        }}>Show All</button>
-
-                    {/* Display other filter buttons */}
-                    {buttons.map(item => (
-                        <button
-                            variant="outline-primary"
-                            key={item.id}
-                            className={item.btnClass}
-                            type="button"
-                            onClick={() => {
-                            this.filterProjects(item.label);
-                            }}>
-                            {item.label}
-                        </button>))}
-                        
-                </div>
                 <div>
-                    {this.state.filteredProjects.length !== 0 ? (
-                        <div className="projects-container">
-                            {this.state.filteredProjects.map(project => (
-                                <div className="projects-project-link-container">
-                                    <ProjectLink
-                                    project={project}
-                                    />
-                                </div>))}
-                        </div>
-                    ) : (
-                        <div className="projects-container">
-                            <p className="intro-paragraph">No projects to display!</p>
-                        </div>  
-                    )}
+                    <div className="project-name-container">
+                        <h1 className="title-name">Projects</h1>
+                    </div>
+                    <div className="my-btn-container">
+
+                        {/* Display 'Show All' button */}
+                        <button
+                            className="btn" 
+                            onClick={() => {
+                            this.setState({
+                                filteredProjects: projects
+                            });
+                            }}>Show All</button>
+
+                        {/* Display other filter buttons */}
+                        {buttons.map(item => (
+                            <button
+                                variant="outline-primary"
+                                key={item.id}
+                                className={item.btnClass}
+                                type="button"
+                                onClick={() => {
+                                this.filterProjects(item.label);
+                                }}>
+                                {item.label}
+                            </button>))}
+                            
+                    </div>
+                    <div>
+                        {this.state.filteredProjects.length !== 0 ? (
+                            <div className="projects-container">
+                                {this.state.filteredProjects.map(project => (
+                                    <div className="projects-project-link-container">
+                                        <ProjectLink
+                                        project={project}
+                                        />
+                                    </div>))}
+                            </div>
+                        ) : (
+                            <div className="projects-container">
+                                <p className="intro-paragraph">No projects to display!</p>
+                            </div>  
+                        )}
+                    </div>
                 </div>
-            </div>
         )
     }
 }

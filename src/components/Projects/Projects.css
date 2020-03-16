@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    overflow: hidden;
 }
 
 .project-name-container{
@@ -20,7 +21,7 @@
         flex: 1;
         margin: auto;
         width:400px;
-        height:330px;
+        height:auto;
         padding-top:50px;
         /* border:1px solid green; */
         

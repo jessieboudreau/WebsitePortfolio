@@ -6,7 +6,6 @@ import exploded from './../../img/battery-design/exploded-container-view.png';
 import cells from './../../img/battery-design/cells.png';
 import packaging from './../../img/battery-design/packaging.png';
 import thermalModel from './../../img/battery-design/thermal-model.png';
-
 import ProjectPage from './ProjectPage';
 
 export class BatteryMK1 extends Component {
@@ -15,8 +14,9 @@ export class BatteryMK1 extends Component {
     }
     
     render() {
+
         return (
-            
+
             <ProjectPage
             title="FSAE-E Accumulator MK 1"
             images={[

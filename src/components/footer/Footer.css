@@ -1,139 +1,19 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Create three equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 100px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+.btn {
+  min-width: 40%;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  margin: 5px;
   }
 
-.footer-container {
-    position:relative;
-    bottom:-100px;
-    left: -16px;
-    width: 102.2%;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    background-color: #555;
-    color:#fff;
-    overflow-x: hidden;
-}
-
-    .footer{
-        width: 100%;
-        max-width: 1100px;
-        margin: auto;
-    }
-
-        .name-container{
-            /* border:1px solid green; */
-            padding-top: 20px;
-            padding: 10px;
-            float: left;
-        }
-
-            .footer-name{
-                position: relative;
-                font-size: 16px;
-            }
-
-            .link-container-wrapper {
-                /* border:1px solid green; */
-                text-align: center;
-                font-size: 40px;
-            }
-
-                .link-container {
-                    margin: 10px;
-                    color: rgb(49, 51, 53);
-                }
-                
-                    .link-container:hover {
-                        color: rgb(179, 179, 179)
-                    }
-
-        .made-with-container{
-            /* border:1px solid green; */
-            position: relative;
-            float: right;
-            padding: 20px;
-            text-align: right;
-        }
-
-            .made-with-container h1{
-                font-size: 16px;
-                color:#fff;
-            }
-
-            .footer-container:hover .made-with-container span{
-                color:rgb(202, 29, 29);
-                font-weight: normal;}
-
-@media only screen and (max-width: 800px) {
-      /* Create three equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 125px;
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: grey;
+  color: #666;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
   }
-    
-    .footer-container {
-        height: 180px;
-        padding-top:5px;
-        width: 107%;
-    }
-        
-            .name-container{
-                margin: auto;
-                padding-top:14px;}
-
-                .footer-name{
-                    font-size:12px;
-                }
-
-                    .footer-name-span{
-                        font-size:12px;
-                    }
-
-            .link-container-wrapper {
-                font-size: 23px;
-            }
-    
-            .made-with-container{
-                margin: auto;
-                padding-top:14px;
-            }
-
-                .made-with-container h1{
-                    font-size: 12px;
-                }
-
-                    .footer-container:hover .made-with-container span{
-                        font-size: 12px;
-                    }
-                
-                /* .made-with-container h1{
-                    font-size: 0px;} */
-            
-                /* .footer-container:hover .made-with-container span{} */
-}
