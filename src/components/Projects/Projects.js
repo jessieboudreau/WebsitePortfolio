@@ -7,7 +7,6 @@ import batterydesignThumbnail from './../../img/project/batterydesign-thumbnail.
 import bmstestingboardThumbnail from './../../img/project/cellboardtester-thumbnail.png';
 import wireharnessThumbnail from './../../img/WiringHarness/original.png';
 import awgprojectThumbnail from './../../img/project/watergenerator-thumbnail.jpg';
-import { tsCallSignatureDeclaration } from '@babel/types';
 
 const buttons = [
     {

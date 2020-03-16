@@ -9,7 +9,7 @@ const FooterPage = () => {
         <MDBRow>
           <MDBCol md="3">
             <h5 className="title">Education</h5>
-            <hr size="6" width="80%" align="left" color="white"></hr>
+            <hr size="6" width="90%" align="left" color="white"></hr>
             <p>
               McMaster University<br/>
               Bachelor of Technology,<br/> 
@@ -25,7 +25,7 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="3">
           <h5 className="title">Experience</h5>
-          <hr size="6" width="80%" align="left" color="white"></hr>
+          <hr size="6" width="90%" align="left" color="white"></hr>
             <p>
               Undergraduate Research Assisstant<br/>
               McMaster Automotive Resource Centre<br/> 
@@ -41,25 +41,25 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="3">
             <h5 className="title">Connect</h5>
-            <hr size="6" width="80%" align="left" color="white"></hr>
+            <hr size="6" width="90%" align="left" color="white"></hr>
             <ul>
-                <li className="btn text-decoration-none">
-                    <a href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank">LinkedIn </a>
+                <li className="btn">
+                    <a href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
                 </li>  
                 <li className="btn">
-                    <a href="https://github.com/jessieboudreau" target="_blank">GitHub</a>
+                    <a href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </li>
                 <li className="btn">
-                        <a href={Resume} target="_blank">Resume</a>
+                        <a href={Resume} target="_blank" rel="noopener noreferrer">Resume</a>
                 </li>
                 <li className="btn">
-                    <a href="mailto:jessie.boudreau@live.ca" target="_blank">Email</a>
+                    <a href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer">Email</a>
                 </li>
             </ul>
           </MDBCol>
           <MDBCol md="3">
             <h5 className="title">Projects</h5>
-            <hr size="6" width="80%" align="left" color="white"></hr>
+            <hr size="6" width="90%" align="left" color="white"></hr>
             <ul>
                 <li className="list-unstyled">
                 <a href="/atmospheric-water-generator">Atmospheric Water Generator</a>
