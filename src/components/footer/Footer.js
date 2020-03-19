@@ -5,7 +5,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="grey darken-2" className="font-small pt-4 mt-4">
+    <MDBFooter color="grey darken-2" className="footer-container font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="3">
@@ -43,17 +43,17 @@ const FooterPage = () => {
           <MDBCol md="3">
             <h5 className="title">Connect</h5>
             <hr size="6" width="100%" align="left" color="white"></hr>
-            <ul>
-                <a className="btn" href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">
+            <ul className="btn-container">
+                <a className="footer-btn" href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a className="btn" href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">
+                <a className="footer-btn" href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-github"></i> GitHub
                 </a>
-                <a className="btn" href={Resume} target="_blank" rel="noopener noreferrer">
+                <a className="footer-btn" href={Resume} target="_blank" rel="noopener noreferrer">
                   <i class="far fa-file"></i> Resume
                 </a>
-                <a className="btn" href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer">
+                <a className="footer-btn" href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer">
                   <i class="far fa-envelope"></i> Email
                 </a>
             </ul>
@@ -69,6 +69,7 @@ const FooterPage = () => {
             <a className="link" href="/coming-soon">Inverter & MCU Enclosure</a><br/>
             <a className="link" href="/accumulator">Electric Accumulator</a><br/>
             <a className="link" href="/wiring-harness">Wiring Harness</a><br/>
+            <br/>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
