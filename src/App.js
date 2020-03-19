@@ -9,6 +9,8 @@ import WiringHarness from './components/ProjectPage/WiringHarness';
 import cellBoard from './components/ProjectPage/CellBoardTester';
 import waterGenerator from './components/ProjectPage/AWG';
 import CapstoneBattery from './components/ProjectPage/CapstoneBattery';
+import ScrollToTopBtn from "./components/ScrollToTop/ScrollToTop";
+import comingSoon from "./components/ProjectPage/ComingSoon";
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
             <div className="app">
               <Route exact path="/"
                 component={HomePage}/>
-              <Route path="/accumulator-MK1" 
+              <Route path="/ev-battery" 
                 component={BatteryDesign} />
               <Route path="/capstone-battery" 
                 component={CapstoneBattery} />
@@ -28,9 +30,12 @@ function App() {
                 component={cellBoard} />
               <Route path="/atmospheric-water-generator" 
                 component={waterGenerator} />
+              <Route path="/coming-soon"
+                component={comingSoon} />
             </div>
           </Router>
-          <Footer></Footer>
+          <Footer/>
+          <ScrollToTopBtn/>
       </div>
   );
 }

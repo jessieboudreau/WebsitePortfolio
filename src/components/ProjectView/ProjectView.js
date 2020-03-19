@@ -19,10 +19,6 @@ export class ProjectView extends Component {
                         September 2017, I have had the opportunity to work on a variety of projects that both endorsed and 
                         challenged my in-class learning. Here you will find many of the projects I have worked on in class and on 
                         this team.
-                        {/* Experienced engineering Team Leader with a demonstrated history of working in the automotive industry. 
-                        Skilled in electrical engineering, leadership, testing and manufacturing design. Fluent in English 
-                        with professional working proficiency in French. Strong engineering professional working towards a Bachelor 
-                        Technology – B.Tech focused in Power & Energy Engineering from McMaster University.  */}
                         </p>
                 </div>
                 <div className="project-container">

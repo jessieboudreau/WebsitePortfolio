@@ -3,9 +3,6 @@ import ProfileBox from '../ProfileBox/ProfileBox';
 import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 import { Link } from 'react-router-dom';
 import LoadingSpinner from './../../components/loadingspinner/LoadingSpinner';
-
-
-
 import './ProjectPage.css';
 import Projects from './../../components/Projects/Projects.js'
 
@@ -26,21 +23,10 @@ export class ProjectPage extends Component {
         window.scrollTo(0, 0)
     }
 
-    updateShowcase = (newImage) =>{
+    updateShowcase = (newImage) => {
         this.setState({showcase:newImage})
     }
-        
-        scrollStep() {
-          if (window.pageYOffset === 0) {
-              clearInterval(this.state.intervalId);
-          }
-          window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-        }
-        
-        scrollToTop() {
-          let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
-          this.setState({ intervalId: intervalId });
-        }
+
 
 
     render() {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import original from './../../img/battery-design/original.png';
-import cellsInstalled from './../../img/battery-design/cells-installed.jpg';
-import chamber from './../../img/battery-design/chamber.png';
-import fixture from './../../img/battery-design/inside-chamber.png';
-import assembled from './../../img/battery-design/assembled.jpg';
-import voltVcap from './../../img/battery-design/voltage-v-cap.png';
-import resVsoc from './../../img/battery-design/res-v-cap.png';
+import original from './../../img/charging-cart/';
+import cellsInstalled from './../../img/charging-cart/';
+import chamber from './../../img/charging-cart/';
+import fixture from './../../img/charging-cart/';
+import assembled from './../../img/charging-cart/';
+import voltVcap from './../../img/charging-cart/';
+import resVsoc from './../../img/charging-cart/';
 import ProjectPage from './ProjectPage';
 
 export class BatteryMK1 extends Component {
@@ -18,7 +18,7 @@ export class BatteryMK1 extends Component {
         return (
 
             <ProjectPage
-            title="FSAE-E Accumulator MK 1"
+            title="Charging Cart"
             images={[
                 {image: original,
                     description:"Model of the 2018 vehicle battery, also referred to as the 'Accumulator'"},

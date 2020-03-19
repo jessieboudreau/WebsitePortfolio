@@ -1,5 +1,6 @@
 import React from 'react';
 import Resume from './../../docs/jessie-boudreau-resume.pdf'
+import './Footer.css';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 const FooterPage = () => {
@@ -9,7 +10,7 @@ const FooterPage = () => {
         <MDBRow>
           <MDBCol md="3">
             <h5 className="title">Education</h5>
-            <hr size="6" width="90%" align="left" color="white"></hr>
+            <hr size="6" width="100%" align="left" color="white"></hr>
             <p>
               McMaster University<br/>
               Bachelor of Technology,<br/> 
@@ -25,7 +26,7 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="3">
           <h5 className="title">Experience</h5>
-          <hr size="6" width="90%" align="left" color="white"></hr>
+          <hr size="6" width="100%" align="left" color="white"></hr>
             <p>
               Undergraduate Research Assisstant<br/>
               McMaster Automotive Resource Centre<br/> 
@@ -41,42 +42,33 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="3">
             <h5 className="title">Connect</h5>
-            <hr size="6" width="90%" align="left" color="white"></hr>
+            <hr size="6" width="100%" align="left" color="white"></hr>
             <ul>
-                <li className="btn">
-                    <a href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn </a>
-                </li>  
-                <li className="btn">
-                    <a href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                </li>
-                <li className="btn">
-                        <a href={Resume} target="_blank" rel="noopener noreferrer"><i class="far fa-file"></i> Resume</a>
-                </li>
-                <li className="btn">
-                    <a href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i> Email</a>
-                </li>
+                <a className="btn" href="https://www.linkedin.com/in/jessie-boudreau-46203ba5/" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a className="btn" href="https://github.com/jessieboudreau" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a className="btn" href={Resume} target="_blank" rel="noopener noreferrer">
+                  <i class="far fa-file"></i> Resume
+                </a>
+                <a className="btn" href="mailto:jessie.boudreau@live.ca" target="_blank" rel="noopener noreferrer">
+                  <i class="far fa-envelope"></i> Email
+                </a>
             </ul>
           </MDBCol>
-          <MDBCol md="3">
+          <MDBCol md="3" className="project-list">
             <h5 className="title">Projects</h5>
-            <hr size="6" width="90%" align="left" color="white"></hr>
-            <ul>
-                <li className="list-unstyled">
-                <a href="/atmospheric-water-generator">Atmospheric Water Generator</a>
-              </li>  
-              <li className="list-unstyled">
-                <a href="/cell-board-tester">Battery Cell Board Tester</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="/capstone-battery">Capstone Battery Design</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="/accumulator-MK1">FSAE-E Accumulator MK I</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="/wiring-harness">Wiring Harness</a>
-              </li>
-            </ul>
+            <hr size="6" width="100%" align="left" color="white"></hr>
+            <a href="/atmospheric-water-generator">Atmospheric Water Generator</a><br/>
+            <a href="/cell-board-tester">Battery Cell Board Tester</a><br/>
+            <a href="/coming-soon">Capstone Battery Design</a><br/>
+            <a href="/coming-soon">Charging Cart</a><br/>
+            <a href="/coming-soon">Electric Vehicle Charger</a><br/>
+            <a href="/coming-soon">Inverter & MCU Enclosure</a><br/>
+            <a href="/accumulator">Electric Accumulator</a><br/>
+            <a href="/wiring-harness">Wiring Harness</a><br/>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

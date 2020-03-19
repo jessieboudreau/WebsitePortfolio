@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProjectPage from './ProjectPage';
 
-import isoView from './../../img/project/cellboardtester-thumbnail.png';
+import isoView from './../../img/thumbnail/cellboardtester-thumbnail.png';
 import topView from './../../img/CellBoardTester/top-view.PNG';
 import topLayer from './../../img/CellBoardTester/top-layer-view.PNG';
 import complete from './../../img/CellBoardTester/complete.jpg'

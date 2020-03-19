@@ -3,11 +3,15 @@ import './Projects.css';
 import ProjectLink from '../ProjectLink/ProjectLink';
 
 // Project thumbnails
-import batterydesignThumbnail from './../../img/project/batterydesign-thumbnail.png';
-import bmstestingboardThumbnail from './../../img/project/cellboardtester-thumbnail.png';
-import wireharnessThumbnail from './../../img/WiringHarness/original.png';
-import awgprojectThumbnail from './../../img/project/watergenerator-thumbnail.jpg';
-import capstoneThumbnail from './../../img/battery-design-capstone/iso.png';
+import batterydesignThumbnail from './../../img/thumbnail/batterydesign-thumbnail.png';
+import bmstestingboardThumbnail from './../../img/thumbnail/cellboardtester-thumbnail.png';
+import wireharnessThumbnail from './../../img/thumbnail/wiring-thumbnail.png';
+import awgprojectThumbnail from './../../img/thumbnail/watergenerator-thumbnail.jpg';
+import capstoneThumbnail from './../../img/thumbnail/capstone-thumbnail.png';
+import inverterThumbnail from './../../img/thumbnail/inverters-thumbnail.png';
+import cyclerThumbnail from './../../img/thumbnail/cycler-thumbnail.png';
+import chargerThumbnail from './../../img/thumbnail/charger-thumbnail.png';
+import cartThumbnail from './../../img/thumbnail/cart-thumbnail.JPG';
 
 const buttons = [
     {
@@ -27,10 +31,10 @@ const buttons = [
 const projects = [
     {
         id: 0,
-        name: "FSAE-E Accumulator MK I",
+        name: "Electric Vehicle Battery",
         group: "MAC Formula Electric",
         type: "modelling",
-        link: "/accumulator-MK1",
+        link: "/ev-battery",
         title: "Battery Design",
         thumbnail: batterydesignThumbnail},
     {
@@ -62,9 +66,41 @@ const projects = [
         name: "Capstone Battery Design",
         group: "McMaster University",
         type: "modelling",
-        link: "/capstone-battery",
+        link: "/coming-soon",
         title: "Battery Design",
         thumbnail: capstoneThumbnail},
+    {    
+        id: 5,
+        name: "Inverter & MCU Enclosure",
+        group: "MAC Formula Electric",
+        type: "modelling",
+        link: "/coming-soon",
+        title: "Battery Design",
+        thumbnail: inverterThumbnail},
+    {
+        id: 6,
+        name: "Charging Cart",
+        group: "MAC Formula Electric",
+        type: "modelling",
+        link: "/coming-soon",
+        title: "Battery Design",
+        thumbnail: cartThumbnail},
+    {    
+        id: 7,
+        name: "Electric Vehicle Charger",
+        group: "MAC Formula Electric",
+        type: "modelling",
+        link: "/coming-soon",
+        title: "Battery Design",
+        thumbnail: chargerThumbnail},
+    {    
+        id: 8,
+        name: "Battery Cycler",
+        group: "McMaster University",
+        type: "modelling",
+        link: "/coming-soon",
+        title: "Battery Design",
+        thumbnail: cyclerThumbnail},
 ];
 
 

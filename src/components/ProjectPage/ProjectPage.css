@@ -13,6 +13,15 @@
     font-family: 'Rajdhani', sans-serif;
 }
 
+.soon-header{
+    width:auto;
+    align-self: center;
+    font-size:40px;
+    color:#666;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+}
+
 .project-subheader{
     width:auto;
     font-size:25px;
@@ -38,6 +47,15 @@
     width:100%;
     height:auto;
     max-height: 75vh;
+    object-position: center;
+    /* top:-100px; */
+}
+
+.figure{
+    object-fit: contain; 
+    width:100%;
+    height:auto;
+    max-height: 50vh;
     object-position: center;
     /* top:-100px; */
 }
@@ -192,7 +210,7 @@
     }
 
 
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 900px) {
 
     .project-header-container{
         /* border:1px solid blue; */
@@ -202,7 +220,16 @@
     
     .project-header{
         width:auto;
-        font-size:4vw;
+        font-size:8vw;
+        color:#666;
+        font-weight: normal;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    .soon-header{
+        width:auto;
+        align-self: center;
+        font-size:8vw;
         color:#666;
         font-weight: normal;
         font-family: 'Rajdhani', sans-serif;
@@ -210,25 +237,26 @@
 
     .project-subheader{
         width:auto;
-        font-size:2.5vw;
+        font-size:5vw;
         color:#666;
         font-weight: normal;
         font-family: 'Rajdhani', sans-serif;
     }
 
     .pill {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .link {
-        font-size: 2.3vw;
+        font-size: 3vw;
     }
 
     .showcase-description{
         /* border:1px solid blue; */
-        height:3vw;
-        padding:  .9vw 0;
-        font-size:1.4vw;
+        height: 3vw;
+        margin: 4vw;
+        padding: 0.9vw 0;
+        font-size: 4vw;
         color:#777;
         font-weight: lighter;
     }
@@ -266,7 +294,7 @@
     }
     
     .project-description{
-        font-size: 2.3vw;
+        font-size: 3vw;
         line-height:1.5;
         font-weight: 200;
     }
