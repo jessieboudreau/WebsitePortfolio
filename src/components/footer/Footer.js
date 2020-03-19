@@ -61,14 +61,14 @@ const FooterPage = () => {
           <MDBCol md="3" className="project-list">
             <h5 className="title">Projects</h5>
             <hr size="6" width="100%" align="left" color="white"></hr>
-            <a href="/atmospheric-water-generator">Atmospheric Water Generator</a><br/>
-            <a href="/cell-board-tester">Battery Cell Board Tester</a><br/>
-            <a href="/coming-soon">Capstone Battery Design</a><br/>
-            <a href="/coming-soon">Charging Cart</a><br/>
-            <a href="/coming-soon">Electric Vehicle Charger</a><br/>
-            <a href="/coming-soon">Inverter & MCU Enclosure</a><br/>
-            <a href="/accumulator">Electric Accumulator</a><br/>
-            <a href="/wiring-harness">Wiring Harness</a><br/>
+            <a className="link" href="/atmospheric-water-generator">Atmospheric Water Generator</a><br/>
+            <a className="link" href="/cell-board-tester">Battery Cell Board Tester</a><br/>
+            <a className="link" href="/coming-soon">Capstone Battery Design</a><br/>
+            <a className="link" href="/coming-soon">Charging Cart</a><br/>
+            <a className="link" href="/coming-soon">Electric Vehicle Charger</a><br/>
+            <a className="link" href="/coming-soon">Inverter & MCU Enclosure</a><br/>
+            <a className="link" href="/accumulator">Electric Accumulator</a><br/>
+            <a className="link" href="/wiring-harness">Wiring Harness</a><br/>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
