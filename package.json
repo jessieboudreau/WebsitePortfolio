@@ -16,7 +16,7 @@
     "react-dom": "^16.13.1",
     "react-horizontal-timeline": "^1.5.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.4.1",
     "react-swipeable-views": "^0.13.9",
     "react-vertical-timeline-component": "^2.5.0",
     "react-web-tabs": "^1.0.1",
