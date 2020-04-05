@@ -1,0 +1,367 @@
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+    color: #222;
+    font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+    margin-top: 2rem;
+    padding-right: 2vw;
+    padding-left: 1vw;
+    border-right: 1px solid #cecece;
+    position: sticky;
+    top: 2rem;
+    float: left;
+    max-width: 17vw;
+}
+
+.section-nav a {
+    text-decoration: none;
+    display: block;
+    padding: .125rem 0;
+    color: #777;
+    transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    color: #333;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    font-size: 20px;
+}
+
+ul {
+    font-size: 15px;
+}
+
+.contents-list {
+    margin-left: 1rem;
+}
+
+.project-header-container{
+    /* border:1px solid blue; */
+    width:900px;
+    margin:30px auto 30px;
+}
+
+.project-header{
+    padding-top: 2rem;
+    width:auto;
+    font-size:40px;
+    color:#666;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.soon-header{
+    width:auto;
+    align-self: center;
+    font-size:40px;
+    color:#666;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.project-subheader{
+    padding-top: 2rem;
+    width:auto;
+    font-size:25px;
+    margin-top: 15px;
+    color:#666;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.showcase-container {
+    /* border: 1px solid red;  */
+    width:auto;
+    margin:30px auto;
+    height: auto;
+}
+
+.showcase-image-container {
+    /* border: 1px solid red; */
+    width: auto;
+    margin: 30px auto;
+    text-align: center;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.showcase-image{
+    object-fit: contain; 
+    width: auto;
+    max-height: 55vh;
+    object-position: center;
+    margin: auto;
+}
+
+.figure{
+    object-fit: contain; 
+    width:100%;
+    height:auto;
+    max-height: 50vh;
+    object-position: center;
+    /* top:-100px; */
+}
+
+.showcase-description{
+    /* border:1px solid blue; */
+    height:30px;
+    padding: 9px 0px;
+    font-size:14x;
+    color:#777;
+    font-weight: lighter;
+}
+
+.showcase-image-selector-container{
+    /* border:1px solid blue; */
+    margin: auto 10vw;
+    width:auto;
+    height:20vh;
+    display: flex;
+    
+}
+.showcase-image-selector-image-container{
+    width:100%;
+    height:auto;
+    margin-left:3px;
+    box-shadow: 2px 2px 2px #aaa;
+    overflow: hidden;
+}
+
+.showcase-image-selector-image-container:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #666;
+    transition: .3s all ease;
+}
+
+.showcase-image-selector-image{
+    object-fit: cover; 
+    width: 100%;
+    height: 100%
+}
+
+.project-description-container{
+    max-width:90vw;
+    margin:40px 5vw 100px 20vw;
+}
+
+.project-description{
+    font-size: 20px;
+    line-height:1.5;
+    font-weight: 200;
+}
+
+.project-links {
+    margin-top:10px;
+    margin-bottom:10px;
+    color: royalblue;
+}
+
+.link {
+    font-size: 15px;
+    line-height:1.5;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.pill {
+    background-color: rgb(255,255,255);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 16px;
+    color:#666;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 5px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  
+  .pill:hover {
+    cursor: default;
+  }
+  
+  .pill:hover span {
+    color:rgba(255, 230, 2, 0.75);
+  }
+
+  .pill:hover .check {
+    color:rgba(2, 255, 2, 0.75);
+  }
+
+.scroll {
+    opacity: 0.3;
+    background-color: #555;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    bottom: 190px;
+    align-self: flex-end;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    vertical-align: middle;
+}
+    
+    .scroll:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .arrow-up {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -6px;
+    }
+
+.tftable {
+    font-size:20px;
+    color:#333333;
+    width:100%;
+    margin-top: 5px;
+    border-width: 1px;
+    border-color: #a9a9a9;
+    border-collapse: collapse;
+    }
+.tftable th {
+    font-size:20px;
+    background-color:#b8b8b8;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9a9a9;
+    text-align:left;
+    }
+.tftable tr {
+    background-color:#ffffff;
+    }
+.tftable td {
+    font-size:20px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9a9a9;
+    }
+.tftable tr:hover {
+    background-color:#dfdfdf;
+    }
+
+
+  @media only screen and (max-width: 1100px) {
+
+    .section-nav {
+        display: none;
+    }
+
+    .project-header-container{
+        /* border:1px solid blue; */
+        width:90vw;
+        margin:3vw auto 3vw;
+    }
+    
+    .project-header{
+        width:auto;
+        font-size:6vw;
+        color:#666;
+        font-weight: normal;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    .soon-header{
+        width:auto;
+        align-self: center;
+        font-size:8vw;
+        color:#666;
+        font-weight: normal;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    .project-subheader{
+        width:auto;
+        font-size:5vw;
+        color:#666;
+        font-weight: normal;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    .pill {
+        font-size: 3vw;
+    }
+
+    .link {
+        font-size: 3vw;
+    }
+
+    .showcase-description{
+        /* border:1px solid blue; */
+        height: 3vw;
+        margin: 4vw;
+        padding: 0.9vw 0;
+        font-size: 4vw;
+        color:#777;
+        font-weight: lighter;
+    }
+    
+    .showcase-image-selector-image-container:hover{
+        cursor: pointer;
+        box-shadow: 2px 2px 3px #666;
+        transition: .3s all ease;
+    }
+    
+    .project-description-container{
+        width:90vw;
+        margin:4vw auto 10vw;
+    }
+    
+    .project-description{
+        font-size: 3vw;
+        line-height:1.5;
+        font-weight: 200;
+    }
+
+    .tftable {
+        font-size:2vw;
+        color:#333333;
+        width:100%;
+        margin-top: 5px;
+        border-width: 1px;
+        border-color: #a9a9a9;
+        border-collapse: collapse;
+        }
+
+    .tftable th {
+        font-size:2vw;
+        background-color:#b8b8b8;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #a9a9a9;
+        text-align:left;
+        }
+
+    .tftable td {
+        font-size:2vw;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #a9a9a9;
+        }
+}

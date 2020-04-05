@@ -1,54 +1,50 @@
-import React, { Component } from "react";
-import "./ScrollToTop.css";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
 
-export class ScrollToTop extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      is_visible: false
-    };
-  }
+const useStyles = makeStyles(theme => ({
+  root: {
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
+}));
 
-  componentDidMount() {
-    var scrollComponent = this;
-    document.addEventListener("scroll", function(e) {
-      scrollComponent.toggleVisibility();
-    });
-  }
+function ScrollTop(props) {
+  const { children, window } = props;
+  const classes = useStyles();
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
 
-  toggleVisibility() {
-    if (window.pageYOffset > 75) {
-      this.setState({
-        is_visible: true
-      });
-    } else {
-      this.setState({
-        is_visible: false
-      });
+  const handleClick = event => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#topSection');
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  }
+  };
 
-  scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-  render() {
-    const { is_visible } = this.state;
-    return (
-      <div>
-        {is_visible && (
-          <div onClick={() => this.scrollToTop()}>
-              <a className="scroll-to-top">
-                <i class="fa fa-arrow-up"></i>
-              </a>
-          </div>
-        )}
+  return (
+    <Zoom in={trigger}>
+      <div onClick={handleClick} role="presentation" className={classes.root}>
+        {children}
       </div>
-    );
-  }
+    </Zoom>
+  );
 }
 
-export default ScrollToTop
+export default function BackToTop(props) {
+  return (
+    <ScrollTop {...props}>
+      <Fab color="secondary" size="small" aria-label="scroll back to top">
+        <KeyboardArrowUpIcon />
+      </Fab>
+    </ScrollTop>
+  );
+}

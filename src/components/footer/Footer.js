@@ -1,12 +1,13 @@
 import React from 'react';
 import Resume from './../../docs/jessie-boudreau-resume.pdf'
 import './Footer.css';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import TreeNav from './../../components/TreeNav/TreeNav'
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="grey darken-2" className="footer-container font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
+    <MDBFooter color="grey darken-2" className="ont-small pt-4 mt-4">
+      <MDBContainer fluid className="footer-container text-center text-md-left">
         <MDBRow>
           <MDBCol md="3">
             <h5 className="title">Education</h5>
@@ -58,18 +59,12 @@ const FooterPage = () => {
                 </a>
             </ul>
           </MDBCol>
-          <MDBCol md="3" className="project-list">
-            <h5 className="title">Projects</h5>
+          <MDBCol md="3">
+            <h5 className="title">Site Map</h5>
             <hr size="6" width="100%" align="left" color="white"></hr>
-            <a className="link" href="/atmospheric-water-generator">Atmospheric Water Generator</a><br/>
-            <a className="link" href="/cell-board-tester">Battery Cell Board Tester</a><br/>
-            <a className="link" href="/coming-soon">Capstone Battery Design</a><br/>
-            <a className="link" href="/coming-soon">Charging Cart</a><br/>
-            <a className="link" href="/coming-soon">Electric Vehicle Charger</a><br/>
-            <a className="link" href="/coming-soon">Inverter & MCU Enclosure</a><br/>
-            <a className="link" href="/accumulator">Electric Accumulator</a><br/>
-            <a className="link" href="/wiring-harness">Wiring Harness</a><br/>
-            <br/>
+            <div className="site-map">
+              <TreeNav/>
+            </div>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

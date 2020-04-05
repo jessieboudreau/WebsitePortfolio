@@ -1,0 +1,23 @@
+.tabs-container {
+    /* border:1px solid blue; */
+    width:80%;
+    height: auto;
+    /* margin:auto; */
+    margin:20px auto 40px auto;
+    /* float: center; */
+}
+
+.tab-name {
+    font-size:20px;
+}
+
+.tab-panel {
+    margin: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    .tab-name {
+        font-size:3vw;
+        justify-content: space-evenly;
+    }
+}

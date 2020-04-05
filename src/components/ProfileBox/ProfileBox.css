@@ -23,7 +23,7 @@
         }
         
         .profile-box-name{
-            font-size:70px;
+            font-size:65px;
             width:100%;
             float:left;
             /* border:1px solid green; */
@@ -59,7 +59,7 @@
             }
             
             .profile-box-name {
-                font-size:10vw;
+                font-size:8vw;
                 width: 100%;
                 float:left;
                 font-family: 'Rajdhani', sans-serif;

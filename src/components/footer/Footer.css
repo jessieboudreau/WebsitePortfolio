@@ -32,3 +32,8 @@
   width: 100%;
   margin: none;
 }
+
+.site-map {
+  overflow: auto;
+  overflow-x: hidden;
+}
