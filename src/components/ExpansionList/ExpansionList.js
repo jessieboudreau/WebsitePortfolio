@@ -87,7 +87,7 @@ export default function DetailedExpansionPanel() {
             <Typography className={classes.secondaryHeading}>PDF</Typography>
           </div>
           <div className={classes.column}>
-            <Typography className={classes.secondaryHeading}>March 20th, 2020</Typography>
+            <Typography className={classes.secondaryHeading}>03/20/2020</Typography>
           </div>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.details}>
