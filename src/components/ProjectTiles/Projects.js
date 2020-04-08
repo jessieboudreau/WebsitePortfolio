@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import ProjectLink from './ProjectLink';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import './Projects.css';
 
 // Project thumbnails
@@ -28,7 +34,7 @@ const buttons = [
         btnClass: 'btn'},
 ];
 
-const projects = [
+export const projects = [
     {
         id: 0,
         name: "Electric Vehicle Battery",
@@ -95,15 +101,25 @@ const projects = [
     //     thumbnail: cyclerThumbnail},
 ];
 
-
 export class Projects extends Component {
     constructor(props){
         super(props)
 
         this.state = {
             filteredProjects: projects,
+            formFill: 'Show All',
         }
     }
+
+    useStyles = makeStyles((theme) => ({
+        formControl: {
+          margin: theme.spacing(1),
+          minWidth: 240,
+        },
+        selectEmpty: {
+          marginTop: theme.spacing(2),
+        },
+    }));
 
     filterProjects(group) {
         // Filter for 'Conestoga College' projects
@@ -173,8 +189,39 @@ export class Projects extends Component {
                                 this.filterProjects(item.label);
                                 }}>
                                 {item.label}
-                            </button>))}
-                            
+                            </button>))}    
+                    </div>
+                    <div>
+                        {/* <FormControl variant="outlined" className={this.useStyles.formControl}>
+                            <InputLabel id="demo-simple-select-outlined-label">Group</InputLabel>
+                            <Select
+                                labelId="demo-simple-select-outlined-label"
+                                id="demo-simple-select-outlined"
+                                onChange={this.handleChange}
+                                label=""
+                                autoWidth='true'
+                            >
+                            <a onclick={() => {
+                                this.setState({
+                                    filteredProjects: projects
+                                })}}>
+                                <MenuItem>Show All</MenuItem>
+                            </a>
+                            {buttons.map(item => (
+                                <a onclick={() => {
+                                    this.setState({
+                                        filteredProjects: projects,
+                                        formFill: this.label,
+                                    })}}
+                                >
+                                <MenuItem>
+                                    {item.label}
+                                </MenuItem>
+                                </a>
+                            ))} 
+                            </Select>
+                            <FormHelperText>Filter</FormHelperText>
+                        </FormControl> */}
                     </div>
                     <div>
                         {this.state.filteredProjects.length !== 0 ? (

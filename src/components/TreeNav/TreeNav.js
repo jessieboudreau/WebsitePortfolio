@@ -5,6 +5,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
 import Resume from './../../docs/jessie-boudreau-resume.pdf';
+import { docs } from './../../components/ExpansionList/ExpansionList';
+import { projects } from './../../components/ProjectTiles/Projects'
 
 const useStyles = makeStyles({
   root: {
@@ -41,36 +43,19 @@ export default function ControlledTreeView() {
         <TreeItem nodeId="1" label="Home" />
       </a>
       <TreeItem nodeId="2" label="Projects">
-        <a href="/projects/conestoga-college/atmospheric-water-generator">
-          <TreeItem nodeId="3" label="Atmospheric Water Generator" />
-        </a>
-        <a href="/projects/mac-formula-electric/cell-board-tester">
-          <TreeItem nodeId="4" label="Battery Cell Board Tester" />
-        </a>
-        {/* <a href="/projects/mac-formula-electric/battery-cycler">
-          <TreeItem nodeId="5" label="Battery Cycler" />
-        </a> */}
-        {/* <a href="/projects/mcmaster-university/battery-design">
-          <TreeItem nodeId="6" label="Capstone Battery Design" />
-        </a>
-        <a href="/projects/mac-formula-electric/charging-cart">
-          <TreeItem nodeId="7" label="Charging Cart" />
-        </a> */}
-        {/* <a href="/projects/mac-formula-electric/ev-charger">
-          <TreeItem nodeId="8" label="Electric Vehicle Charger" />
-        </a> */}
-        {/* <a href="/projects/mac-formula-electric/inverter-mcu-enclosure">
-          <TreeItem nodeId="9" label="Inverter & MCU Enclosure" />
-        </a> */}
-        <a href="/projects/mac-formula-electric/ev-battery">
-          <TreeItem nodeId="10" label="Electric Accumulator" />
-        </a>
+      {projects.map(item => ( 
+          <a href={item.link} target="_blank">
+            <TreeItem nodeId={item.id} label={item.name} />
+          </a>
+        ))}
       </TreeItem>
-      <TreeItem nodeId="11" label="Documents">
-        <a href={Resume} target="_blank">
-          <TreeItem nodeId="12" label="Resume" />
-        </a>
-      </TreeItem>
+        <TreeItem nodeId="3" label="Documents">
+        {docs.map(item => ( 
+          <a href={item.link} target="_blank">
+            <TreeItem nodeId={item.id} label={item.title} />
+          </a>
+        ))}
+        </TreeItem>
     </TreeView>
   );
 }
