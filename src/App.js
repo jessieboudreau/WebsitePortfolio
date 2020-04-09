@@ -4,12 +4,15 @@ import { BrowserRouter as Router,  Route} from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
-import BatteryDesign from './pages/Projects/AccumulatorMK1';
+import batteryDesign from './pages/Projects/AccumulatorMK1';
 import cellBoard from './pages/Projects/CellBoardTester';
 import waterGenerator from './pages/Projects/AtmosphericWaterGenerator';
-import CapstoneBattery from './pages/Projects/CapstoneBattery';
+import capstoneBattery from './pages/Projects/CapstoneBattery';
 import ScrollToTopBtn from "./components/ScrollToTop/ScrollToTop";
-import comingSoon from "./pages/Projects/ComingSoon";
+import inverterEnclosure from "./pages/Projects/InverterEnclosure";
+import chargerEnclosure from "./pages/Projects/ChargerEnclosure";
+import chargingCart from "./pages/Projects/ChargingCart";
+import batteryCycler from "./pages/Projects/BatteryCycler";
 
 function App() {
   return (
@@ -23,16 +26,22 @@ function App() {
                 component={Home}/>
 
                 {/* Projects paths */}
-              <Route path="/projects/mac-formula-electric/ev-battery" 
-                component={BatteryDesign} />
-              <Route path="/projects/mcmaster-university/capstone-battery" 
-                component={CapstoneBattery} />
-              <Route path="/projects/mac-formula-electric/cell-board-tester" 
+              <Route path="/projects/mac-formula-electric/ev-battery/" 
+                component={batteryDesign} />
+              <Route path="/projects/mac-formula-electric/charging-cart/"
+                component={chargingCart} />
+              <Route path="/projects/mac-formula-electric/cell-board-tester/" 
                 component={cellBoard} />
-              <Route path="/projects/conestoga-college/atmospheric-water-generator" 
+              <Route path="/projects/mac-formula-electric/inverter-enclosure/" 
+                component={inverterEnclosure} />
+              <Route path="/projects/mac-formula-electric/charger-enclosure/" 
+                component={chargerEnclosure} />
+              <Route path="/projects/mcmaster/capstone/" 
+                component={capstoneBattery} />
+              <Route path="/projects/mcmaster/battery-cycler/" 
+                component={batteryCycler} />
+              <Route path="/projects/conestoga/atmospheric-water-generator/" 
                 component={waterGenerator} />
-              <Route path="/coming-soon"
-                component={comingSoon} />   
             </div>
           </Router>
           <Footer/>

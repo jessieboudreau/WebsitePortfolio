@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import original from './../../img/battery-design/original.png';
-import cellsInstalled from './../../img/battery-design/cells-installed.jpg';
-import chamber from './../../img/battery-design/chamber.png';
-import fixture from './../../img/battery-design/inside-chamber.png';
-import assembled from './../../img/battery-design/assembled.jpg';
-import voltVcap from './../../img/battery-design/voltage-v-cap.png';
-import resVsoc from './../../img/battery-design/res-v-cap.png';
+import original from './../../img/Accumulator/original.png';
+import cellsInstalled from './../../img/Accumulator/cells-installed.jpg';
+import chamber from './../../img/Accumulator/chamber.png';
+import fixture from './../../img/Accumulator/inside-chamber.png';
+import assembled from './../../img/Accumulator/assembled.jpg';
+import voltVcap from './../../img/Accumulator/voltage-v-cap.png';
+import resVsoc from './../../img/Accumulator/res-v-cap.png';
 import ProjectPage from './ProjectPage';
 
 export class BatteryMK1 extends Component {
@@ -79,7 +79,12 @@ export class BatteryMK1 extends Component {
                         <img src={resVsoc} className="figure"></img>
                         <br/><br/>
                         <p className="project-description">
-                            The data in Figure 2 shows that the resistance of the cell begins to increase at approximately 70% depth of discharge (DOD). The rate at which the resistance increases is proportional to the rate of discharge. Since the rate of discharge increases with the rate of vehicle acceleration, this information tells us that more aggressive driving will result in more losses and, therefore, shorter drive-times. Table 1 shows data for various drive-cycles - with UDDS being the most conservative and US06 being the most aggressive. The speed-time plots for each drive-cycle can be found in Figures 3-6.<br/>
+                            The data in Figure 2 shows that the resistance of the cell begins to increase at approximately 70% 
+                            depth of discharge (DOD). The rate at which the resistance increases is proportional to the rate of 
+                            scharge. Since the rate of discharge increases with the rate of vehicle acceleration, this information 
+                            tells us that more aggressive driving will result in more losses and, therefore, shorter drive-times. 
+                            Table 1 shows data for various drive-cycles - with UDDS being the most conservative and US06 being the 
+                            most aggressive.<br/>
                         </p>
                         <div>
                             <h1 className="project-subheader" id="table-1">Table 1: Driving schedule test results</h1>
@@ -95,12 +100,13 @@ export class BatteryMK1 extends Component {
                         <p className="project-description">
                             Three options for accumulator cooling were investigated, including forced air cooling, composite phase change materials, and liquid cooling.<br/> <br/> 
                             After careful consideration of the three options, air cooling was chosen to maintain the thermal performance of the accumulator. The combination of low-weight, cost, and simplicity outweighed any potential drawbacks in performance <br/><br/>  
-                            Below is a video of the fan controls being tested!<br/>
+                            Below is a video of the fan controls on the Accumulator Control Board (ACB) being tested!<br/>
                         </p>
                         <h1 className="project-subheader" id="video-1">Accumulator Fan Test</h1>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://youtube.com/embed/TYOCjgeFkfI"></iframe>
                         </div>
+                        <br/>
                     </div>
                 </div>
             ]}

@@ -25,7 +25,7 @@ import './ExpansionList.css';
 export const docs = [
   {
     id: '1',
-    title: 'Resume',
+    title: 'Resume ',
     type: 'PDF',
     icon: 'fas fa-lock',
     date: '03/20/2020',
@@ -57,7 +57,7 @@ export const docs = [
   },
   {
     id: '5',
-    title: 'Proof of Program Completon | Conestoga',
+    title: 'Proof of Program Completion | Conestoga',
     type: 'PDF',
     icon: 'fas fa-lock',
     date: '05/17/2017',
@@ -134,7 +134,7 @@ export default function DetailedExpansionPanel() {
             <Typography className={classes.heading}>Title</Typography>
           </div>
           <div className={classes.column}>
-            <Typography className={classes.heading}>Type</Typography>
+            {/* <Typography className={classes.heading}>Type</Typography> */}
           </div>
           <div className={classes.column}>
             <Typography className={classes.heading}>Date Issued</Typography>
@@ -156,7 +156,7 @@ export default function DetailedExpansionPanel() {
               </Typography>
             </div>
             <div className={classes.column}>
-              <Typography className={classes.secondaryHeading}>{item.type}</Typography>
+              {/* <Typography className={classes.secondaryHeading}>{item.type}</Typography> */}
             </div>
             <div className={classes.column}>
               <Typography className={classes.secondaryHeading}>{item.date}</Typography>

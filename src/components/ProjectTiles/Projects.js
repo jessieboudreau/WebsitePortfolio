@@ -40,65 +40,73 @@ export const projects = [
         name: "Electric Vehicle Battery",
         group: "MAC Formula Electric",
         type: "modelling",
-        link: "/projects/mac-formula-electric/ev-battery",
+        link: "/projects/mac-formula-electric/ev-battery/",
         title: "Battery Design",
-        thumbnail: batterydesignThumbnail},
+        thumbnail: batterydesignThumbnail
+    },
     {   
         id: 1,
         name: "Battery Cell Board Tester",
         group: "MAC Formula Electric",
         type: "modelling",
-        link: "/projects/mac-formula-electric/cell-board-tester",
+        link: "/projects/mac-formula-electric/cell-board-tester/",
         title: "PCB Development",
-        thumbnail: bmstestingboardThumbnail},
+        thumbnail: bmstestingboardThumbnail
+    },
     {
         id: 2,
         name: "Atmospheric Water Generator",
         group: "Conestoga College",
         type: "capstone",
-        link: "/projects/conestoga-college/atmospheric-water-generator",
+        link: "/projects/conestoga/atmospheric-water-generator/",
         title: "Atmospheric Water Generator",
-        thumbnail: awgprojectThumbnail},
+        thumbnail: awgprojectThumbnail
+    },
     // {
     //     id: 3,
     //     name: "Capstone Battery Design",
     //     group: "McMaster University",
     //     type: "modelling",
-    //     link: "/coming-soon",
+    //     link: "/projects/mcmaster/capstone/",
     //     title: "Battery Design",
-    //     thumbnail: capstoneThumbnail},
+    //     thumbnail: capstoneThumbnail
+    // },
     // {    
     //     id: 4,
     //     name: "Inverter & MCU Enclosure",
     //     group: "MAC Formula Electric",
     //     type: "modelling",
-    //     link: "/coming-soon",
+    //     link: "/projects/mac-formula-electric/inverter-enclosure/",
     //     title: "Battery Design",
-    //     thumbnail: inverterThumbnail},
-    // {
-    //     id: 5,
-    //     name: "Charging Cart",
-    //     group: "MAC Formula Electric",
-    //     type: "modelling",
-    //     link: "/coming-soon",
-    //     title: "Battery Design",
-    //     thumbnail: cartThumbnail},
+    //     thumbnail: inverterThumbnail
+    // },
+    {
+        id: 5,
+        name: "Charging Cart",
+        group: "MAC Formula Electric",
+        type: "modelling",
+        link: "/projects/mac-formula-electric/charging-cart/",
+        title: "Battery Design",
+        thumbnail: cartThumbnail
+    },
     // {    
     //     id: 6,
     //     name: "Electric Vehicle Charger",
     //     group: "MAC Formula Electric",
     //     type: "modelling",
-    //     link: "/coming-soon",
+    //     link: "/projects/mac-formula-electric/charger-enclosure/",
     //     title: "Battery Design",
-    //     thumbnail: chargerThumbnail},
-    // {    
-    //     id: 7,
-    //     name: "Battery Cycler",
-    //     group: "McMaster University",
-    //     type: "modelling",
-    //     link: "/coming-soon",
-    //     title: "Battery Design",
-    //     thumbnail: cyclerThumbnail},
+    //     thumbnail: chargerThumbnail
+    // },
+    {    
+        id: 7,
+        name: "Battery Cycler",
+        group: "McMaster University",
+        type: "modelling",
+        link: "/projects/mcmaster/battery-cycler/",
+        title: "Battery Design",
+        thumbnail: cyclerThumbnail
+    },
 ];
 
 export class Projects extends Component {

@@ -47,7 +47,7 @@ export class ProjectPage extends Component {
 
                 <div className="showcase-container">
                     <div className="project-header-container">
-                        <h1 className="project-header" id="header">
+                        <h1 className="project-header" id="showcase">
                             {this.props.title}
                         </h1>
                     </div>
@@ -58,7 +58,7 @@ export class ProjectPage extends Component {
                     <div className="showcase-image-selector-container">
                         {this.state.images.map(img => (
                             <div className="showcase-image-selector-image-container" onClick={this.updateShowcase.bind(this,img)}>
-                                <a href="#header">
+                                <a href="#showcase">
                                     <img src={img.image} className="showcase-image-selector-image"/>
                                 </a>
                             </div>
