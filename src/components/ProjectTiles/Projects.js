@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import ProjectLink from './ProjectLink';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import InputBase from '@material-ui/core/InputBase';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import Button from '@material-ui/core/Button';
 import './Projects.css';
 
 // Project thumbnails
@@ -109,29 +112,105 @@ export const projects = [
     },
 ];
 
+const getGroup = [
+        {
+            name: 'All Teams', 
+        },
+        {
+            name: 'Conestoga College', 
+        },
+        {
+            name: 'MAC Formula Electric', 
+        },
+        {
+            name: 'McMaster University', 
+        },
+    ]
+
+const useStyles = makeStyles((theme) => ({
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 120,
+    },
+    selectEmpty: {
+        marginTop: theme.spacing(2),
+    },
+    }));
+
 export class Projects extends Component {
     constructor(props){
         super(props)
 
         this.state = {
             filteredProjects: projects,
-            formFill: 'Show All',
+            data: getGroup,
+            groupSelected: 'All Teams',
+            nameSelected: 'All Names',
         }
     }
 
-    useStyles = makeStyles((theme) => ({
-        formControl: {
-          margin: theme.spacing(1),
-          minWidth: 240,
-        },
-        selectEmpty: {
-          marginTop: theme.spacing(2),
-        },
-    }));
+    renderOptions() {
+        return this.state.data.map((dt, i) => {
+            return (
+                    <MenuItem
+                        label="Select a group"
+                        value={dt.name}
+                        key={i} 
+                        name={dt.name}>
+                            {dt.name}
+                    </MenuItem>
+            );
+        });
+    }
 
-    filterProjects(group) {
+    handleGroupChange = event => {
+        this.setState({ 
+            groupSelected: event.target.textContent, 
+            name: event.target.name,
+            nameSelected: 'All Names',
+        }, this.filterProjectsByGroup(event.target.textContent));
+    };
+
+    handleNameChange = event => {
+        this.setState({ 
+            nameSelected: event.target.textContent, 
+            name: event.target.name,
+        }, this.filterProjectsByName(event.target.textContent));
+    };
+
+    filterProjectsByName(value) {
+
+        // Filter for 'All' projects
+        if (value === 'All Names') {
+            this.setState({
+                filteredProjects: projects,
+            })
+        }
+        else {
+            let temp = [];
+            for (let p of projects) {
+                if (p.name === value) {
+                    temp.push(p);
+                };
+                this.setState({
+                    nameSelected: value,
+                    filteredProjects: temp,
+                });
+            }
+        }
+    }
+
+    filterProjectsByGroup(filter) {
+
+        // Filter for 'All' projects
+        if (filter === 'All Teams') {
+            this.setState({
+                filteredProjects: projects,
+                nameSelected: 'All Names',
+            })
+        }
         // Filter for 'Conestoga College' projects
-        if (group === 'Conestoga College') {
+        else if (filter === 'Conestoga College') {
             let temp = [];
             for (let p of projects) {
               if (p.group === 'Conestoga College') {
@@ -143,7 +222,7 @@ export class Projects extends Component {
             });
         }
         // Filter for 'MAC Formula Electric' projects
-        else if (group === 'MAC Formula Electric') {
+        else if (filter === 'MAC Formula Electric') {
             let temp = [];
             for (let p of projects) {
               if (p.group === 'MAC Formula Electric') {
@@ -155,7 +234,7 @@ export class Projects extends Component {
             });
         }
         // Filter for 'McMaster University' projects
-        else if (group === 'McMaster University') {
+        else if (filter === 'McMaster University') {
             let temp = [];
             for (let p of projects) {
               if (p.group === 'McMaster University') {
@@ -171,67 +250,61 @@ export class Projects extends Component {
     render() {
 
         return (
-                <div className="project-section">
-                    {/* <div className="project-name-container">
-                        <h1 className="title-name">Projects</h1>
-                    </div> */}
-                    <div className="my-btn-container">
+            <div>
 
-                        {/* Display 'Show All' button */}
-                        <button
-                            className="btn" 
-                            onClick={() => {
-                            this.setState({
-                                filteredProjects: projects
-                            });
-                            }}>Show All</button>
+                <div className="selection-container">
 
-                        {/* Display other filter buttons */}
-                        {buttons.map(item => (
-                            <button
-                                variant="outline-primary"
-                                key={item.id}
-                                className={item.btnClass}
-                                type="button"
-                                onClick={() => {
-                                this.filterProjects(item.label);
-                                }}>
-                                {item.label}
-                            </button>))}    
-                    </div>
-                    <div>
-                        {/* <FormControl variant="outlined" className={this.useStyles.formControl}>
-                            <InputLabel id="demo-simple-select-outlined-label">Group</InputLabel>
-                            <Select
+                    {/* Filter dropdown menu */}
+                    <span>
+                        <FormControl variant="outlined" className={useStyles.formControl}>
+                            <Autocomplete
                                 labelId="demo-simple-select-outlined-label"
                                 id="demo-simple-select-outlined"
-                                onChange={this.handleChange}
-                                label=""
-                                autoWidth='true'
-                            >
-                            <a onclick={() => {
-                                this.setState({
-                                    filteredProjects: projects
-                                })}}>
-                                <MenuItem>Show All</MenuItem>
-                            </a>
-                            {buttons.map(item => (
-                                <a onclick={() => {
-                                    this.setState({
-                                        filteredProjects: projects,
-                                        formFill: this.label,
-                                    })}}
-                                >
-                                <MenuItem>
-                                    {item.label}
-                                </MenuItem>
-                                </a>
-                            ))} 
-                            </Select>
-                            <FormHelperText>Filter</FormHelperText>
-                        </FormControl> */}
-                    </div>
-                    <div>
+                                searchText={this.state.groupSelected}
+                                onChange={this.handleGroupChange}
+                                options={this.state.data}
+                                getOptionLabel={(option) => option.name}
+                                style={{ width: 250, margin: 10 }}
+                                disableClearable={true}
+                                renderInput={(params) => <TextField {...params} value={this.state.groupSelected} label="Filter by team..." variant="outlined" />}
+                            />
+                        </FormControl>
+                    </span>
+
+                    {this.state.groupSelected === "All Teams"
+                        ?   <span className="select">
+                            </span>
+                        :   <span>
+                                <FormControl className={useStyles.formControl}>
+                                    <Autocomplete
+                                        id="combo-box-demo"
+                                        onChange={this.handleNameChange}
+                                        options={this.state.filteredProjects}
+                                        getOptionLabel={(option) => option.name}
+                                        style={{ minWidth: 250, margin: 10 }}
+                                        searchText={this.state.nameSelected}
+                                        disableClearable={true}
+                                        renderInput={(params) => <TextField {...params} label="Filter by name..." variant="outlined" />}
+                                        />
+                                </FormControl>
+                            </span>
+                    }
+
+                    <span>
+                        <Button 
+                            onClick={() => {this.setState({groupSelected: "All Teams", nameSelected: "All Names", filteredProjects: projects},() => this.forceUpdate())}}
+                            style={{ height: 56, margin: 10 }} 
+                            size="large" 
+                            variant="outlined">
+                                Reset
+                        </Button>
+                    </span>
+                </div>
+                
+                <div className="project-section">
+
+                    {/* Display projects */}
+                    <div>  
                         {this.state.filteredProjects.length !== 0 ? (
                             <div className="projects-container">
                                 {this.state.filteredProjects.map(project => (
@@ -248,6 +321,7 @@ export class Projects extends Component {
                         )}
                     </div>
                 </div>
+            </div>
         )
     }
 }

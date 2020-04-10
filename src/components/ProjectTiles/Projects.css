@@ -59,6 +59,10 @@
     padding-top: 30px;
 }
 
+.selection-container {
+    padding:20px;
+    border-bottom: 1px solid #ddd;
+}
 
 @media only screen and (max-width: 1100px) {
     .projects-container {
