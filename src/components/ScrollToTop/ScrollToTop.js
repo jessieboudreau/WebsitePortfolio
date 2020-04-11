@@ -42,8 +42,8 @@ function ScrollTop(props) {
 export default function BackToTop(props) {
   return (
     <ScrollTop {...props}>
-      <Fab color="secondary" size="small" aria-label="scroll back to top">
-        <KeyboardArrowUpIcon />
+      <Fab style={{ background: "#bdbdbd" }} size="small" aria-label="scroll back to top">
+        <KeyboardArrowUpIcon style={{ color: "#202020" }} />
       </Fab>
     </ScrollTop>
   );

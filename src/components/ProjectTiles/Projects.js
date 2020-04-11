@@ -9,6 +9,7 @@ import InputBase from '@material-ui/core/InputBase';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Button from '@material-ui/core/Button';
+import FilterListIcon from '@material-ui/icons/FilterList';
 import './Projects.css';
 
 // Project thumbnails
@@ -204,41 +205,44 @@ export class Projects extends Component {
         if (e.keyCode === 13) {
             this.filterProjectsByGroup(e.target.value);
             this.setState({
-            // groupSelected: e.target.value,
+            groupSelected: e.target.value,
             keyStroke: 0,
-        });
-            // this.forceUpdate()
+        },
+            this.forceUpdate());
         }
     }
 
     handleNameOnKeyPress = e => {
+        this.setState({
+            nameSelected: e.target.value,
+            keyStroke: 0,
+        },
+            this.forceUpdate())
         if (e.keyCode === 13) {
             this.filterProjectsByName(e.target.value);
-            this.setState({
-            // nameSelected: e.target.value,
-            keyStroke: 0,
-        });
-            this.forceUpdate()
         }
     }
 
-    filterProjectsByName(value) {
+    filterProjectsByName(filter) {
 
         // Filter for 'All' projects
-        if (value === 'All Names') {
+        if ((filter === 'All Names') || (filter === '' && this.state.keyStroke === 13)) {
             this.setState({
                 filteredProjects: projects,
+                groupSelected: "All Teams", 
+                nameSelected: "All Names", 
+                filterGroupKey: this.state.filterGroupKey + 1,
             },
             this.forceUpdate())
         }
         else {
             let temp = [];
             for (let p of projects) {
-                if (p.name === value) {
+                if (p.name === filter) {
                     temp.push(p);
                 };
                 this.setState({
-                    nameSelected: value,
+                    nameSelected: filter,
                     filteredProjects: temp,
                 },
                 this.forceUpdate());
@@ -249,10 +253,11 @@ export class Projects extends Component {
     filterProjectsByGroup(filter) {
 
         // Filter for 'All' projects
-        if ((filter === 'All Teams') || (filter === '' && !this.state.keyStroke === 13)) {
+        if (filter === 'All Teams') {
             this.setState({
                 filteredProjects: projects,
-                nameSelected: 'All Names',
+                groupSelected: "All Teams", 
+                nameSelected: "All Names",
                 filterNameKey: this.state.filterNameKey + 1,
             },
             this.forceUpdate())
@@ -323,13 +328,14 @@ export class Projects extends Component {
                                 noOptionsText="No teams..."
                                 getOptionLabel={(option) => option.name}
                                 searchText={this.state.groupSelected}
-                                style={{ width: 250, marginTop: 10, marginBottom: 10, marginRight: 10  }}
+                                style={{ width: 250, marginTop: 10, marginBottom: 10, marginRight: 10, }}
                                 renderInput={(params) => 
                                     <TextField 
                                         {...params}
-                                        onKeyDown={(event) => this.setKeyStroke(event)}
+                                        onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
                                         onKeyUp={(event) => this.handleGroupOnKeyPress(event)}
-                                        searchText={this.state.groupSelected} 
+                                        searchText={this.state.groupSelected}
+                                        icon={<FilterListIcon />} 
                                         label="Filter by team..." 
                                         variant="outlined" />}
                             />
@@ -354,14 +360,14 @@ export class Projects extends Component {
                                         searchText={this.state.nameSelected}
                                         noOptionsText="No projects..."
                                         // autoSelect
-                                        style={{ minWidth: 250, marginTop: 10, marginBottom: 10, marginRight: 10 }}
+                                        style={{ minWidth: 250, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
                                         renderInput={(params) => 
                                             <TextField 
                                                 {...params}
-                                                onKeyDown={(event) => this.setKeyStroke(event)}
+                                                onKeyDown={(event) => this.handleNameOnKeyPress(event)}
                                                 onKeyUp={(event) => this.handleNameOnKeyPress(event)}
                                                 searchText={this.state.nameSelected} 
-                                                label="Filter by name..." 
+                                                label="Filter by name..."
                                                 variant="outlined" />}
                                         />
                                 </FormControl>

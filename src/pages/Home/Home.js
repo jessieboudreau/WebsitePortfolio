@@ -11,6 +11,10 @@ import ProfileBox from '../../components/ProfileBox/ProfileBox';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import ProjectTiles from '../../components/ProjectTiles/ProjectTiles';
 import DocList from '../../components/ExpansionList/ExpansionList';
+import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
+import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import 'react-web-tabs/dist/react-web-tabs.css';
 import './Home.css'; 
 
@@ -76,7 +80,7 @@ export default function ScrollableTabsButtonAuto() {
         {/* Tab View section */}
         <div className="tabs-container">
           <Box
-            boxShadow={2}
+            boxShadow={3}
             bgcolor="background.primary"
             > 
             <AppBar
@@ -93,18 +97,19 @@ export default function ScrollableTabsButtonAuto() {
                   style={{ minHeight: 56 }}
                   onChange={handleChange}
                   // indicatorColor="grey800"
-                  inkBarStyle={{ backgroud: "grey400" }}
-                  textColor="grey400"
+                  inkBarStyle={{ color: "#202020" }}
                   variant="scrollable"
                   scrollButtons="auto"
                   aria-label="scrollable auto tabs example"
                   >
-                <Tab style={{ minHeight: 55 }} label="Projects" {...a11yProps(0)} />
-                <Tab style={{ minHeight: 55 }} label="Documents" {...a11yProps(1)} />
+                <Tab style={{ minHeight: 55 }} label="Projects" icon={<WorkOutlineOutlinedIcon />} {...a11yProps(0)} />
+                <Tab style={{ minHeight: 55 }} label="Documents" icon={<InsertDriveFileOutlinedIcon />} {...a11yProps(1)} />
+              {/* <Tab style={{ minHeight: 55 }} label="Blog" icon={<ChatBubbleOutlineIcon />} {...a11yProps(1)} />
+                <Tab style={{ minHeight: 55 }} label="Contact" icon={<MailOutlineIcon/>} {...a11yProps(1)} /> */}
                 </Tabs>
             </AppBar>
             <SwipeableViews
-                axis={theme.direction === 'rtl' ? 'x' : 'x'}
+                axis={theme.direction === 'rtl' ? 'x-reversible' : 'x'}
                 index={value}
                 onChangeIndex={handleChangeIndex}
                 >

@@ -6,7 +6,7 @@ import TreeNav from './../../components/TreeNav/TreeNav'
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="grey darken-2" className="ont-small pt-4 mt-4">
+    <MDBFooter color="grey darken-2" className="ont-small pt-4">
       <MDBContainer fluid className="footer-container text-center text-md-left">
         <MDBRow>
           <MDBCol md="3">
@@ -25,6 +25,7 @@ const FooterPage = () => {
               Graduated: Spring 2017
             </p>
           </MDBCol>
+          
           <MDBCol md="3">
           <h5 className="title">Experience</h5>
           <hr size="6" width="100%" align="left" color="white"></hr>

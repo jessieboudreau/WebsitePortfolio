@@ -3,7 +3,7 @@
 }
 
 .project-link-container{
-    flex: 2;
+    flex: 1;
     width:320px;
     height:320px;
     /* margin:auto; */
@@ -68,8 +68,8 @@
 
 @media only screen and (max-width: 900px) {
     .project-link-container{
-        width:12rem;
-        height:12rem;
+        width:15rem;
+        height:15rem;
         margin-left:30px;
     }
 
