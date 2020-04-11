@@ -1,7 +1,8 @@
 .tabs-container {
     /* border:1px solid blue; */
-    width:80%;
+    width:85%;
     height: auto;
+    /* border-radius: 10px; */
     /* margin:auto; */
     margin:20px auto 40px auto;
     /* float: center; */
@@ -19,5 +20,10 @@
     .tab-name {
         font-size:3vw;
         justify-content: space-evenly;
+    }
+
+    .tabs-container {
+        width:100%;
+        margin:20px auto 20px auto;
     }
 }

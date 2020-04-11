@@ -144,6 +144,9 @@ export class Projects extends Component {
         this.state = {
             filteredProjects: projects,
             data: getGroup,
+            keyStroke: 0,
+            filterGroupKey: 0,
+            filterNameKey: 0,
             groupSelected: 'All Teams',
             nameSelected: 'All Names',
         }
@@ -163,11 +166,18 @@ export class Projects extends Component {
         });
     }
 
+    setKeyStroke = event => {
+        this.setState({
+            keyStroke: event.keyCode,
+        });
+    }
+
     handleGroupChange = event => {
         this.setState({ 
             groupSelected: event.target.textContent, 
             name: event.target.name,
-            nameSelected: 'All Names',
+            // nameSelected: 'All Names',
+            filterNameKey: this.state.filterNameKey + 1,
         }, this.filterProjectsByGroup(event.target.textContent));
     };
 
@@ -178,13 +188,48 @@ export class Projects extends Component {
         }, this.filterProjectsByName(event.target.textContent));
     };
 
+    handleReset() {
+        this.setState({
+            keyStroke: 0,
+            groupSelected: "All Teams", 
+            nameSelected: "All Names", 
+            filteredProjects: projects,
+            filterGroupKey: this.state.filterGroupKey + 1,
+            filterNameKey: this.state.filterNameKey + 1,
+        },
+        this.forceUpdate());
+    }
+
+    handleGroupOnKeyPress = e => {
+        if (e.keyCode === 13) {
+            this.filterProjectsByGroup(e.target.value);
+            this.setState({
+            // groupSelected: e.target.value,
+            keyStroke: 0,
+        });
+            // this.forceUpdate()
+        }
+    }
+
+    handleNameOnKeyPress = e => {
+        if (e.keyCode === 13) {
+            this.filterProjectsByName(e.target.value);
+            this.setState({
+            // nameSelected: e.target.value,
+            keyStroke: 0,
+        });
+            this.forceUpdate()
+        }
+    }
+
     filterProjectsByName(value) {
 
         // Filter for 'All' projects
         if (value === 'All Names') {
             this.setState({
                 filteredProjects: projects,
-            })
+            },
+            this.forceUpdate())
         }
         else {
             let temp = [];
@@ -195,7 +240,8 @@ export class Projects extends Component {
                 this.setState({
                     nameSelected: value,
                     filteredProjects: temp,
-                });
+                },
+                this.forceUpdate());
             }
         }
     }
@@ -203,11 +249,13 @@ export class Projects extends Component {
     filterProjectsByGroup(filter) {
 
         // Filter for 'All' projects
-        if (filter === 'All Teams') {
+        if ((filter === 'All Teams') || (filter === '' && !this.state.keyStroke === 13)) {
             this.setState({
                 filteredProjects: projects,
                 nameSelected: 'All Names',
-            })
+                filterNameKey: this.state.filterNameKey + 1,
+            },
+            this.forceUpdate())
         }
         // Filter for 'Conestoga College' projects
         else if (filter === 'Conestoga College') {
@@ -218,8 +266,10 @@ export class Projects extends Component {
               }
             }
             this.setState({
-              filteredProjects: temp
-            });
+              filteredProjects: temp,
+              filterNameKey: this.state.filterNameKey + 1,
+            },
+            this.forceUpdate());
         }
         // Filter for 'MAC Formula Electric' projects
         else if (filter === 'MAC Formula Electric') {
@@ -230,8 +280,10 @@ export class Projects extends Component {
               }
             }
             this.setState({
-              filteredProjects: temp
-            });
+              filteredProjects: temp,
+              filterNameKey: this.state.filterNameKey + 1,
+            },
+            this.forceUpdate());
         }
         // Filter for 'McMaster University' projects
         else if (filter === 'McMaster University') {
@@ -242,10 +294,13 @@ export class Projects extends Component {
               }
             }
             this.setState({
-              filteredProjects: temp
-            });
+              filteredProjects: temp,
+              filterNameKey: this.state.filterNameKey + 1,
+            },
+            this.forceUpdate());
         }
     }
+
 
     render() {
 
@@ -255,45 +310,67 @@ export class Projects extends Component {
                 <div className="selection-container">
 
                     {/* Filter dropdown menu */}
-                    <span>
+                    <span className="autocomplete">
                         <FormControl variant="outlined" className={useStyles.formControl}>
                             <Autocomplete
+                                autoComplete={true}
+                                key={this.state.filterGroupKey}
                                 labelId="demo-simple-select-outlined-label"
                                 id="demo-simple-select-outlined"
-                                searchText={this.state.groupSelected}
-                                onChange={this.handleGroupChange}
+                                onChange={(event) => this.handleGroupChange(event)}
                                 options={this.state.data}
-                                getOptionLabel={(option) => option.name}
-                                style={{ width: 250, margin: 10 }}
                                 disableClearable={true}
-                                renderInput={(params) => <TextField {...params} value={this.state.groupSelected} label="Filter by team..." variant="outlined" />}
+                                noOptionsText="No teams..."
+                                getOptionLabel={(option) => option.name}
+                                searchText={this.state.groupSelected}
+                                style={{ width: 250, marginTop: 10, marginBottom: 10, marginRight: 10  }}
+                                renderInput={(params) => 
+                                    <TextField 
+                                        {...params}
+                                        onKeyDown={(event) => this.setKeyStroke(event)}
+                                        onKeyUp={(event) => this.handleGroupOnKeyPress(event)}
+                                        searchText={this.state.groupSelected} 
+                                        label="Filter by team..." 
+                                        variant="outlined" />}
                             />
                         </FormControl>
                     </span>
 
-                    {this.state.groupSelected === "All Teams"
+                    {/* {this.state.groupSelected === "All Teams"
                         ?   <span className="select">
                             </span>
-                        :   <span>
+                        :  }  
+                        */}
+                        <span className="autocomplete">
                                 <FormControl className={useStyles.formControl}>
                                     <Autocomplete
+                                        autoComplete={true}
+                                        key={this.state.filterNameKey}
                                         id="combo-box-demo"
-                                        onChange={this.handleNameChange}
+                                        onChange={(event) => this.handleNameChange(event)}
                                         options={this.state.filteredProjects}
                                         getOptionLabel={(option) => option.name}
-                                        style={{ minWidth: 250, margin: 10 }}
-                                        searchText={this.state.nameSelected}
                                         disableClearable={true}
-                                        renderInput={(params) => <TextField {...params} label="Filter by name..." variant="outlined" />}
+                                        searchText={this.state.nameSelected}
+                                        noOptionsText="No projects..."
+                                        // autoSelect
+                                        style={{ minWidth: 250, marginTop: 10, marginBottom: 10, marginRight: 10 }}
+                                        renderInput={(params) => 
+                                            <TextField 
+                                                {...params}
+                                                onKeyDown={(event) => this.setKeyStroke(event)}
+                                                onKeyUp={(event) => this.handleNameOnKeyPress(event)}
+                                                searchText={this.state.nameSelected} 
+                                                label="Filter by name..." 
+                                                variant="outlined" />}
                                         />
                                 </FormControl>
                             </span>
-                    }
 
-                    <span>
+                    <span className="autocomplete">
                         <Button 
-                            onClick={() => {this.setState({groupSelected: "All Teams", nameSelected: "All Names", filteredProjects: projects},() => this.forceUpdate())}}
-                            style={{ height: 56, margin: 10 }} 
+                            onClick={() => {this.handleReset()}}
+                            style={{ height: 56, marginTop: 10, marginBottom: 10, marginRight: 10  }} 
                             size="large" 
                             variant="outlined">
                                 Reset
@@ -304,8 +381,9 @@ export class Projects extends Component {
                 <div className="project-section">
 
                     {/* Display projects */}
-                    <div>  
-                        {this.state.filteredProjects.length !== 0 ? (
+                    <div>
+                        {this.state.filteredProjects.length !== 0 
+                        ?
                             <div className="projects-container">
                                 {this.state.filteredProjects.map(project => (
                                     <div className="projects-project-link-container">
@@ -314,11 +392,11 @@ export class Projects extends Component {
                                         />
                                     </div>))}
                             </div>
-                        ) : (
+                         : 
                             <div className="projects-container">
                                 <p className="intro-paragraph">No projects to display!</p>
                             </div>  
-                        )}
+                        }
                     </div>
                 </div>
             </div>

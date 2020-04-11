@@ -36,7 +36,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 5rem;
     }
     .grid > div {
     background: #EDE7F6;
@@ -59,6 +59,10 @@
     padding-top: 30px;
 }
 
+.autocomplete {
+    margin: 10px;
+}
+
 .selection-container {
     padding:20px;
     border-bottom: 1px solid #ddd;
@@ -67,5 +71,14 @@
 @media only screen and (max-width: 1100px) {
     .projects-container {
         width:auto;
+        margin: auto 0px;
+    }
+
+    .selection-container {
+        padding:5px;
+    }
+
+    .autocomplete {
+        margin: 0px;
     }
 }

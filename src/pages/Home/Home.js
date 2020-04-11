@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -47,13 +48,18 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     width: '100%',
-    backgroundColor: theme.palette.background.primary,
+    backgroundColor: theme.palette.background.paper,
   },
 }));
 
 export default function ScrollableTabsButtonAuto() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -69,26 +75,62 @@ export default function ScrollableTabsButtonAuto() {
 
         {/* Tab View section */}
         <div className="tabs-container">
-            <AppBar position="static" color="default">
+          <Box
+            boxShadow={2}
+            bgcolor="background.primary"
+            > 
+            <AppBar
+              boxShadow={0} 
+              style={{ 
+                minHeight: 55, 
+                textDecorationColor: "#222",
+                }} 
+              position="sticky"
+              color="default"
+              >
                 <Tabs
-                value={value}
-                onChange={handleChange}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="scrollable"
-                scrollButtons="auto"
-                aria-label="scrollable auto tabs example"
-                >
-                <Tab label="Projects" {...a11yProps(0)} />
-                <Tab label="Documents" {...a11yProps(1)} />
+                  value={value}
+                  style={{ minHeight: 56 }}
+                  onChange={handleChange}
+                  // indicatorColor="grey800"
+                  inkBarStyle={{ backgroud: "grey400" }}
+                  textColor="grey400"
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  aria-label="scrollable auto tabs example"
+                  >
+                <Tab style={{ minHeight: 55 }} label="Projects" {...a11yProps(0)} />
+                <Tab style={{ minHeight: 55 }} label="Documents" {...a11yProps(1)} />
                 </Tabs>
             </AppBar>
-            <TabPanel value={value} index={0}>
-                <ProjectTiles/>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <DocList/>
-            </TabPanel>
+            <SwipeableViews
+                axis={theme.direction === 'rtl' ? 'x' : 'x'}
+                index={value}
+                onChangeIndex={handleChangeIndex}
+                >
+              <Box
+                overflow="hidden"
+              >
+                <TabPanel 
+                  value={value} 
+                  index={0}
+                >
+                    <ProjectTiles/>
+                </TabPanel>
+              </Box>
+
+              <Box
+                overflow="hidden"
+              >
+                <TabPanel 
+                  value={value} 
+                  index={1}
+                >
+                    <DocList/>
+                </TabPanel>
+              </Box>
+            </SwipeableViews>
+          </Box>
         </div>
     </div>
   );
