@@ -2,8 +2,6 @@
   width: 100%;
   margin: none;
   padding: none;
-  overflow-x: hidden;
-  position: relative;
   min-height: 100vh;
 }
 
