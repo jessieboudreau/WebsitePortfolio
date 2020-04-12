@@ -21,7 +21,15 @@
         border-radius: 50%;
         -webkit-shape-outside:circle();
         shape-outside:circle();
+        transition-duration: 0.1s;
       }
+
+    .curve:hover {
+        min-width: 150.5px;
+        -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 1);
+        box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 1);
+    }
     
     .intro-paragraph {
         font-size:20px;

@@ -50,6 +50,8 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
+    margin: '0px',
+    padding: '0px',
     flexGrow: 1,
     width: '100%',
     backgroundColor: theme.palette.background.paper,
@@ -70,7 +72,7 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-    <div className={classes.root}>
+    <div  className={classes.root}>
         {/* Profile box view */}
         <ProfileBox/>
 

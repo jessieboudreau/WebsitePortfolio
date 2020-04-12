@@ -16,7 +16,7 @@ import batteryCycler from "./pages/Projects/BatteryCycler";
 
 function App() {
   return (
-      <div className="app">
+      <div className="App">
           <Router>
             {/* <link href="https://fonts.googleapis.com/css?family=Rajdhani:520,600|Ubuntu&display=swap" rel="stylesheet"/> */}
             <div>

@@ -1,6 +1,8 @@
 .App {
-  padding: 0px;
-  margin: 0px;
+  width: 100%;
+  margin: none;
+  padding: none;
+  overflow-x: hidden;
   text-align: center;
   position: relative;
   min-height: 100vh;
