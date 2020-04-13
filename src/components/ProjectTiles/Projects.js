@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectLink from './ProjectLink';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, ThemeProvider, } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -10,6 +10,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Button from '@material-ui/core/Button';
 import FilterListIcon from '@material-ui/icons/FilterList';
+import { red } from '@material-ui/core/colors';
 import './Projects.css';
 
 // Project thumbnails
@@ -138,6 +139,14 @@ const useStyles = makeStyles((theme) => ({
     },
     }));
 
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#ed4856',
+          },
+    },
+    });
+
 export class Projects extends Component {
     constructor(props){
         super(props)
@@ -213,14 +222,6 @@ export class Projects extends Component {
     }
 
     handleNameOnKeyPress = e => {
-        // this.setState({
-        //     nameSelected: e.target.value,
-        //     keyStroke: 0,
-        // },
-        //     this.forceUpdate())
-        // if (e.keyCode === 13) {
-        //     this.filterProjectsByName(e.target.value);
-        // }
         if (e.keyCode === 13) {
             this.filterProjectsByName(e.target.value);
             this.setState({
@@ -319,69 +320,73 @@ export class Projects extends Component {
 
         return (
             <div>
-                <div className="selection-container">
-                    {/* Filter dropdown menu */}
-                    <span className="autocomplete">
-                        <FormControl variant="outlined" className={useStyles.formControl}>
-                            <Autocomplete
-                                autoComplete={true}
-                                key={this.state.filterGroupKey}
-                                labelId="demo-simple-select-outlined-label"
-                                id="demo-simple-select-outlined"
-                                onChange={(event) => this.handleGroupChange(event)}
-                                options={this.state.data}
-                                disableClearable={true}
-                                noOptionsText="No teams..."
-                                onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
-                                getOptionLabel={(option) => option.name}
-                                searchText={this.state.groupSelected}
-                                style={{ width: 300, marginTop: 10, marginBottom: 10, marginRight: 10, }}
-                                renderInput={(params) => 
-                                    <TextField 
-                                        {...params}
-                                        searchText={this.state.groupSelected}
-                                        icon={<FilterListIcon />} 
-                                        label="Filter by team..." 
-                                        variant="outlined" />}
-                            />
-                        </FormControl>
-                    </span>
-
-                    <span className="autocomplete">
-                            <FormControl className={useStyles.formControl}>
+                <ThemeProvider theme={theme}>
+                    <div className="selection-container">
+                        {/* Filter dropdown menu */}
+                        <span className="autocomplete">
+                            <FormControl variant="outlined" className={useStyles.formControl}>
                                 <Autocomplete
                                     autoComplete={true}
-                                    key={this.state.filterNameKey}
-                                    id="combo-box-demo"
-                                    onChange={(event) => this.handleNameChange(event)}
-                                    options={this.state.filteredProjects}
-                                    getOptionLabel={(option) => option.name}
+                                    key={this.state.filterGroupKey}
+                                    labelId="demo-simple-select-outlined-label"
+                                    id="demo-simple-select-outlined"
+                                    onChange={(event) => this.handleGroupChange(event)}
+                                    options={this.state.data}
                                     disableClearable={true}
-                                    searchText={this.state.nameSelected}
-                                    noOptionsText="No projects..."
-                                    onKeyDown={(event) => this.handleNameOnKeyPress(event)}
-                                    // autoSelect
-                                    style={{ minWidth: 300, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
+                                    noOptionsText="No teams..."
+                                    onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
+                                    getOptionLabel={(option) => option.name}
+                                    searchText={this.state.groupSelected}
+                                    style={{ width: 300, marginTop: 10, marginBottom: 10, marginRight: 10, }}
                                     renderInput={(params) => 
                                         <TextField 
                                             {...params}
-                                            searchText={this.state.nameSelected} 
-                                            label="Filter by name..."
+                                            id="mui-theme-provider-outlined-input"
+                                            searchText={this.state.groupSelected}
+                                            icon={<FilterListIcon />} 
+                                            label="Filter by team..." 
                                             variant="outlined" />}
-                                    />
+                                />
                             </FormControl>
                         </span>
 
-                    <span className="autocomplete">
-                        <Button 
-                            onClick={() => {this.handleReset()}}
-                            style={{ height: 56, marginTop: 10, marginBottom: 10, marginRight: 10  }} 
-                            size="large" 
-                            variant="outlined">
-                                Reset
-                        </Button>
-                    </span>
-                </div>
+                        <span className="autocomplete">
+                                <FormControl className={useStyles.formControl}>
+                                    <Autocomplete
+                                        autoComplete={true}
+                                        key={this.state.filterNameKey}
+                                        id="combo-box-demo"
+                                        onChange={(event) => this.handleNameChange(event)}
+                                        options={this.state.filteredProjects}
+                                        getOptionLabel={(option) => option.name}
+                                        disableClearable={true}
+                                        searchText={this.state.nameSelected}
+                                        noOptionsText="No projects..."
+                                        onKeyDown={(event) => this.handleNameOnKeyPress(event)}
+                                        // autoSelect
+                                        style={{ minWidth: 300, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
+                                        renderInput={(params) => 
+                                            <TextField 
+                                                {...params}
+                                                id="mui-theme-provider-outlined-input"
+                                                searchText={this.state.nameSelected} 
+                                                label="Filter by name..."
+                                                variant="outlined" />}
+                                        />
+                                </FormControl>
+                            </span>
+
+                        <span className="autocomplete">
+                            <Button 
+                                onClick={() => {this.handleReset()}}
+                                style={{ height: 56, marginTop: 10, marginBottom: 10, marginRight: 10  }} 
+                                size="large" 
+                                variant="outlined">
+                                    Reset
+                            </Button>
+                        </span>
+                    </div>
+                </ThemeProvider>
                 
                 <div className="project-section">
 
