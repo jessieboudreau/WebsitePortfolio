@@ -213,13 +213,21 @@ export class Projects extends Component {
     }
 
     handleNameOnKeyPress = e => {
-        this.setState({
+        // this.setState({
+        //     nameSelected: e.target.value,
+        //     keyStroke: 0,
+        // },
+        //     this.forceUpdate())
+        // if (e.keyCode === 13) {
+        //     this.filterProjectsByName(e.target.value);
+        // }
+        if (e.keyCode === 13) {
+            this.filterProjectsByName(e.target.value);
+            this.setState({
             nameSelected: e.target.value,
             keyStroke: 0,
         },
-            this.forceUpdate())
-        if (e.keyCode === 13) {
-            this.filterProjectsByName(e.target.value);
+            this.forceUpdate());
         }
     }
 
@@ -326,14 +334,13 @@ export class Projects extends Component {
                                 options={this.state.data}
                                 disableClearable={true}
                                 noOptionsText="No teams..."
+                                onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
                                 getOptionLabel={(option) => option.name}
                                 searchText={this.state.groupSelected}
                                 style={{ width: 250, marginTop: 10, marginBottom: 10, marginRight: 10, }}
                                 renderInput={(params) => 
                                     <TextField 
                                         {...params}
-                                        onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
-                                        onKeyUp={(event) => this.handleGroupOnKeyPress(event)}
                                         searchText={this.state.groupSelected}
                                         icon={<FilterListIcon />} 
                                         label="Filter by team..." 
@@ -359,13 +366,12 @@ export class Projects extends Component {
                                         disableClearable={true}
                                         searchText={this.state.nameSelected}
                                         noOptionsText="No projects..."
+                                        onKeyDown={(event) => this.handleNameOnKeyPress(event)}
                                         // autoSelect
                                         style={{ minWidth: 250, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
                                         renderInput={(params) => 
                                             <TextField 
                                                 {...params}
-                                                onKeyDown={(event) => this.handleNameOnKeyPress(event)}
-                                                onKeyUp={(event) => this.handleNameOnKeyPress(event)}
                                                 searchText={this.state.nameSelected} 
                                                 label="Filter by name..."
                                                 variant="outlined" />}
