@@ -319,9 +319,7 @@ export class Projects extends Component {
 
         return (
             <div>
-
                 <div className="selection-container">
-
                     {/* Filter dropdown menu */}
                     <span className="autocomplete">
                         <FormControl variant="outlined" className={useStyles.formControl}>
@@ -337,7 +335,7 @@ export class Projects extends Component {
                                 onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
                                 getOptionLabel={(option) => option.name}
                                 searchText={this.state.groupSelected}
-                                style={{ width: 250, marginTop: 10, marginBottom: 10, marginRight: 10, }}
+                                style={{ width: 300, marginTop: 10, marginBottom: 10, marginRight: 10, }}
                                 renderInput={(params) => 
                                     <TextField 
                                         {...params}
@@ -349,35 +347,30 @@ export class Projects extends Component {
                         </FormControl>
                     </span>
 
-                    {/* {this.state.groupSelected === "All Teams"
-                        ?   <span className="select">
-                            </span>
-                        :  }  
-                        */}
-                        <span className="autocomplete">
-                                <FormControl className={useStyles.formControl}>
-                                    <Autocomplete
-                                        autoComplete={true}
-                                        key={this.state.filterNameKey}
-                                        id="combo-box-demo"
-                                        onChange={(event) => this.handleNameChange(event)}
-                                        options={this.state.filteredProjects}
-                                        getOptionLabel={(option) => option.name}
-                                        disableClearable={true}
-                                        searchText={this.state.nameSelected}
-                                        noOptionsText="No projects..."
-                                        onKeyDown={(event) => this.handleNameOnKeyPress(event)}
-                                        // autoSelect
-                                        style={{ minWidth: 250, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
-                                        renderInput={(params) => 
-                                            <TextField 
-                                                {...params}
-                                                searchText={this.state.nameSelected} 
-                                                label="Filter by name..."
-                                                variant="outlined" />}
-                                        />
-                                </FormControl>
-                            </span>
+                    <span className="autocomplete">
+                            <FormControl className={useStyles.formControl}>
+                                <Autocomplete
+                                    autoComplete={true}
+                                    key={this.state.filterNameKey}
+                                    id="combo-box-demo"
+                                    onChange={(event) => this.handleNameChange(event)}
+                                    options={this.state.filteredProjects}
+                                    getOptionLabel={(option) => option.name}
+                                    disableClearable={true}
+                                    searchText={this.state.nameSelected}
+                                    noOptionsText="No projects..."
+                                    onKeyDown={(event) => this.handleNameOnKeyPress(event)}
+                                    // autoSelect
+                                    style={{ minWidth: 300, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
+                                    renderInput={(params) => 
+                                        <TextField 
+                                            {...params}
+                                            searchText={this.state.nameSelected} 
+                                            label="Filter by name..."
+                                            variant="outlined" />}
+                                    />
+                            </FormControl>
+                        </span>
 
                     <span className="autocomplete">
                         <Button 
