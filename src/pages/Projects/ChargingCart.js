@@ -19,16 +19,26 @@ export class BatteryMK1 extends Component {
             title="Charging Cart"
             group="MAC Formula Electric"
             images={[
-                {image: Iso,
-                    description:"Isometric rendering"},
-                {image: Front,
-                    description:"Front rendering"},
-                {image: Back,
-                    description:"Back rendering"},
-                {image: sideA,
-                    description:"Side-a rendering"},
-                {image: sideB,
-                    description:"Side-b rendering"},
+                {
+                    src: Iso,
+                    title: "Isometric rendering"
+                },
+                {
+                    src: Front,
+                    title: "Front rendering"
+                },
+                {
+                    src: Back,
+                    title: "Back rendering"
+                },
+                {
+                    src: sideA,
+                    title: "Side-a rendering"
+                },
+                {
+                    src: sideB,
+                    title: "Side-b rendering"
+                },
                 ]}
 
                 contents={[

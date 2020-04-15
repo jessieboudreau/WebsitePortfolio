@@ -3,6 +3,8 @@ import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 import { Link } from 'react-router-dom';
 import ProfileBox from './../../components/ProfileBox/ProfileBox';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import Button from '@material-ui/core/Button';
+import "react-image-gallery/styles/css/image-gallery.css";
 import './ProjectPage.css';
 
 export class ProjectPage extends Component {
@@ -13,16 +15,31 @@ export class ProjectPage extends Component {
             images:this.props.images,
             intervalId: 0,
             loaded:true,
-            loadingElement:<LoadingSpinner/>
+            galleryOpen:false,
+            galleryBtn:"Open",
+            loadingElement:<LoadingSpinner/>,
         }}
     
     updateShowcase = (newImage) => {
         this.setState({showcase:newImage})
     }
 
-
+    toggleGallery = () => {
+        if (this.state.galleryOpen == true) {
+            this.setState({
+                galleryOpen: false,
+                galleryBtn: "Open",
+            });
+        }
+        else {
+            this.setState({
+                galleryOpen: true,
+                galleryBtn: "Close",
+            })}
+    }
 
     render() {
+
         return (
             <div>
                 <ProfileBox />
@@ -45,26 +62,45 @@ export class ProjectPage extends Component {
                     </MDBBreadcrumb>
                 </MDBContainer>
 
-                <div className="showcase-container">
+                <div>
                     <div className="project-header-container">
-                        <h1 className="project-header" id="showcase">
+                        <h1 className="project-header">
                             {this.props.title}
                         </h1>
+                        <div className="button" id="showcase">
+                            <Button 
+                                onClick={() => {this.toggleGallery()}}
+                                href="#showcase"
+                                style={{ height: 56, marginTop: 10, marginBottom: 10, marginRight: 10, paddingTop: 10  }} 
+                                size="large" 
+                                variant="outlined">
+                                    {this.state.galleryBtn} Image Gallery
+                            </Button>
+                        </div>
                     </div>
-                    <div className="showcase-image-container">
-                        <img src={this.state.showcase.image} className="showcase-image"/>
-                        <p className="showcase-description">{this.state.showcase.description}</p>
-                    </div>
-                    <div className="showcase-image-selector-container">
-                        {this.state.images.map(img => (
-                            <div className="showcase-image-selector-image-container" onClick={this.updateShowcase.bind(this,img)}>
-                                <a href="#showcase">
-                                    <img src={img.image} className="showcase-image-selector-image"/>
-                                </a>
+
+                    {this.state.galleryOpen
+                        ?   <div>
+                                <div className="showcase-image-container">
+                                    <img src={this.state.showcase.src} className="showcase-image"/>
+                                    <p className="showcase-description">{this.state.showcase.title}</p>
+                                </div>
+                                <div className="showcase-image-selector-container">
+                                    {this.state.images.map(img => (
+                                        <div className="showcase-image-selector-image-container" onClick={this.updateShowcase.bind(this,img)}>
+                                            <a href="#showcase">
+                                                <img src={img.src} className="showcase-image-selector-image"/>
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        ))}
-                    </div>
+                        :   <div></div>
+                    }       
                 </div>
+
+
+
                 <div>
                     {this.props.contents}              
                 </div>

@@ -20,16 +20,26 @@ export class BatteryMK1 extends Component {
             title="FSAE-E Accumulator MK 1"
             group="MAC Formula Electric"
             images={[
-                {image: original,
-                    description:"Model of the 2018 vehicle battery, also referred to as the 'Accumulator'"},
-                {image: assembled,
-                    description:"Complete assmembly"},
-                {image: cellsInstalled,
-                    description:"Cells instlled in the enclosure"},
-                {image: chamber,
-                    description:"Thermal chamber and cycler used for testing and characterization"},
-                {image: fixture,
-                    description:"Prismatic pouch cell inside the test fixture in the thermal chamber"},
+                {
+                    src: original,
+                    title: "Model of the 2018 vehicle battery, also referred to as the 'Accumulator'"
+                },
+                {
+                    src: assembled,
+                    title: "Complete assmembly"
+                },
+                {
+                    src: cellsInstalled,
+                    title: "Cells instlled in the enclosure"
+                },
+                {
+                    src: chamber,
+                    title: "Thermal chamber and cycler used for testing and characterization"
+                },
+                {
+                    src: fixture,
+                    title: "Prismatic pouch cell inside the test fixture in the thermal chamber"
+                },
                 ]}
 
             contents={[

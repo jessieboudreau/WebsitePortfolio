@@ -13,8 +13,11 @@ export class BatteryMK1 extends Component {
             title="FSAE-E Accumulator MK 1"
             group="MAC Formula Electric"
             images={[
-                {image: "",
-                    description:""},
+                {
+                    src: "",
+                    title: "",
+                    description: ""
+                },
                 ]}
 
             contents={[

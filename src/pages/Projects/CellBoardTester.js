@@ -18,14 +18,22 @@ export class pcbDev extends Component {
             title="Battery Cell Board Tester"
             group="MAC Formula Electric"
             images={[
-                {image:isoView,
-                description:"Isometric view render"},
-                {image:topView,
-                description:"Top view render"},
-                {image:topLayer,
-                description:"Top layer view"},
-                {image:complete,
-                description:"Complete assembled pcb with testing harness"},
+                {
+                    src: isoView,
+                    title: "Isometric view render"
+                },
+                {
+                    src: topView,
+                    title: "Top view render"
+                },
+                {
+                    src: topLayer,
+                    title: "Top layer view"
+                },
+                {
+                    src: complete,
+                    title: "Complete assembled pcb with testing harness"
+                },
             ]}
 
             contents={[

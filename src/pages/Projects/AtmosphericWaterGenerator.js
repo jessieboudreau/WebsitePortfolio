@@ -31,16 +31,26 @@ export class AWG extends Component {
             title="Atmospheric Water Generator"
             group="Conestoga College"
             images={[
-                {image: frontView,
-                    description:"Front view with access panel"},
-                {image: rightView,
-                    description:"Right-side view"},
-                {image: rearView,
-                    description:"Rear view"},
-                {image: leftView,
-                    description:"Left view showing air inlet"},
-                {image: showcase,
-                    description:"Showcase presentation"},
+                {
+                    src: frontView,
+                    title: "Front view with access panel"
+                },
+                {
+                    src: rightView,
+                    title: "Right-side view"
+                },
+                {
+                    src: rearView,
+                    title: "Rear view"
+                },
+                {
+                    src: leftView,
+                    title: "Left view showing air inlet"
+                },
+                {
+                    src: showcase,
+                    title: "Showcase presentation"
+                },
             ]}
             contents={[
                 <div>

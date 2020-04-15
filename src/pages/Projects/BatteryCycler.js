@@ -16,10 +16,14 @@ export class BatteryMK1 extends Component {
             title="Battery Cycler"
             group="McMaster University"
             images={[
-                {image: Iso,
-                    description:"Iso rendering (internal view)"},
-                {image: Assembled,
-                    description:"Partially assembled"},
+                {
+                    src: Iso,
+                    title: "Iso rendering (internal view)"
+                },
+                {
+                    src: Assembled,
+                    title: "Partially assembled"
+                },
                 ]}
 
             contents={[

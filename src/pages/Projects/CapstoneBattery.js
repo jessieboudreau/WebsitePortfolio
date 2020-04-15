@@ -15,10 +15,14 @@ export class BatteryMK1 extends Component {
             title="Capstone Battery Design"
             group="McMaster University"
             images={[
-                {image: isoFront,
-                    description:"Front isometric render with the lid and electronics hidden"},
-                {image: isoRear,
-                    description:"Rear isometric render with the lid and electronics hidden"},
+                {
+                    src: isoFront,
+                    title: "Front isometric render with the lid and electronics hidden"
+                },
+                {
+                    src: isoRear,
+                    title: "Rear isometric render with the lid and electronics hidden"
+                },
                 ]}
 
             contents={[
