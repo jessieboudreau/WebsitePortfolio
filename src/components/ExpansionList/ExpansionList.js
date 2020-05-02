@@ -28,7 +28,7 @@ export const docs = [
     title: 'Resume ',
     type: 'PDF',
     icon: 'fas fa-lock',
-    date: '03/20/2020',
+    date: '04/15/2020',
     link: Resume,
   },
   {
