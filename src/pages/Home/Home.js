@@ -7,6 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import ProfileBox from '../../components/ProfileBox/ProfileBox';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import ProjectTiles from '../../components/ProjectTiles/ProjectTiles';
@@ -50,12 +52,17 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: '0px',
-    padding: '0px',
     flexGrow: 1,
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
+  paper: {
+    height: 'auto',
+    width: '85vw',
+  },
+  grid: {
+    margin: theme.spacing(2),
+  }
 }));
 
 export default function ScrollableTabsButtonAuto() {
@@ -80,15 +87,17 @@ export default function ScrollableTabsButtonAuto() {
         <AboutMe/>
 
         {/* Tab View section */}
-        <div className="tabs-container">
-          <Box
-            boxShadow={3}
-            bgcolor="background.primary"
-            > 
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          >
+          <Paper className={classes.paper}>
             <AppBar
-              boxShadow={0} 
               style={{ 
-                minHeight: 55, 
+                margin: 15,
+                minHeight: 55,
+                width: 'auto',
                 textDecorationColor: "#222",
                 }} 
               position="sticky"
@@ -115,8 +124,8 @@ export default function ScrollableTabsButtonAuto() {
                 index={value}
                 onChangeIndex={handleChangeIndex}
                 >
-              <Box
-                overflow="hidden"
+              <Paper
+                className={classes.paper}
               >
                 <TabPanel 
                   value={value} 
@@ -124,10 +133,10 @@ export default function ScrollableTabsButtonAuto() {
                 >
                     <ProjectTiles/>
                 </TabPanel>
-              </Box>
+              </Paper>
 
-              <Box
-                overflow="hidden"
+              <Paper
+                className={classes.paper}
               >
                 <TabPanel 
                   value={value} 
@@ -135,10 +144,10 @@ export default function ScrollableTabsButtonAuto() {
                 >
                     <DocList/>
                 </TabPanel>
-              </Box>
+              </Paper>
             </SwipeableViews>
-          </Box>
-        </div>
+          </Paper>
+        </Grid>
     </div>
   );
 }

@@ -10,18 +10,20 @@ import './Footer.css';
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 30,
+    // maxWidth: '85vw',
     flexGrow: 1,
   },
   paper: {
-    height: 340,
+    minHeight: 340,
     width: 290,
+    maxWidth: '85vw',
     padding: theme.spacing(2),
   },
   signature: {
     padding: theme.spacing(2),
   },
   button: {
-    height: 60,
+    height: 55,
   }
 }));
 
@@ -29,9 +31,9 @@ export default function FooterPage() {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root}>
       <Grid item xs={12}>
-        <Grid container justify="center" spacing={2}>
+        <Grid container spacing={2} justify="center" style={{maxWidth: '85vw', margin: 'auto'}}>
 
           <Grid item>
             <Paper className={classes.paper}>

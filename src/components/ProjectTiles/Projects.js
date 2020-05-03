@@ -9,6 +9,7 @@ import InputBase from '@material-ui/core/InputBase';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import { red } from '@material-ui/core/colors';
 import './Projects.css';
@@ -137,6 +138,9 @@ const useStyles = makeStyles((theme) => ({
     selectEmpty: {
         marginTop: theme.spacing(2),
     },
+    grid: {
+        margin: theme.spacing(2),
+    }
     }));
 
 const theme = createMuiTheme({
@@ -337,7 +341,7 @@ export class Projects extends Component {
                                     onKeyDown={(event) => this.handleGroupOnKeyPress(event)}
                                     getOptionLabel={(option) => option.name}
                                     searchText={this.state.groupSelected}
-                                    style={{ width: 300, marginTop: 10, marginBottom: 10, marginRight: 10, }}
+                                    style={{ maxWidth: 300, width: '70vw', marginTop: 10, marginBottom: 10, marginRight: 10, }}
                                     renderInput={(params) => 
                                         <TextField 
                                             {...params}
@@ -364,7 +368,7 @@ export class Projects extends Component {
                                         noOptionsText="No projects..."
                                         onKeyDown={(event) => this.handleNameOnKeyPress(event)}
                                         // autoSelect
-                                        style={{ minWidth: 300, marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
+                                        style={{ maxWidth: 300, width: '70vw', marginTop: 10, marginBottom: 10, marginRight: 10, color: "secondary" }}
                                         renderInput={(params) => 
                                             <TextField 
                                                 {...params}
