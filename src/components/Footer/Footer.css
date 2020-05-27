@@ -32,6 +32,13 @@
   width: 100%;
 }
 
+.divider {
+    padding:20px;
+    width:85%;
+    margin:auto;
+    border-bottom: 1px solid #ddd;
+}
+
 .site-map {
   overflow: auto;
   overflow-x: hidden;

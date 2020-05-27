@@ -26,11 +26,11 @@ export class BatteryMK1 extends Component {
                 },
                 {
                     src: assembled,
-                    title: "Complete assmembly"
+                    title: "Complete assembly"
                 },
                 {
                     src: cellsInstalled,
-                    title: "Cells instlled in the enclosure"
+                    title: "Cells installed in the enclosure"
                 },
                 {
                     src: chamber,
@@ -71,12 +71,12 @@ export class BatteryMK1 extends Component {
                         </p>
                         <h1 className="project-header" id="cell-testing">Cell Testing</h1>
                         <p className="project-description">
-                            A battery cell from the current accumulator pack was thoroughly tested at the MARC facility in order to 
-                            provide baseline metrics of cell performance. Baseline cell performance metrics of the existing cells will 
-                            allow us essentially to validating performance improvements between the new battery cells and the existing 
-                            cells.<br/><br/>
+                            A battery cell from the current accumulator pack was thoroughly tested at the McMaster Automotive Resource 
+                            Center (MARC) in order to provide baseline metrics of cell performance. Baseline cell performance metrics 
+                            of the existing cells will allow us to validate performance improvements between the new battery 
+                            cells and the existing cells.<br/><br/>
                             The charge and discharge characteristics of the current accumulator cells were obtained using a specialized 
-                            battery cycler inside of a thermal chamber (to maintain a constant temperature of 25°C). The cells 
+                            battery cycler inside of a thermal chamber (to maintain a constant temperature of 25°C). The cells' 
                             charge-discharge cycles were completed at 0.05C, 0.5C, 1C, 2C, 3C and 5C.<br/>
                         </p>
                         <h1 className="project-subheader" id="figure-1">Figure 1: Voltage vs. C-Rate (25°C)</h1>
@@ -91,7 +91,7 @@ export class BatteryMK1 extends Component {
                         <p className="project-description">
                             The data in Figure 2 shows that the resistance of the cell begins to increase at approximately 70% 
                             depth of discharge (DOD). The rate at which the resistance increases is proportional to the rate of 
-                            scharge. Since the rate of discharge increases with the rate of vehicle acceleration, this information 
+                            charge. Since the rate of discharge increases with the rate of vehicle acceleration, this information 
                             tells us that more aggressive driving will result in more losses and, therefore, shorter drive-times. 
                             Table 1 shows data for various drive-cycles - with UDDS being the most conservative and US06 being the 
                             most aggressive.<br/>

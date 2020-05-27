@@ -87,7 +87,7 @@ export class AWG extends Component {
                     <div className="project-description-container">
                         <h1 className="project-header" id="overview">Overview</h1>
                         <p className="project-description">
-                            The Atmospheric Water Generator (AWG) extract water from the air by condensing it over some refrigerant cooled coils. The extracted water is first stored in a "gray-water" tank before filtration. Once the gray-water tank has sufficient volume, it is pumped out and filtered through an ultra-violet reaction chamber. Finally, the water is stored in a "fresh-water" tank awaiting consumption. The technologies the AWG employs may be divided into six categories. The six categories are as follows:
+                            The Atmospheric Water Generator (AWG) extracts water from the air by condensing it over some refrigerant cooled coils. The extracted water is first stored in a "gray-water" tank before filtration. Once the gray-water tank has sufficient volume, it is pumped out and filtered through an ultra-violet reaction chamber. Finally, the water is stored in a "fresh-water" tank awaiting consumption. The technologies the AWG employs may be divided into six categories. The six categories are as follows:
                         </p>
                         <div>
                             <div className="pill"><span class="fa fa-trophy"></span> Mastercraft Award Winner: Spring 2017</div>
@@ -146,7 +146,7 @@ export class AWG extends Component {
                         <img src={rpiInputs} className="figure"></img>
                         <h1 className="project-header" id="concurrent-programming">Concurrent Programming</h1>
                         <p className="project-description">
-                            Approximately 330 lines of Python control code run three concurrent threads on the Raspberry Pi in order to operate the AWG: a control thread, a data logging thread, and a fault handling thread. All three threads run in parallel to provide real-time responsiveness and automation. the following 3 figures depict the process flow for the overall program process flow in addition to more detailed process flow diagrams of the controls and data logging threads. In addition to the Raspberry Pi code, the Arduino Uno executes approximately 50 lines of code in order to monitor the evaporator temperature and output the result to the Raspberry Pi using a serial data link. This connection is handled by a serial module imported in the main Python program.
+                            Approximately 330 lines of Python control code run three concurrent threads on the Raspberry Pi in order to operate the AWG: a control thread, a data logging thread, and a fault handling thread. All three threads run in parallel to provide real-time responsiveness and automation. The following 3 figures depict the process flow for the overall program process flow in addition to more detailed process flow diagrams of the controls and data logging threads. In addition to the Raspberry Pi code, the Arduino Uno executes approximately 50 lines of code in order to monitor the evaporator temperature and output the result to the Raspberry Pi using a serial data link. This connection is handled by a serial module imported in the main Python program.
                         </p>
                         <h1 className="project-subheader" id="figure-4">Figure 4: Process overview block diagram</h1>
                         <img src={generalThread} className="figure"></img>

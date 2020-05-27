@@ -14,12 +14,19 @@ export class ProjectPage extends Component {
             showcase:this.props.images[0],
             images:this.props.images,
             intervalId: 0,
-            loaded:true,
             galleryOpen:false,
             galleryBtn:"Open",
+            loaded:true,
             loadingElement:<LoadingSpinner/>,
         }}
     
+    showcaseLoaded= () => {
+        this.setState({
+            loaded:true,
+            loadingElement:<div/>
+        })
+    }
+
     updateShowcase = (newImage) => {
         this.setState({showcase:newImage})
     }
@@ -81,8 +88,9 @@ export class ProjectPage extends Component {
 
                     {this.state.galleryOpen
                         ?   <div>
+                                {this.state.loadingElement}
                                 <div className="showcase-image-container">
-                                    <img src={this.state.showcase.src} className="showcase-image"/>
+                                    <img src={this.state.showcase.src} className="showcase-image" onLoad={this.showcaseLoaded}/>
                                     <p className="showcase-description">{this.state.showcase.title}</p>
                                 </div>
                                 <div className="showcase-image-selector-container">

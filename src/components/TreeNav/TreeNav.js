@@ -4,7 +4,7 @@ import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
-import Resume from './../../docs/jessie-boudreau-resume.pdf';
+import Resume from './../../docs/jessie-boudreau-cv.pdf';
 import { docs } from './../../components/ExpansionList/ExpansionList';
 import { projects } from './../../components/ProjectTiles/Projects'
 

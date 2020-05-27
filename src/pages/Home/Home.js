@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     height: 'auto',
-    width: '85vw',
+    width: '84vw',
   },
   grid: {
     margin: theme.spacing(2),
@@ -95,7 +95,9 @@ export default function ScrollableTabsButtonAuto() {
           <Paper className={classes.paper}>
             <AppBar
               style={{ 
-                margin: 15,
+                marginTop: 15,
+                marginRight: 15,
+                marginLeft: 15,
                 minHeight: 55,
                 width: 'auto',
                 textDecorationColor: "#222",

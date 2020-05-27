@@ -16,6 +16,11 @@
     margin: 15px;
 }
 
+/* .appbar-stick {
+    width: 100vw !important;
+    transition: width 0.5s;
+} */
+
 @media only screen and (max-width: 900px) {
     .tab-name {
         font-size:3vw;

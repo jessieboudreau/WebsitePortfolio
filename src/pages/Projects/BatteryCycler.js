@@ -37,7 +37,7 @@ export class BatteryMK1 extends Component {
                     <div className="project-description-container">
                         <h1 className="project-header" id="overview">Overview</h1>
                         <p className="project-description">
-                            The battery cycler is designed to cycle test battery cells with upto 150 amps. The controller is a 
+                            The battery cycler is designed to cycle test battery cells with up to 150 amps. The controller is a 
                             National Instruments CompacDAQ with four card slots. The cards are used for analogue & digital 
                             sensing, voltage sense, and serial communication. The software was developed using LabView by 
                             <a href="https://www.linkedin.com/in/phil-kollmeyer-6a313711/"> Phil Kollmeyer</a>. This cycler 

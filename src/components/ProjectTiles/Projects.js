@@ -4,6 +4,7 @@ import { makeStyles, createMuiTheme, ThemeProvider, } from '@material-ui/core/st
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Select from '@material-ui/core/Select';
 import InputBase from '@material-ui/core/InputBase';
 import TextField from '@material-ui/core/TextField';
@@ -151,7 +152,7 @@ const theme = createMuiTheme({
     },
     });
 
-export class Projects extends Component {
+class Projects extends Component {
     constructor(props){
         super(props)
 
@@ -163,7 +164,20 @@ export class Projects extends Component {
             filterNameKey: 0,
             groupSelected: 'All Teams',
             nameSelected: 'All Names',
+            loaded: true,
+            loadingElement: <LoadingSpinner/>
         }
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+      } 
+
+    projectsLoaded= () => {
+        this.setState({
+            loaded:true,
+            loadingElement:<div/>
+        })
     }
 
     renderOptions() {
@@ -396,6 +410,7 @@ export class Projects extends Component {
 
                     {/* Display projects */}
                     <div>
+                        {this.state.loadingElement}
                         {this.state.filteredProjects.length !== 0 
                         ?
                             <div className="projects-container">
@@ -403,6 +418,7 @@ export class Projects extends Component {
                                     <div className="projects-project-link-container">
                                         <ProjectLink
                                         project={project}
+                                        projectsLoaded={this.projectsLoaded}
                                         />
                                     </div>))}
                             </div>

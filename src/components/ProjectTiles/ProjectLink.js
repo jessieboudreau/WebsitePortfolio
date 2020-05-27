@@ -48,7 +48,7 @@ export class ProjectLink extends Component {
                     className={useStyles.grid}
                     >  
                     <div className="project-link-container">
-                        <img className="project-thumbnail" src={this.props.project.thumbnail}/>
+                        <img className="project-thumbnail" src={this.props.project.thumbnail} onLoad={this.props.projectsLoaded}/>
                         <div>
                             <h1 className="project-name">{this.props.project.name}</h1>
                             <h1 className="project-group">{this.props.project.group}</h1> 

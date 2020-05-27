@@ -50,7 +50,12 @@ export class pcbDev extends Component {
                     <div className="project-description-container">
                         <h1 className="project-header" id="overview">Overview</h1>
                         <p className="project-description">
-                            The battery cell board tester is a critical component to ensuring the accumulator management system (AMS) reliability prior to assembly. The AMS used for the MK 1 version of the vehicle accumulator is the Elition Lithiumate Pro – a decentralized management system that utilizes AMS slave boards for each cell to measure voltage, temperature and handle cell balancing. The cell board tester is designed to simulate a connection to a cell and generate a single LED flash if the board is in good working condition or a series of other LED functions for a number of different failure modes detailed Table 1.
+                            The battery cell board tester is a critical component that ensures the accumulator management system (AMS) 
+                            is functioning properly and reliability prior to assembly. The AMS used for the MK 1 version of the vehicle 
+                            accumulator was the Elition Lithiumate Pro – a decentralized management system that utilizes AMS slave boards 
+                            for each cell to measure voltage, temperature, and handle cell balancing. The cell board tester is designed 
+                            to simulate a connection to a cell and generate a single LED flash if the board is in good working condition 
+                            or a series of other LED functions for a number of different failure modes detailed <a href="#table-1">Table 1</a>.
                         </p>
                         <div>
                             <h1 className="project-subheader" id="table-1">Table 1: Test cases</h1>
