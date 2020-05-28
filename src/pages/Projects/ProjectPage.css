@@ -1,3 +1,9 @@
+.root {
+    background: white;
+    box-shadow: 3px 6px 5px -5px #777;
+    padding-bottom: 5px;
+}
+
 /* 3. ScrollSpy active styles (see JS tab for activation) */
 .section-nav li.active > a {
     color: #222;

@@ -17,6 +17,7 @@ import batteryCycler from "./pages/Projects/BatteryCycler";
 function App() {
   return (
       <div className="App">
+        <div className="main">
           <Router>
             {/* <link href="https://fonts.googleapis.com/css?family=Rajdhani:520,600|Ubuntu&display=swap" rel="stylesheet"/> */}
             <div>
@@ -44,8 +45,9 @@ function App() {
                 component={waterGenerator} />
             </div>
           </Router>
-          <Footer/>
-          <ScrollToTopBtn/>
+        </div>
+        <Footer/>
+        <ScrollToTopBtn/>
       </div>
   );
 }

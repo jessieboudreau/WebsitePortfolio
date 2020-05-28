@@ -14,8 +14,8 @@ export class ProjectPage extends Component {
             showcase:this.props.images[0],
             images:this.props.images,
             intervalId: 0,
-            galleryOpen:false,
-            galleryBtn:"Open",
+            galleryOpen:true,
+            galleryBtn:"Close",
             loaded:true,
             loadingElement:<LoadingSpinner/>,
         }}
@@ -48,7 +48,7 @@ export class ProjectPage extends Component {
     render() {
 
         return (
-            <div>
+            <div className="root">
                 <ProfileBox />
                 <MDBContainer>
                     <MDBBreadcrumb>
