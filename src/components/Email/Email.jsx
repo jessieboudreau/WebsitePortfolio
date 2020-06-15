@@ -23,6 +23,12 @@ const theme = createMuiTheme({
     },
     });
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class email extends Component{
     constructor(){
         super()
@@ -47,6 +53,18 @@ class email extends Component{
 
         this.handleChange = this.handleChange.bind(this)
     }
+
+    handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...this.state })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
+  
+        e.preventDefault();
+      };
 
     handleChange = e => {
         console.log(e.target.value)
@@ -92,7 +110,7 @@ class email extends Component{
                     <div className="tab-paragraph-container">
                         <h1 className="tab-title">Drop me a line!</h1>
                     </div>
-                    <form className={useStyles.root} name="contact" method="POST" id="email-form" data-netlify="true">
+                    <form className={useStyles.root} name="contact" method="POST" id="email-form" onSubmit={this.handleSubmit}>
                         <div className="input-container">
                             <div>
                                 <TextField 
