@@ -111,6 +111,7 @@ class email extends Component{
                         <h1 className="tab-title">Drop me a line!</h1>
                     </div>
                     <form className={useStyles.root} name="contact" method="POST" id="email-form" onSubmit={this.handleSubmit}>
+                    <input type="hidden" name="form-name" value="contact" />
                         <div className="input-container">
                             <div>
                                 <TextField 
