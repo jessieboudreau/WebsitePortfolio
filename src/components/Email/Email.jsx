@@ -92,7 +92,7 @@ class email extends Component{
                     <div className="tab-paragraph-container">
                         <h1 className="tab-title">Drop me a line!</h1>
                     </div>
-                    <form className={useStyles.root} name="contact" method="post" id="email-form" netlify>
+                    <form className={useStyles.root} name="contact" method="POST" id="email-form" data-netlify="true">
                         <div className="input-container">
                             <div>
                                 <TextField 
