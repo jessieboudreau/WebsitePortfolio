@@ -44,7 +44,7 @@ const buttons = [
 export const projects = [
     {
         id: 0,
-        name: "Electric Vehicle Battery",
+        name: "FSAE-E Accumulator MK 1",
         group: "MAC Formula Electric",
         type: "modelling",
         link: "/projects/mac-formula-electric/ev-battery/",
@@ -69,15 +69,15 @@ export const projects = [
         title: "Atmospheric Water Generator",
         thumbnail: awgprojectThumbnail
     },
-    // {
-    //     id: 3,
-    //     name: "Capstone Battery Design",
-    //     group: "McMaster University",
-    //     type: "modelling",
-    //     link: "/projects/mcmaster/capstone/",
-    //     title: "Battery Design",
-    //     thumbnail: capstoneThumbnail
-    // },
+    {
+        id: 3,
+        name: "FSAE-E Accumulator MK 2",
+        group: "MAC Formula Electric",
+        type: "modelling",
+        link: "/projects/mcmaster/capstone/",
+        title: "Battery Design",
+        thumbnail: capstoneThumbnail
+    },
     // {    
     //     id: 4,
     //     name: "Inverter & MCU Enclosure",
@@ -98,7 +98,7 @@ export const projects = [
     },
     // {    
     //     id: 6,
-    //     name: "Electric Vehicle Charger",
+    //     name: "Vehicle Charger Enclosure",
     //     group: "MAC Formula Electric",
     //     type: "modelling",
     //     link: "/projects/mac-formula-electric/charger-enclosure/",
@@ -339,6 +339,9 @@ class Projects extends Component {
         return (
             <div>
                 <ThemeProvider theme={theme}>
+                    <div className="tab-paragraph-container">
+                        <h1 className="tab-title">Projects</h1>
+                    </div>
                     <div className="selection-container">
                         {/* Filter dropdown menu */}
                         <span className="autocomplete">

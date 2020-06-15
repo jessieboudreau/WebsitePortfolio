@@ -17,6 +17,7 @@ import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
 import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Email from './../../components/Email/Email'
 import 'react-web-tabs/dist/react-web-tabs.css';
 import './Home.css'; 
 
@@ -92,7 +93,8 @@ export default function ScrollableTabsButtonAuto() {
           justify="center"
           alignItems="center"
           >
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper}
+          >
             <AppBar
               style={{ 
                 marginTop: 15,
@@ -117,8 +119,13 @@ export default function ScrollableTabsButtonAuto() {
                   >
                 <Tab style={{ minHeight: 55 }} label="Projects" icon={<WorkOutlineOutlinedIcon />} {...a11yProps(0)} />
                 <Tab style={{ minHeight: 55 }} label="Documents" icon={<InsertDriveFileOutlinedIcon />} {...a11yProps(1)} />
-              {/* <Tab style={{ minHeight: 55 }} label="Blog" icon={<ChatBubbleOutlineIcon />} {...a11yProps(1)} />
-                <Tab style={{ minHeight: 55 }} label="Contact" icon={<MailOutlineIcon/>} {...a11yProps(1)} /> */}
+                {/* <Tab style={{ minHeight: 55 }} label="Blog" icon={<ChatBubbleOutlineIcon />} {...a11yProps(1)} /> */}
+                {window.innerWidth > 900 
+                  ?
+                  <Tab style={{ minHeight: 55 }} label="Contact" icon={<MailOutlineIcon/>} {...a11yProps(1)} />
+                  :
+                  <div></div>
+                }
                 </Tabs>
             </AppBar>
             <SwipeableViews
@@ -146,6 +153,22 @@ export default function ScrollableTabsButtonAuto() {
                 >
                     <DocList/>
                 </TabPanel>
+              </Paper>
+
+              <Paper
+                className={classes.paper}
+              >
+                {window.innerWidth > 900 
+                  ?
+                  <TabPanel 
+                    value={value} 
+                    index={2}
+                  >
+                      <Email/>
+                  </TabPanel>
+                  :
+                  <div></div>
+                }
               </Paper>
             </SwipeableViews>
           </Paper>

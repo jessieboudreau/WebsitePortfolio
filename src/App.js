@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router,  Route} from 'react-router-dom';
+import { loadReCaptcha } from 'react-recaptcha-google'
 
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
@@ -15,6 +16,11 @@ import chargingCart from "./pages/Projects/ChargingCart";
 import batteryCycler from "./pages/Projects/BatteryCycler";
 
 function App() {
+  
+  useEffect(() => {
+    loadReCaptcha();
+  })
+
   return (
       <div className="App">
         <div className="main">

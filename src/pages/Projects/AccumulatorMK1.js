@@ -7,6 +7,8 @@ import assembled from './../../img/Accumulator/assembled.jpg';
 import voltVcap from './../../img/Accumulator/voltage-v-cap.png';
 import resVsoc from './../../img/Accumulator/res-v-cap.png';
 import ProjectPage from './ProjectPage';
+import packCut from './../../img/Accumulator/full-accumulator-cross-section.png';
+import pcbPlate from './../../img/Accumulator/pcb-plate-iso.png';
 
 export class BatteryMK1 extends Component {
     componentDidMount() {
@@ -23,6 +25,14 @@ export class BatteryMK1 extends Component {
                 {
                     src: original,
                     title: "Model of the 2018 vehicle battery, also referred to as the 'Accumulator'"
+                },
+                {
+                    src: packCut,
+                    title:"X-ray view of the battery pack internal assembly"
+                },
+                {
+                    src: pcbPlate,
+                    title:"Isometric view of the BMS and controls plate assembly"
                 },
                 {
                     src: assembled,

@@ -20,7 +20,8 @@ import proofOfCompletionConestoga from './../../docs/Achievements/Proof_of_Progr
 import saeBatteryTraining from './../../docs/Achievements/SAE_Safe_Handling_of_HV_Battery_Systems.pdf';
 import firstAid from './../../docs/Achievements/Standard_First_Aid_CPR-AED_Level_HCP.pdf';
 import letterPhil from './../../docs/Phil_Kollmeyer_Recommendation_Letter.pdf'
-// import letterChi from './../../docs/Chi_Tang_Recommendation_Letter.pdf'
+import letterChi from './../../docs/Chi_Tang_Recommendation_Letter.pdf'
+import degreeConferred from './../../docs/Achievements/Degree_Confer_Letter.pdf'
 
 import './ExpansionList.css';
 
@@ -42,21 +43,31 @@ export const docs = [
     avatar: "",
     type: 'PDF',
     icon: 'fas fa-lock',
-    date: '05/27/2020',
+    date: '06/2/2020',
     link: letterPhil,
   },
-  // {
-  //   id: '3',
-  //   title: 'Letter of Recommedation - Dr. Chi Tang',
-  //   description: "A letter of recommendation from the Power & Energy Engineering Program Chair at McMaster University",
-  //   avatar: "",
-  //   type: 'PDF',
-  //   icon: 'fas fa-lock',
-  //   date: '05/27/2020',
-  //   link: letterChi,
-  // },
+  {
+    id: '3',
+    title: 'Letter of Recommedation - Dr. Chi Tang',
+    description: "A letter of recommendation from the Power & Energy Engineering Program Chair at McMaster University",
+    avatar: "",
+    type: 'PDF',
+    icon: 'fas fa-lock',
+    date: '06/1/2020',
+    link: letterChi,
+  },
   {
     id: '4',
+    title: 'Degree Conferred Confirmation',
+    description: "This letter confirms Bachelor of Technology (B.Tech) degree and date awarded.",
+    avatar: "",
+    type: 'PDF',
+    icon: 'fas fa-lock',
+    date: '06/12/2020',
+    link: degreeConferred,
+  },
+  {
+    id: '5',
     title: 'Safe Handling of HV Battery Systems | SAE',
     description: "This training introduces participants to the risks encountered in handling high voltage battery systems and their component parts. With the understanding of these risks, the seminar will then address how to raise risk awareness and then methods of dealing with those risks. The outcome of this seminar should be improved avoidance of personal injury, reduced risk of reputation loss and product liability actions and reduced risk of loss of property and time. Students will have an opportunity to participate in a real world battery handling case study scenario in which they will identify solutions for potential risk situations.",
     avatar: "",
@@ -66,7 +77,7 @@ export const docs = [
     link: saeBatteryTraining,
   },
   {
-    id: '5',
+    id: '6',
     title: 'First Aid Certification | Red Cross',
     avatar: "",
     description: "",
@@ -76,7 +87,7 @@ export const docs = [
     link: firstAid,
   },
   {
-    id: '6',
+    id: '7',
     title: 'Honours with Distinction | Conestoga',
     avatar: "",
     description: "",
@@ -86,7 +97,7 @@ export const docs = [
     link: honoursDistinctionConestoga,
   },
   {
-    id: '7',
+    id: '8',
     title: 'Proof of Program Completion | Conestoga',
     avatar: "",
     description: "",
@@ -96,7 +107,7 @@ export const docs = [
     link: proofOfCompletionConestoga,
   },
   {
-    id: '8',
+    id: '9',
     title: 'Best Capstone Project Award | Conestoga',
     avatar: "",
     description: "",
@@ -106,7 +117,7 @@ export const docs = [
     link: esetBestProject,
   },
   {
-    id: '9',
+    id: '10',
     title: "Dean's Honour List | Conestoga",
     avatar: "",
     description: "",
@@ -120,6 +131,7 @@ export const docs = [
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
+    marginTop: 45,
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -168,6 +180,12 @@ export default function DetailedExpansionPanel() {
   const classes = useStyles();
 
   return (
+
+    <div>
+
+    <div className="tab-paragraph-container">
+        <h1 className="tab-title">Documents & Certifications</h1>
+    </div>
 
     <div className={classes.root}>
 
@@ -235,6 +253,7 @@ export default function DetailedExpansionPanel() {
           </ExpansionPanelActions>
         </ExpansionPanel>
       ))} 
+    </div>
     </div>
   );
 }
