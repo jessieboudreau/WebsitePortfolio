@@ -41,6 +41,7 @@ class email extends Component{
         this.state={
             sucessSnack:false,
             errorSnack:false,
+            errorMsg:"",
             firstName:"",
             lastName:"",
             email:"",
@@ -78,14 +79,22 @@ class email extends Component{
     }
     };
 
+    handleSuccess = () => {
+        this.setState({ sucessSnack:true, firstName:"", lastName:"", email:"", message:"", })
+    }
+
+    handleError = (error) => {
+        this.setState({ errorSnack:true, errorMsg:error })
+    }
+
     handleSubmit = e => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...this.state })
         })
-          .then(() => this.setState({ sucessSnack:true, firstName:"", lastName:"", email:"", message:"", }))
-          .catch(error => this.setState({ errorSnack:true }));
+          .then(() => alert('Success! Your message has been sent.'), this.handleSuccess())
+          .catch(() => alert('Sorry, an error occurred while sending your message.'), this.handleError());
   
         e.preventDefault();
       };
@@ -100,7 +109,7 @@ class email extends Component{
                 <div className="send-btn-container">
                     <Button
                         type="submit"
-                        onClick={() => this.setState({ sucessSnack:true })}
+                        onClick={() => this.handleSuccess}
                         style={{ maxWidth: 300, width: '70vw', height: 55 }} 
                         size="large" 
                         variant="outlined">
@@ -130,6 +139,16 @@ class email extends Component{
 
         return (
             <div className="form-full">
+                <Snackbar open={this.state.sucessSnack} autoHideDuration={6000} onClose={this.handleSuccessClose}>
+                    <Alert onClose={this.handleSuccessClose} severity="success">
+                        Thanks! Your message has been sent.
+                    </Alert>
+                </Snackbar>
+                <Snackbar open={this.state.errorSnack} autoHideDuration={6000} onClose={this.handleErrorClose}>
+                    <Alert onClose={this.handleErrorClose} severity="error">
+                        Sorry, there was an error sending your message. Error: {this.state.errorMsg}
+                    </Alert>
+                </Snackbar>
                 <ThemeProvider theme={theme}>
                     <div className="tab-paragraph-container">
                         <h1 className="tab-title">Drop me a line!</h1>
