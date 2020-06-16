@@ -4,6 +4,12 @@ import './Email.css';
 import { makeStyles, createMuiTheme, ThemeProvider, } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +39,8 @@ class email extends Component{
     constructor(){
         super()
         this.state={
+            sucessSnack:false,
+            errorSnack:false,
             firstName:"",
             lastName:"",
             email:"",
@@ -53,6 +61,22 @@ class email extends Component{
 
         this.handleChange = this.handleChange.bind(this)
     }
+    
+    handleSuccessClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          this.setState({
+              sucessSnack:false,
+          });
+        }
+      };
+
+    handleErrorClose = (event, reason) => {
+    if (reason === 'clickaway') {
+        this.setState({
+            errorSnack:true,
+        });
+    }
+    };
 
     handleSubmit = e => {
         fetch("/", {
@@ -60,8 +84,8 @@ class email extends Component{
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...this.state })
         })
-          .then(() => alert("Success!"))
-          .catch(error => alert(error));
+          .then(() => this.setState({ sucessSnack:true, firstName:"", lastName:"", email:"", message:"", }))
+          .catch(error => this.setState({ errorSnack:true }));
   
         e.preventDefault();
       };
@@ -76,7 +100,7 @@ class email extends Component{
                 <div className="send-btn-container">
                     <Button
                         type="submit"
-                        // onClick={() => {this.handleReset()}}
+                        onClick={() => this.setState({ sucessSnack:true })}
                         style={{ maxWidth: 300, width: '70vw', height: 55 }} 
                         size="large" 
                         variant="outlined">

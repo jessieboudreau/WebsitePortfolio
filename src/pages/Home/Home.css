@@ -8,6 +8,13 @@
     /* float: center; */
 }
 
+.app-bar {
+    margin: 15 15 0 15;
+    min-height: 55;
+    width: 'auto';
+    text-decoration-color: "#222";
+}
+
 .tab-name {
     font-size:20px;
 }
@@ -25,6 +32,11 @@
     .tab-name {
         font-size:3vw;
         justify-content: space-evenly;
+    }
+
+    .app-bar {
+        margin: 15 0 0 0;
+        width: 100vw;
     }
 
     .tabs-container {

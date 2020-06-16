@@ -169,10 +169,6 @@ class Projects extends Component {
         }
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-      } 
-
     projectsLoaded= () => {
         this.setState({
             loaded:true,

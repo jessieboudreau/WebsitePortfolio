@@ -143,18 +143,30 @@ color: white;
 
 .form-full{
     width:80%;
-    max-width:580px;
+    /* max-width:580px;
     margin: 40px auto;
     padding:15px 20px 25px 20px;
     display: inline-block;
-    height:50px;}
+    height:50px; */
+}
+
+.tab-title {
+    /* color:rgb(248, 100, 100); */
+    margin-bottom:10px;
+    padding-left:0px;
+    font-size:35px;
+}
 
     .input-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 80px 80px 80px 280px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 80px 80px;
         grid-column-gap: 20px;
         border-bottom: 1px solid #ddd;
-        padding: 25px;
+        padding: 10px;
+    }
+
+    .send-btn-container {
+        padding: 20px 5px;
     }
 
         .__first_name-input, .__last_name-input, .__email-input, .__message-input {

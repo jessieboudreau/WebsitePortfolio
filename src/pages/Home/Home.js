@@ -96,37 +96,42 @@ export default function ScrollableTabsButtonAuto() {
           <Paper className={classes.paper}
           >
             <AppBar
-              style={{ 
-                marginTop: 15,
-                marginRight: 15,
-                marginLeft: 15,
-                minHeight: 55,
-                width: 'auto',
-                textDecorationColor: "#222",
-                }} 
+              className="app-bar"
               position="sticky"
               color="default"
               >
-                <Tabs
-                  value={value}
-                  style={{ minHeight: 56 }}
-                  onChange={handleChange}
-                  // indicatorColor="grey800"
-                  inkBarStyle={{ color: "#202020" }}
-                  variant="scrollable"
-                  scrollButtons="auto"
-                  aria-label="scrollable auto tabs example"
-                  >
-                <Tab style={{ minHeight: 55 }} label="Projects" icon={<WorkOutlineOutlinedIcon />} {...a11yProps(0)} />
-                <Tab style={{ minHeight: 55 }} label="Documents" icon={<InsertDriveFileOutlinedIcon />} {...a11yProps(1)} />
-                {/* <Tab style={{ minHeight: 55 }} label="Blog" icon={<ChatBubbleOutlineIcon />} {...a11yProps(1)} /> */}
-                {window.innerWidth > 900 
-                  ?
-                  <Tab style={{ minHeight: 55 }} label="Contact" icon={<MailOutlineIcon/>} {...a11yProps(1)} />
-                  :
-                  <div></div>
-                }
-                </Tabs>
+                  {window.innerWidth > 310 
+                    ?
+                    <Tabs
+                      value={value}
+                      style={{ minHeight: 56 }}
+                      onChange={handleChange}
+                      // indicatorColor="grey800"
+                      inkBarStyle={{ color: "#202020" }}
+                      variant="scrollable"
+                      scrollButtons="auto"
+                      aria-label="scrollable auto tabs example"
+                      >
+                      <Tab style={{ minHeight: 55, maxWidth: '33%' }} label="Projects" icon={<WorkOutlineOutlinedIcon />} {...a11yProps(0)} />
+                      <Tab style={{ minHeight: 55, maxWidth: '33%' }} label="Documents" icon={<InsertDriveFileOutlinedIcon />} {...a11yProps(1)} />
+                      <Tab style={{ minHeight: 55, maxWidth: '33%' }} label="Contact" icon={<MailOutlineIcon/>} {...a11yProps(1)} />
+                    </Tabs>
+                    :
+                    <Tabs
+                      value={value}
+                      style={{ minHeight: 56 }}
+                      onChange={handleChange}
+                      // indicatorColor="grey800"
+                      inkBarStyle={{ color: "#202020" }}
+                      variant="scrollable"
+                      scrollButtons="auto"
+                      aria-label="scrollable auto tabs example"
+                      >
+                      <Tab style={{ minHeight: 55, maxWidth: '33%' }} label="" icon={<WorkOutlineOutlinedIcon />} {...a11yProps(0)} />
+                      <Tab style={{ minHeight: 55, maxWidth: '33%' }} label="" icon={<InsertDriveFileOutlinedIcon />} {...a11yProps(1)} />
+                      <Tab style={{ minHeight: 55, maxWidth: '33%' }} label="" icon={<MailOutlineIcon/>} {...a11yProps(1)} />
+                    </Tabs>
+                  }
             </AppBar>
             <SwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reversible' : 'x'}
@@ -158,17 +163,12 @@ export default function ScrollableTabsButtonAuto() {
               <Paper
                 className={classes.paper}
               >
-                {window.innerWidth > 900 
-                  ?
-                  <TabPanel 
-                    value={value} 
-                    index={2}
-                  >
-                      <Email/>
-                  </TabPanel>
-                  :
-                  <div></div>
-                }
+                <TabPanel 
+                  value={value} 
+                  index={2}
+                >
+                    <Email/>
+                </TabPanel>
               </Paper>
             </SwipeableViews>
           </Paper>
