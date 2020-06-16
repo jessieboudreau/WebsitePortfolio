@@ -70,10 +70,11 @@ export class BatteryMK1 extends Component {
                     <div class="section-nav">
                         <ol>
                             <li className="contents-list"><a href="#overview">Overview</a></li>
-                            <li className="contents-list"><a href="#cell-performance">Cell Performance</a>
+                            <li className="contents-list"><a href="#performance">Performance</a>
                                 <ul>
                                     <li className="contents-list"><a href="#table-1">Table 1: Comparison Between Previous and New Cells</a></li>
                                     <li className="contents-list"><a href="#figure-1">Figure 1: Discharge Voltage vs. C-Rate (25°C), Sony VTC6 Cell</a></li>
+                                    <li className="contents-list"><a href="#table-2">Table 2: Battery Improvement Metrics Comparison</a></li>
                                 </ul>
                             </li>
                         </ol>
@@ -84,7 +85,7 @@ export class BatteryMK1 extends Component {
                             The focal point of this project was to improve on the previous battery pack design. This criteria was checked against a number of metrics including energy density, peak power, and efficiency. My roles in this project include pack energy optimization, cell selection, cell configuration, and internal packaging. Other members of the MAC Formula Electric team supported this project in the areas of PCB development, thermal management, and vehicle pacakging and integration.
                             <br/>
                         </p>
-                        <h1 className="project-header" id="cell-performance">Cell Performance</h1>
+                        <h1 className="project-header" id="performance">Performance</h1>
                         <p className="project-description">
                             Once the decision to use 18650 cylindrical cells was made, many different cells were considered. After substantial research, it was determined that the Sony VTC6 was the best choice for our application. Below is the table comparing specifications of the previous cell and the new VTC6.<br/>
                         </p>
@@ -95,11 +96,11 @@ export class BatteryMK1 extends Component {
                             <tr><td>Size</td><td>217 mm x 137 mm x 6.1 mm</td><td>18650</td></tr>
                             <tr><td>Style</td><td>Pouch Cell</td><td>Flat Top</td></tr>
                             <tr><td>Protected?</td><td>No</td><td>No</td></tr>
-                            <tr><td>Nominal Capacity</td><td>13000 mAh</td><td>3000 mAh</td></tr>
+                            <tr><td>Nominal Capacity (mAh)</td><td>13000</td><td>3000</td></tr>
                             <tr><td>Continuous Discharge Rating</td><td>8 C (104A)</td><td>15 C (45A)</td></tr>
-                            <tr><td>Nominal Voltage</td><td>3.7 V</td><td>3.6 V</td></tr>
-                            <tr><td>Approximate Weight</td><td>322 g</td><td>46.6 g</td></tr>
-                            <tr><td>Energy Density</td><td>149 Wh/kg</td><td>237 Wh/kg</td></tr>
+                            <tr><td>Nominal Voltage (V)</td><td>3.7</td><td>3.6</td></tr>
+                            <tr><td>Approximate Weight (g)</td><td>322</td><td>46.6</td></tr>
+                            <tr><td>Energy Density (Wh/Kg)</td><td>149</td><td>237</td></tr>
                             </table>
                         </div>
                         <h1 className="project-subheader" id="figure-1">Figure 1: Discharge Voltage vs. C-Rate (25°C), Sony VTC6 Cell</h1>
@@ -109,6 +110,15 @@ export class BatteryMK1 extends Component {
                         <p className="project-description">
                             The discharge characteristics of the Sony VTC6 cell and the Kokam SLPB60205130H differ at higher discharge rates. The Kokam cell exhibits a loss of capacity at higher C-rates, whereas the Sony VTC6 exhibits very similar discharge characteristics and capacity at all tested C-rates.<br/>
                         </p>
+                        <div>
+                            <h1 className="project-subheader" id="table-2">Table 2: Battery Improvement Metrics Comparison</h1>
+                            <table class="tftable" border="1">
+                            <tr><th></th><th>Accumulator MK 1</th><th>Accumulator MK 2</th><th>Difference</th></tr>
+                            <tr><td>Total Capacity (Wh)</td><td>6,637.8</td><td>6,804.0</td><td className='success'>+166.2</td></tr>
+                            <tr><td>Mass (Kg, cells only)</td><td>44.55</td><td>28.7</td><td className='success'>-15.85</td></tr>
+                            <tr><td>Energy Loss (Wh/Km)</td><td>119.9</td><td>24.9</td><td className='success'>-95.0</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             ]}

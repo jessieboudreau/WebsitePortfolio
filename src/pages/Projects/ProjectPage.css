@@ -10,6 +10,10 @@
     font-weight: 500;
 }
 
+.success {
+    color: green;
+}
+
 /* Sidebar Navigation */
 .section-nav {
     margin-top: 2rem;
