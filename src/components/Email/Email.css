@@ -86,68 +86,15 @@ color: white;
         padding: 20px 15px;
     }
 
-        .__first_name-input, .__last_name-input, .__email-input, .__message-input {
-            padding:17px;
-            border-radius:10px;
-            border: 1px solid #bbb;
-            color: #000;
-            outline: 0;
-            font-size: .9em;
-            min-width: 30em;
-            background-size: 16px 16px;
-            padding-left: 5px;
-            width:200px;
-            float:left;
-            padding-left:10px;
-            margin-left:20px;
-            margin-top:30px;}
-
-        .__message-input {
-            height:216px;
-            max-width:590px;
-            min-width:45em;
-            max-height:300px;
-            float:right;}
-
-        .__first_name-input:focus, .__email-input:focus, .__last_name-input:focus, .__message-input:focus {
-            border: 1px solid rgb(255, 52, 52);}
-
-        .submit-button {
-            width:300px;
-            height:50px;
-            float:right;
-            font-size: 25px;
-            margin-left:20px;
-            margin-top:30px;
-            border-radius: 4px;
-            color:rgb(255, 255, 255);
-            background-color:rgb(250, 36, 36);
-            font-weight: normal;}
-
-        .submit-button:hover {
-            background-color:rgb(141, 0, 0);
-            color:rgb(255, 181, 181);
-            border-color: rgb(153, 153, 153);
-            cursor: pointer;}
-
-        .submit-button:disabled {
-            color:rgb(219, 219, 219);
-            background-color:rgb(177, 141, 141);}
-
-        .submit-button:disabled:hover {
-            color:rgb(219, 219, 219);
-            background-color:rgb(177, 141, 141);
-            cursor:auto;}
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
 
 .form-full{
-    width:80%;
-    /* max-width:580px;
-    margin: 40px auto;
-    padding:15px 20px 25px 20px;
-    display: inline-block;
-    height:50px; */
+    width:100%;
+    /* max-width:580px; */
+    /* margin: auto; */
+    /* padding:15px 20px 25px 20px; */
+    /* display: inline-block; */
+    /* height:50px; */
 }
 
 .tab-title {
@@ -157,64 +104,23 @@ color: white;
     font-size:35px;
 }
 
+.tab-paragraph-container {
+    padding: 20px 35px 0px 0px;
+}
+
     .input-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 80px 80px;
+        display: inline-block;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 80px 80px 80px;
         grid-column-gap: 20px;
         border-bottom: 1px solid #ddd;
-        padding: 10px;
+        padding: 10px 10px 10px 0px;
+        align-items: center;
     }
 
     .send-btn-container {
-        padding: 20px 5px;
+        padding: 20px 0px;
+        align-items: center;
     }
 
-        .__first_name-input, .__last_name-input, .__email-input, .__message-input {
-            padding:12px;
-            border-radius:4px;
-            border: 1px solid #bbb;
-            color: #000;
-            outline: 0;
-            font-size: .9em;
-            background-size: 16px 16px;
-            padding-left: 0px;
-            width:100%;
-            max-width:600px;
-            float:center;
-            padding-left:10px;
-            margin-left:0px;
-        margin:auto;
-        margin-top:15px;}
-
-        .__message-input {
-            height:225px;
-            /* width:50%; */
-            max-height:300px;
-            /* max-width: 600px; */
-            max-width:600px;
-            min-width:80%;
-            max-height:300px;
-        float:left;
-    }
-
-        .__first_name-input:focus, .__email-input:focus, .__last_name-input:focus, .__message-input:focus {
-            border: 1px solid rgb(255, 52, 52);}
-
-        .submit-button {
-            width:50%;
-            height:50px;
-            float:right;
-            font-size: 25px;
-            margin-right: 20px;
-            margin-top:30px;
-            font-weight: normal;}
-
-        .submit-button:hover {
-            border-color: rgb(153, 153, 153);
-            cursor: pointer;}
-
-        /* .submit-button:disabled {} */
-
-        .submit-button:disabled:hover {
-            cursor:auto;}
 }
