@@ -33,22 +33,27 @@ export class AWG extends Component {
             images={[
                 {
                     src: frontView,
+                    alt: "",
                     title: "Front view with access panel"
                 },
                 {
                     src: rightView,
+                    alt: "",
                     title: "Right-side view"
                 },
                 {
                     src: rearView,
+                    alt: "",
                     title: "Rear view"
                 },
                 {
                     src: leftView,
+                    alt: "",
                     title: "Left view showing air inlet"
                 },
                 {
                     src: showcase,
+                    alt: "",
                     title: "Showcase presentation"
                 },
             ]}
@@ -63,23 +68,30 @@ export class AWG extends Component {
                             </li>
                             <li className="contents-list"><a href="#hvac">HVAC</a></li>
                             <li className="contents-list"><a href="#plumbing">Plumbing</a></li>
-                            <li className="contents-list"><a href="#mechanical">Mechanical</a></li>
+                            <li className="contents-list"><a href="#mechanical">Mechanical</a>
+                                <ul>
+                                    <li className="contents-list"><a href="#figure-1">Figure 1: 3-View Mechanical Drawing</a></li>
+                                </ul>
+                            </li>
                             <li className="contents-list"><a href="#power-circuits">Power Circuits</a>
                                 <ul>
-                                    <li className="contents-list"><a href="#figure-1">Figure 1: Power circuits schematic</a></li>
+                                    <li className="contents-list"><a href="#figure-2">Figure 2: Power Circuits Schematic</a></li>
                                 </ul>
                             </li>
                             <li className="contents-list"><a href="#control-circuits">Control Circuits</a>
                                 <ul>
-                                    <li className="contents-list"><a href="#figure-2">Figure 2: Raspberry Pi outputs schematic</a></li>
-                                    <li className="contents-list"><a href="#figure-3">Figure 3: Raspberry Pi inputs schematic</a></li>
+                                    <li className="contents-list"><a href="#figure-3">Figure 3: Raspberry Pi Outputs Schematic</a></li>
+                                    <li className="contents-list"><a href="#figure-4">Figure 4: Raspberry Pi Inputs Schematic</a></li>
+                                    <li className="contents-list"><a href="#figure-5">Figure 5: Led Testing</a></li>
+                                    <li className="contents-list"><a href="#figure-6">Figure 6: Relay Testing</a></li>
+                                    <li className="contents-list"><a href="#figure-7">Figure 7: Assembled Control Box</a></li>
                                 </ul>
                             </li>
                             <li className="contents-list"><a href="#concurrent-programming">Concurrent Programming</a>
                                 <ul>
-                                    <li className="contents-list"><a href="#figure-4">Figure 4: Process overview block diagram</a></li>
-                                    <li className="contents-list"><a href="#figure-5">Figure 5: Control thread block diagram</a></li>
-                                    <li className="contents-list"><a href="#figure-6">Figure 6: Data thread block diagram</a></li>
+                                    <li className="contents-list"><a href="#figure-8">Figure 8: Process Overview Block Diagram</a></li>
+                                    <li className="contents-list"><a href="#figure-9">Figure 9: Control Thread Block Diagram</a></li>
+                                    <li className="contents-list"><a href="#figure-10">Figure 10: Data Thread Block Diagram</a></li>
                                 </ul>
                             </li>
                         </ol>
@@ -114,6 +126,8 @@ export class AWG extends Component {
                             The AWG chassis is constructed of 4 cm and 3 cm extruded aluminum slotted bar, chosen for its strength and suitability for bearing the weight of the compressor and blower, as well as the water tanks when full. At full capacity, the tanks alone weigh approximately 70 kg, or 154 lbs:
                             <br/>2tanks * 35 L/tank * 1kg/L = 70kg = 70kg * 2.2lbs/kg = 154lbs
                         </p>
+                        <h1 className="project-subheader" id="figure-1">Figure 1: 3-View Mechanical Drawing</h1>
+                        <img alt="three-view mechanical drawings" src={drawings} className="figure"/>
                         <h1 className="project-header" id="power-circuits">Power Circuits</h1>
                         <p className="project-description">
                             The power circuitry of the AWG is at 120VAC. This circuit provides power for the:
@@ -125,8 +139,8 @@ export class AWG extends Component {
                             As previously mentioned, the inclusion of an inverter on the power side is essential to the off-grid functionality of the AWG. The inverter is fed by 12VDC from the DC input and the inverted output is put in parallel with the 120VAC input, with two contactors acting as a transfer switch/interlock to prevent simultaneously supplying power from both the inverter and mains. 
                             <br/>The power supplies are supplied with a hard-wired 120VAC source, however the other components—the compressor, fan and ballast—are connected to the relay board in order to control their on/off state by way of low-voltage Raspberry Pi control signals.
                         </p>
-                        <h1 className="project-subheader" id="figure-1">Figure 1: Power circuits schematic</h1>
-                        <img src={powerCircuits} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-2">Figure 2: Power circuits schematic</h1>
+                        <img alt="power circuits block diagram" src={powerCircuits} className="figure"></img>
                         <h1 className="project-header" id="control-circuits">Control Circuits</h1>
                         <p className="project-description">
                             The control circuitry consists of the following components:
@@ -137,23 +151,29 @@ export class AWG extends Component {
                                 <li>2x 5V DC Power Supplies</li>
                             The relay board and microcontrollers are safely located within the steel control box. The Raspberry Pi acts as the central controller for the entire system, receiving all sensor inputs and switching output relays on the 8-channel relay board in response. In total, 7 output channels are used in conjunction with 7 2N4401 transistors and 5 relay coils. This is depicted in the figure below:
                         </p>
-                        <h1 className="project-subheader" id="figure-2">Figure 2: Raspberry Pi outputs schematic</h1>
-                        <img src={rpiOutputs} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-3">Figure 3: Raspberry Pi outputs schematic</h1>
+                        <img alt="raspberry pi output schematic" src={rpiOutputs} className="figure"></img>
                         <p className="project-description">
                             On the input side, the Raspberry Pi receives signals on 6 GPIO (general purpose input/output) channels. This is depicted in the figure below:
                         </p>
-                        <h1 className="project-subheader" id="figure-3">Figure 3: Raspberry Pi inputs schematic</h1>
-                        <img src={rpiInputs} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-4">Figure 4: Raspberry Pi inputs schematic</h1>
+                        <img alt="raspberry pi input schematic" src={rpiInputs} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-5">Figure 5: LED Testing</h1>
+                        <img alt="LED testing setup" src={ledTesting} className="figure"/>
+                        <h1 className="project-subheader" id="figure-6">Figure 6: Relay Testing</h1>
+                        <img alt="relay testing setup" src={relayTesting} className="figure"/>
+                        <h1 className="project-subheader" id="figure-7">Figure 7: Assembled Control Box</h1>
+                        <img alt="assembled control box" src={controlBox} className="figure"/>
                         <h1 className="project-header" id="concurrent-programming">Concurrent Programming</h1>
                         <p className="project-description">
                             Approximately 330 lines of Python control code run three concurrent threads on the Raspberry Pi in order to operate the AWG: a control thread, a data logging thread, and a fault handling thread. All three threads run in parallel to provide real-time responsiveness and automation. The following 3 figures depict the process flow for the overall program process flow in addition to more detailed process flow diagrams of the controls and data logging threads. In addition to the Raspberry Pi code, the Arduino Uno executes approximately 50 lines of code in order to monitor the evaporator temperature and output the result to the Raspberry Pi using a serial data link. This connection is handled by a serial module imported in the main Python program.
                         </p>
-                        <h1 className="project-subheader" id="figure-4">Figure 4: Process overview block diagram</h1>
-                        <img src={generalThread} className="figure"></img>
-                        <h1 className="project-subheader" id="figure-5">Figure 5: Control thread block diagram</h1>
-                        <img src={controlThread} className="figure"></img>
-                        <h1 className="project-subheader" id="figure-6">Figure 6: Data thread block diagram</h1>
-                        <img src={dataThread} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-8">Figure 8: Process overview block diagram</h1>
+                        <img alt="process overview block diagram" src={generalThread} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-9">Figure 9: Control thread block diagram</h1>
+                        <img alt="control thread block diagram" src={controlThread} className="figure"></img>
+                        <h1 className="project-subheader" id="figure-10">Figure 10: Data thread block diagram</h1>
+                        <img alt="data thread block diagram" src={dataThread} className="figure"></img>
                     </div>
                 </div>
             ]}

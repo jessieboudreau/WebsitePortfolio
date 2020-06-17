@@ -15,7 +15,6 @@ import ProjectTiles from '../../components/ProjectTiles/ProjectTiles';
 import DocList from '../../components/ExpansionList/ExpansionList';
 import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
 import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Email from './../../components/Email/Email'
 import 'react-web-tabs/dist/react-web-tabs.css';

@@ -21,22 +21,27 @@ export class BatteryMK1 extends Component {
             images={[
                 {
                     src: Iso,
+                    alt: "",
                     title: "Isometric rendering"
                 },
                 {
                     src: Front,
+                    alt: "",
                     title: "Front rendering"
                 },
                 {
                     src: Back,
+                    alt: "",
                     title: "Back rendering"
                 },
                 {
                     src: sideA,
+                    alt: "",
                     title: "Side-a rendering"
                 },
                 {
                     src: sideB,
+                    alt: "",
                     title: "Side-b rendering"
                 },
                 ]}

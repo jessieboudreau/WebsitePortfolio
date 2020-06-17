@@ -32,7 +32,7 @@ export class ProjectPage extends Component {
     }
 
     toggleGallery = () => {
-        if (this.state.galleryOpen == true) {
+        if (this.state.galleryOpen === true) {
             this.setState({
                 galleryOpen: false,
                 galleryBtn: "Open",
@@ -90,14 +90,14 @@ export class ProjectPage extends Component {
                         ?   <div>
                                 {this.state.loadingElement}
                                 <div className="showcase-image-container">
-                                    <img src={this.state.showcase.src} className="showcase-image" onLoad={this.showcaseLoaded}/>
+                                    <img alt={this.state.showcase.alt} src={this.state.showcase.src} className="showcase-image" onLoad={this.showcaseLoaded}/>
                                     <p className="showcase-description">{this.state.showcase.title}</p>
                                 </div>
                                 <div className="showcase-image-selector-container">
                                     {this.state.images.map(img => (
                                         <div className="showcase-image-selector-image-container" onClick={this.updateShowcase.bind(this,img)}>
                                             <a href="#showcase">
-                                                <img src={img.src} className="showcase-image-selector-image"/>
+                                                <img alt={img.alt} src={img.src} className="showcase-image-selector-image"/>
                                             </a>
                                         </div>
                                     ))}

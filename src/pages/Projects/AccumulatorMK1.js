@@ -24,30 +24,37 @@ export class BatteryMK1 extends Component {
             images={[
                 {
                     src: original,
+                    alt: "",
                     title: "Model of the 2018 vehicle battery, also referred to as the 'Accumulator'"
                 },
                 {
                     src: packCut,
+                    alt: "",
                     title:"X-ray view of the battery pack internal assembly"
                 },
                 {
                     src: pcbPlate,
+                    alt: "",
                     title:"Isometric view of the BMS and controls plate assembly"
                 },
                 {
                     src: assembled,
+                    alt: "",
                     title: "Complete assembly"
                 },
                 {
                     src: cellsInstalled,
+                    alt: "",
                     title: "Cells installed in the enclosure"
                 },
                 {
                     src: chamber,
+                    alt: "",
                     title: "Thermal chamber and cycler used for testing and characterization"
                 },
                 {
                     src: fixture,
+                    alt: "",
                     title: "Prismatic pouch cell inside the test fixture in the thermal chamber"
                 },
                 ]}
@@ -90,13 +97,13 @@ export class BatteryMK1 extends Component {
                             charge-discharge cycles were completed at 0.05C, 0.5C, 1C, 2C, 3C and 5C.<br/>
                         </p>
                         <h1 className="project-subheader" id="figure-1">Figure 1: Voltage vs. C-Rate (25°C)</h1>
-                        <img src={voltVcap} className="figure"></img>
+                        <img alt="Voltage versus C-Rate chart" src={voltVcap} className="figure"></img>
                         <br/><br/>
                         <p className="project-description">
                             The results of the test above indicate that the effective capacity of the cell decreases as the power drawn from the cell increases. This is a result of the internal resistance of the cell, shown in Figure 2, dissipating more power as the current drawn from the cell increases.<br/>
                         </p>
                         <h1 className="project-subheader" id="figure-2">Figure 2: Cell Internal Resistance vs. State of Charge (25°C)</h1>
-                        <img src={resVsoc} className="figure"></img>
+                        <img alt="Cell Internal Resistance versus State of Charge" src={resVsoc} className="figure"></img>
                         <br/><br/>
                         <p className="project-description">
                             The data in Figure 2 shows that the resistance of the cell begins to increase at approximately 70% 
@@ -124,7 +131,7 @@ export class BatteryMK1 extends Component {
                         </p>
                         <h1 className="project-subheader" id="video-1">Accumulator Fan Test</h1>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://youtube.com/embed/TYOCjgeFkfI"></iframe>
+                            <iframe title="Accumulator Fan Test Video" class="embed-responsive-item" src="https://youtube.com/embed/TYOCjgeFkfI"></iframe>
                         </div>
                         <br/>
                     </div>

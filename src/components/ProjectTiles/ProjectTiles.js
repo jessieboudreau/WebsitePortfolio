@@ -3,9 +3,6 @@ import Projects from './../../components/ProjectTiles/Projects'
 import './Projects.css'
 
 export class ProjectTiles extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render() {
 

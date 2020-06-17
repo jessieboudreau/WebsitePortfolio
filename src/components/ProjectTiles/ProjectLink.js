@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import './ProjectTiles.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -16,9 +15,6 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export class ProjectLink extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render() {
 
@@ -32,7 +28,7 @@ export class ProjectLink extends Component {
                     className={useStyles.grid}
                     >
                     <div className="project-link-container">
-                        <img className="project-thumbnail" src={this.props.project.thumbnail}/>
+                        <img className="project-thumbnail" alt="" src={this.props.project.thumbnail}/>
                         <h1 className="project-name">{this.props.project.name}</h1>
                         <h1 className="project-group">{this.props.project.group}</h1>              
                     </div>
@@ -48,7 +44,7 @@ export class ProjectLink extends Component {
                     className={useStyles.grid}
                     >  
                     <div className="project-link-container">
-                        <img className="project-thumbnail" src={this.props.project.thumbnail} onLoad={this.props.projectsLoaded}/>
+                        <img className="project-thumbnail" alt="" src={this.props.project.thumbnail} onLoad={this.props.projectsLoaded}/>
                         <div>
                             <h1 className="project-name">{this.props.project.name}</h1>
                             <h1 className="project-group">{this.props.project.group}</h1> 

@@ -126,8 +126,6 @@ class email extends Component{
                                 <TextField 
                                     id="fname" 
                                     style={{ width: '100%', height: 56, margin: 10, }}
-                                    label="Outlined" 
-                                    variant="outlined"
                                     name="firstName"
                                     label="First name"
                                     variant="outlined"
@@ -136,8 +134,6 @@ class email extends Component{
                                 <TextField 
                                     id="lname" 
                                     style={{ width: '100%', height: 56, margin: 10, }}
-                                    label="Outlined" 
-                                    variant="outlined"
                                     name="lastName" 
                                     label="Last name"
                                     variant="outlined"
@@ -146,8 +142,6 @@ class email extends Component{
                                 <TextField 
                                     id="email" 
                                     style={{ width: '100%', height: 56, margin: 10, }}
-                                    label="Outlined" 
-                                    variant="outlined"
                                     name="email"
                                     label="Email"
                                     variant="outlined"
@@ -159,8 +153,6 @@ class email extends Component{
                                             rows={9}
                                             id="message" 
                                             style={{ width: '100%', minHeight: '100%', margin: 10, }}
-                                            label="Outlined" 
-                                            variant="outlined"
                                             name="message"
                                             label="Message"
                                             variant="outlined"
@@ -175,8 +167,6 @@ class email extends Component{
                                     rows={9}
                                     id="message" 
                                     style={{ width: '100%', minHeight: '100%', margin: 10, }}
-                                    label="Outlined" 
-                                    variant="outlined"
                                     name="message"
                                     label="Message"
                                     variant="outlined"

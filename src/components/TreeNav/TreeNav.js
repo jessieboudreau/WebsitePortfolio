@@ -4,7 +4,6 @@ import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
-import Resume from './../../docs/jessie-boudreau-cv.pdf';
 import { docs } from './../../components/ExpansionList/ExpansionList';
 import { projects } from './../../components/ProjectTiles/Projects'
 
@@ -44,14 +43,14 @@ export default function ControlledTreeView() {
       </a>
       <TreeItem nodeId="2" label="Projects">
       {projects.map(item => ( 
-          <a href={item.link} target="_blank">
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
             <TreeItem nodeId={item.id} label={item.name} />
           </a>
         ))}
       </TreeItem>
         <TreeItem nodeId="3" label="Documents">
         {docs.map(item => ( 
-          <a href={item.link} target="_blank">
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
             <TreeItem nodeId={item.id} label={item.title} />
           </a>
         ))}

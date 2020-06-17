@@ -20,18 +20,22 @@ export class pcbDev extends Component {
             images={[
                 {
                     src: isoView,
+                    alt: "",
                     title: "Isometric view render"
                 },
                 {
                     src: topView,
+                    alt: "",
                     title: "Top view render"
                 },
                 {
                     src: topLayer,
+                    alt: "",
                     title: "Top layer view"
                 },
                 {
                     src: complete,
+                    alt: "",
                     title: "Complete assembled pcb with testing harness"
                 },
             ]}

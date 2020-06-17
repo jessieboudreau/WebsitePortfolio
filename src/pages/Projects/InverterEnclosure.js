@@ -15,8 +15,8 @@ export class BatteryMK1 extends Component {
             images={[
                 {
                     src: "",
+                    alt: "",
                     title: "",
-                    description: ""
                 },
                 ]}
 

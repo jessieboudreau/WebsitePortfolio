@@ -1,45 +1,25 @@
 import React, { Component } from 'react';
 import ProjectLink from './ProjectLink';
 import { makeStyles, createMuiTheme, ThemeProvider, } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
-import Select from '@material-ui/core/Select';
-import InputBase from '@material-ui/core/InputBase';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
 import FilterListIcon from '@material-ui/icons/FilterList';
-import { red } from '@material-ui/core/colors';
 import './Projects.css';
 
 // Project thumbnails
 import batterydesignThumbnail from './../../img/thumbnail/batterydesign-thumbnail.png';
 import bmstestingboardThumbnail from './../../img/thumbnail/cellboardtester-thumbnail.png';
-import wireharnessThumbnail from './../../img/thumbnail/wiring-thumbnail.png';
+// import wireharnessThumbnail from './../../img/thumbnail/wiring-thumbnail.png';
 import awgprojectThumbnail from './../../img/thumbnail/watergenerator-thumbnail.jpg';
 import capstoneThumbnail from './../../img/thumbnail/capstone-thumbnail.png';
-import inverterThumbnail from './../../img/thumbnail/inverters-thumbnail.png';
+// import inverterThumbnail from './../../img/thumbnail/inverters-thumbnail.png';
 import cyclerThumbnail from './../../img/thumbnail/cycler-thumbnail.png';
-import chargerThumbnail from './../../img/thumbnail/charger-thumbnail.png';
+// import chargerThumbnail from './../../img/thumbnail/charger-thumbnail.png';
 import cartThumbnail from './../../img/thumbnail/cart-thumbnail.JPG';
-
-const buttons = [
-    {
-        id: 0,
-        label: 'Conestoga College',
-        btnClass: 'btn'},
-    {
-        id: 1,
-        label: 'MAC Formula Electric',
-        btnClass: 'btn'},
-    {
-        id: 2,
-        label: 'McMaster University',
-        btnClass: 'btn'},
-];
 
 export const projects = [
     {

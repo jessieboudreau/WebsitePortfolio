@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Projects from '../ProjectTiles/Projects';
 import avatar from './../../img/jessie.jpg'
 import 'react-vertical-timeline-component/style.min.css';
 import './AboutMe.css';

@@ -18,10 +18,12 @@ export class BatteryMK1 extends Component {
             images={[
                 {
                     src: Iso,
+                    alt: "",
                     title: "Iso rendering (internal view)"
                 },
                 {
                     src: Assembled,
+                    alt: "",
                     title: "Partially assembled"
                 },
                 ]}
@@ -47,7 +49,7 @@ export class BatteryMK1 extends Component {
                         <h1 className="project-header" id="schematic">Electrical Schematic</h1>
                         <div class="embed-responsive embed-responsive-4by3">
                             <object data={Schematic} type="application/pdf">
-                                <iframe src="https://docs.google.com/viewer?url=your_url_to_pdf&embedded=true"></iframe>
+                                <iframe title="Electrical Schematic" src="https://docs.google.com/viewer?url=your_url_to_pdf&embedded=true"></iframe>
                             </object>
                         </div>
                         <br/><br/>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -9,11 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import Switch from '@material-ui/core/Switch';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import { BrowserRouter as Link } from 'react-router-dom';
 
 // Document links
 import Resume from './../../docs/jessie-boudreau-cv.pdf';
@@ -90,7 +84,7 @@ export const docs = [
   {
     id: '5',
     title: 'Safe Handling of HV Battery Systems | SAE',
-    description: "This training introduces participants to the risks encountered in handling high voltage battery systems and their component parts. With the understanding of these risks, the seminar will then address how to raise risk awareness and then methods of dealing with those risks. The outcome of this seminar should be improved avoidance of personal injury, reduced risk of reputation loss and product liability actions and reduced risk of loss of property and time.",
+    description: "This training introduces participants to the risks encountered in handling high voltage battery systems and their component parts. The outcome of this seminar should be improved avoidance of personal injury, reduced risk of reputation loss and product liability actions and reduced risk of loss of property and time.",
     avatar: "",
     type: 'PDF',
     icon: 'fas fa-lock',
@@ -102,7 +96,7 @@ export const docs = [
     id: '6',
     title: 'First Aid Certification | Red Cross',
     avatar: "",
-    description: "Canadian Red Cross - Standar First Aid & CPR/AED Level HCP",
+    description: "Canadian Red Cross - Standard First Aid & CPR/AED Level HCP",
     type: 'PDF',
     icon: 'fas fa-lock',
     date: '09/08/2018',
@@ -221,13 +215,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function DetailedExpansionPanel() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
-    expandAll: false,
-  });
-
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
 
   return (
 
@@ -235,16 +222,6 @@ export default function DetailedExpansionPanel() {
 
     <div className="tab-paragraph-container">
         <h1 className="tab-title">Documents & Certifications</h1>
-        {/* <FormControl component="fieldset">
-        <FormGroup aria-label="position" row>
-          <FormControlLabel
-            value="expandAll"
-            control={<Switch name="expandAll" color="secondary" checked={state.expandAll} onChange={handleChange}/>}
-            label="Expand All"
-            labelPlacement="start"
-          />
-        </FormGroup>
-      </FormControl> */}
     </div>
 
     <div className={classes.root}>
@@ -270,7 +247,6 @@ export default function DetailedExpansionPanel() {
       {/* Document Rows */}
       {docs.map(item => (                         
         <ExpansionPanel 
-          // expanded={state.expandAll}
           >
           <ExpansionPanelSummary
             expandIcon={<ExpandMoreIcon />}
@@ -293,13 +269,13 @@ export default function DetailedExpansionPanel() {
             ?
             <Typography className={classes.mobileExpanded} align="justify">
               {item.preview.map(prev => (
-                <img src={prev.page} className={classes.preview} />
+                <img alt="document preview" src={prev.page} className={classes.preview} />
               ))}
             </Typography>
             :
             <Typography className={classes.expandedColumn} align="justify">
               {item.preview.map(prev => (
-                <img src={prev.page} className={classes.preview} />
+                <img alt="document preview" src={prev.page} className={classes.preview} />
               ))}
             </Typography>
           }
