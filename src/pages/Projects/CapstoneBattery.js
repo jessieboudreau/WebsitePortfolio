@@ -41,7 +41,7 @@ export class BatteryMK1 extends Component {
 
             <ProjectPage
             title="FSAE-E Accumulator MK 2"
-            group="McMaster University"
+            group="MAC Formula Electric"
             images={[
                 {
                     src: battCut,

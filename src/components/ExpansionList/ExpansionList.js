@@ -50,7 +50,7 @@ export const docs = [
   },
   {
     id: '2',
-    title: 'Letter of Recommedation - Phillip Kollmeyer, Ph.D',
+    title: 'Letter of Recommedation | Phillip Kollmeyer, Ph.D',
     description: "A letter of recommendation from my research supervisor at the McMaster Automotive Resource Centre",
     avatar: "",
     type: 'PDF',
@@ -61,7 +61,7 @@ export const docs = [
   },
   {
     id: '3',
-    title: 'Letter of Recommedation - Dr. Chi Tang',
+    title: 'Letter of Recommedation | Dr. Chi Tang',
     description: "A letter of recommendation from the Power & Energy Engineering Program Chair at McMaster University",
     avatar: "",
     type: 'PDF',
@@ -72,7 +72,7 @@ export const docs = [
   },
   {
     id: '4',
-    title: 'Degree Conferred Confirmation',
+    title: 'Degree Conferred Confirmation | McMaster',
     description: "This letter confirms Bachelor of Technology (B.Tech) degree and date awarded.",
     avatar: "",
     type: 'PDF',

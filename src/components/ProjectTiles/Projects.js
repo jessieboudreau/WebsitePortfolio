@@ -27,12 +27,21 @@ export const projects = [
         name: "FSAE-E Accumulator MK 1",
         group: "MAC Formula Electric",
         type: "modelling",
-        link: "/projects/mac-formula-electric/ev-battery/",
+        link: "/projects/mac-formula-electric/battery-mk1/",
         title: "Battery Design",
         thumbnail: batterydesignThumbnail
     },
-    {   
+    {
         id: 1,
+        name: "FSAE-E Accumulator MK 2",
+        group: "MAC Formula Electric",
+        type: "modelling",
+        link: "/projects/mac-formula-electric/battery-mk2/",
+        title: "Battery Design",
+        thumbnail: capstoneThumbnail
+    },
+    {   
+        id: 2,
         name: "Battery Cell Board Tester",
         group: "MAC Formula Electric",
         type: "modelling",
@@ -41,22 +50,13 @@ export const projects = [
         thumbnail: bmstestingboardThumbnail
     },
     {
-        id: 2,
+        id: 3,
         name: "Atmospheric Water Generator",
         group: "Conestoga College",
         type: "capstone",
         link: "/projects/conestoga/atmospheric-water-generator/",
         title: "Atmospheric Water Generator",
         thumbnail: awgprojectThumbnail
-    },
-    {
-        id: 3,
-        name: "FSAE-E Accumulator MK 2",
-        group: "MAC Formula Electric",
-        type: "modelling",
-        link: "/projects/mcmaster/capstone/",
-        title: "Battery Design",
-        thumbnail: capstoneThumbnail
     },
     // {    
     //     id: 4,

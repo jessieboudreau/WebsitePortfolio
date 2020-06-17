@@ -33,7 +33,7 @@ function App() {
                 component={Home}/>
 
                 {/* Projects paths */}
-              <Route path="/projects/mac-formula-electric/ev-battery/" 
+              <Route path="/projects/mac-formula-electric/battery-mk1/" 
                 component={batteryDesign} />
               <Route path="/projects/mac-formula-electric/charging-cart/"
                 component={chargingCart} />
@@ -43,7 +43,7 @@ function App() {
                 component={inverterEnclosure} />
               <Route path="/projects/mac-formula-electric/charger-enclosure/" 
                 component={chargerEnclosure} />
-              <Route path="/projects/mcmaster/capstone/" 
+              <Route path="/projects/mac-formula-electric/battery-mk2/" 
                 component={capstoneBattery} />
               <Route path="/projects/mcmaster/battery-cycler/" 
                 component={batteryCycler} />
