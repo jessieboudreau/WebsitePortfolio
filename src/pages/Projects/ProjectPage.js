@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 import { Link } from 'react-router-dom';
 import ProfileBox from './../../components/ProfileBox/ProfileBox';
-import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+// import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 import Button from '@material-ui/core/Button';
 import "react-image-gallery/styles/css/image-gallery.css";
 import './ProjectPage.css';
@@ -17,15 +17,15 @@ export class ProjectPage extends Component {
             galleryOpen:true,
             galleryBtn:"Close",
             loaded:true,
-            loadingElement:<LoadingSpinner/>,
+            // loadingElement:<LoadingSpinner/>,
         }}
     
-    showcaseLoaded= () => {
-        this.setState({
-            loaded:true,
-            loadingElement:<div/>
-        })
-    }
+    // showcaseLoaded= () => {
+    //     this.setState({
+    //         loaded:true,
+    //         loadingElement:<div/>
+    //     })
+    // }
 
     updateShowcase = (newImage) => {
         this.setState({showcase:newImage})
@@ -90,7 +90,9 @@ export class ProjectPage extends Component {
                         ?   <div>
                                 {this.state.loadingElement}
                                 <div className="showcase-image-container">
-                                    <img alt={this.state.showcase.alt} src={this.state.showcase.src} className="showcase-image" onLoad={this.showcaseLoaded}/>
+                                    <img alt={this.state.showcase.alt} src={this.state.showcase.src} className="showcase-image" 
+                                    // onLoad={this.showcaseLoaded}
+                                    />
                                     <p className="showcase-description">{this.state.showcase.title}</p>
                                 </div>
                                 <div className="showcase-image-selector-container">
